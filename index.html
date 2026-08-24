@@ -7,12 +7,7 @@
 
   <title>Job Link DZ | منصة التوظيف الجزائرية</title>
 
-  <meta
-    name="description"
-    content="Job Link DZ - منصة التوظيف الجزائرية للباحثين عن العمل والشركات."
-  >
-
-  <meta name="theme-color" content="#071a35">
+  <meta name="description" content="Job Link DZ - منصة التوظيف الجزائرية للباحثين عن العمل والشركات.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,27 +36,23 @@
       line-height: 1.6;
     }
 
-    a {
-      text-decoration: none;
-    }
-
     button,
     input,
     select {
       font-family: inherit;
     }
 
-    /* HEADER */
+    /* ================= HEADER ================= */
 
     header {
       min-height: 76px;
       padding: 0 7%;
-      background: #ffffff;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
 
+      background: #ffffff;
       border-bottom: 1px solid #e5e7eb;
 
       position: relative;
@@ -72,9 +63,11 @@
       font-family: "Libre Baskerville", serif;
       font-size: 22px;
       font-weight: 700;
+
       color: #111827;
-      white-space: nowrap;
+
       direction: ltr;
+      white-space: nowrap;
     }
 
     .logo span {
@@ -84,13 +77,16 @@
     nav {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 26px;
     }
 
     nav a {
       color: #374151;
+      text-decoration: none;
+
       font-size: 14px;
       font-weight: 600;
+
       transition: 0.2s;
     }
 
@@ -101,6 +97,7 @@
     .login {
       border: 1px solid #2563eb;
       color: #2563eb !important;
+
       padding: 9px 17px;
       border-radius: 7px;
     }
@@ -110,44 +107,50 @@
       color: #ffffff !important;
     }
 
-    /* HERO */
+    /* ================= HERO ================= */
 
     .hero {
       min-height: 650px;
+
       display: flex;
       align-items: center;
+
       position: relative;
       overflow: hidden;
+
       background: #071a35;
     }
 
     .hero::before {
       content: "";
+
       position: absolute;
       inset: 0;
 
       background-image:
         url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80");
 
-      background-position: center;
       background-size: cover;
+      background-position: center;
       background-repeat: no-repeat;
 
       filter: grayscale(100%);
+
       transform: scale(1.03);
     }
 
     .hero::after {
       content: "";
+
       position: absolute;
       inset: 0;
 
       background:
         linear-gradient(
           90deg,
-          rgba(7, 26, 53, 0.97) 0%,
-          rgba(7, 26, 53, 0.86) 42%,
-          rgba(7, 26, 53, 0.50) 100%
+          rgba(7,26,53,0.97) 0%,
+          rgba(7,26,53,0.88) 45%,
+          rgba(7,26,53,0.48) 100%
         );
     }
 
@@ -157,30 +160,37 @@
 
       width: 90%;
       max-width: 1150px;
+
       margin: auto;
 
       color: #ffffff;
+
       text-align: right;
     }
 
     .hero-label {
       color: #60a5fa;
+
       font-size: 14px;
       font-weight: 700;
+
       margin-bottom: 18px;
     }
 
     .hero-label small {
       display: block;
-      margin-top: 3px;
+
+      margin-top: 4px;
 
       color: #bfdbfe;
 
       font-family: "Libre Baskerville", serif;
+
       font-size: 10px;
       font-weight: 400;
 
-      letter-spacing: 0.9px;
+      letter-spacing: 1px;
+
       direction: ltr;
     }
 
@@ -209,21 +219,21 @@
       margin-bottom: 38px;
     }
 
-    /* SEARCH */
+    /* ================= SEARCH ================= */
 
     .search-panel {
       max-width: 920px;
 
+      display: flex;
+      gap: 8px;
+
       background: #ffffff;
+
       padding: 9px;
 
       border-radius: 10px;
 
-      display: flex;
-      gap: 8px;
-
-      box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
     }
 
     .search-panel input,
@@ -237,14 +247,11 @@
       border: none;
       outline: none;
 
-      font-size: 14px;
+      background: #ffffff;
+
       color: #111827;
 
-      background: #ffffff;
-    }
-
-    .search-panel input::placeholder {
-      color: #9ca3af;
+      font-size: 14px;
     }
 
     .search-button {
@@ -268,14 +275,16 @@
       background: #1d4ed8;
     }
 
-    /* STATS */
+    /* ================= STATS ================= */
 
     .stats {
-      background: #111827;
-      color: #ffffff;
-
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
+
+      background: #111827;
+
+      color: #ffffff;
 
       text-align: center;
 
@@ -301,13 +310,15 @@
 
     .stat span {
       color: #d1d5db;
+
       font-size: 13px;
     }
 
-    /* SECTIONS */
+    /* ================= SECTION ================= */
 
     .section {
       max-width: 1150px;
+
       margin: auto;
 
       padding: 75px 20px;
@@ -319,28 +330,35 @@
 
     .section-header h2 {
       color: #111827;
+
       font-size: 30px;
       font-weight: 800;
     }
 
     .section-header p {
       color: #6b7280;
+
       margin-top: 8px;
+
       font-size: 14px;
     }
 
     .blue-line {
       width: 55px;
       height: 3px;
+
       background: #2563eb;
+
       margin-top: 13px;
     }
 
-    /* JOBS */
+    /* ================= JOBS ================= */
 
     .jobs {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
+
       gap: 22px;
     }
 
@@ -348,6 +366,7 @@
       background: #ffffff;
 
       border: 1px solid #e5e7eb;
+
       border-radius: 12px;
 
       padding: 25px;
@@ -361,12 +380,14 @@
       border-color: #bfdbfe;
 
       box-shadow:
-        0 15px 35px rgba(37, 99, 235, 0.08);
+        0 15px 35px rgba(37,99,235,0.08);
     }
 
     .company {
       color: #6b7280;
+
       font-size: 13px;
+
       margin-bottom: 10px;
     }
 
@@ -376,7 +397,6 @@
       font-family: "Libre Baskerville", serif;
 
       font-size: 18px;
-      font-weight: 700;
 
       margin-bottom: 12px;
 
@@ -386,7 +406,9 @@
 
     .job-info {
       color: #6b7280;
+
       font-size: 13px;
+
       line-height: 2;
     }
 
@@ -412,10 +434,10 @@
     .apply {
       display: block;
 
-      text-align: center;
-
       background: #111827;
       color: #ffffff;
+
+      text-align: center;
 
       padding: 12px;
 
@@ -425,30 +447,30 @@
 
       font-size: 13px;
       font-weight: 700;
-
-      transition: 0.2s;
     }
 
     .apply:hover {
       background: #2563eb;
     }
 
-    /* SECTORS */
+    /* ================= SECTORS ================= */
 
-    .companies-section {
+    .sectors-section {
       background: #f8fafc;
 
       border-top: 1px solid #e5e7eb;
       border-bottom: 1px solid #e5e7eb;
     }
 
-    .company-grid {
+    .sector-grid {
       display: grid;
+
       grid-template-columns: repeat(4, 1fr);
+
       gap: 18px;
     }
 
-    .company-card {
+    .sector-card {
       background: #ffffff;
 
       border: 1px solid #e5e7eb;
@@ -458,24 +480,16 @@
       border-radius: 10px;
 
       text-align: center;
-
-      transition: 0.2s;
     }
 
-    .company-card:hover {
-      border-color: #93c5fd;
-
-      box-shadow:
-        0 10px 25px rgba(37, 99, 235, 0.07);
-    }
-
-    .company-logo {
+    .sector-icon {
       width: 55px;
       height: 55px;
 
       margin: 0 auto 14px;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
@@ -487,24 +501,25 @@
       font-family: "Libre Baskerville", serif;
 
       font-weight: 700;
-      font-size: 18px;
     }
 
-    .company-card h3 {
+    .sector-card h3 {
       color: #111827;
+
       font-size: 14px;
     }
 
-    .company-card p {
+    .sector-card p {
       color: #9ca3af;
 
       font-family: "Libre Baskerville", serif;
 
       font-size: 10px;
+
       margin-top: 4px;
     }
 
-    /* CTA */
+    /* ================= CTA ================= */
 
     .cta {
       background: #eff6ff;
@@ -512,21 +527,19 @@
       text-align: center;
 
       padding: 75px 20px;
-
-      border-top: 1px solid #dbeafe;
     }
 
     .cta h2 {
       color: #111827;
 
       font-size: 32px;
-      font-weight: 800;
 
       margin-bottom: 10px;
     }
 
     .cta p {
       color: #6b7280;
+
       margin-bottom: 25px;
     }
 
@@ -542,15 +555,9 @@
 
       font-size: 14px;
       font-weight: 700;
-
-      transition: 0.2s;
     }
 
-    .cta-button:hover {
-      background: #1d4ed8;
-    }
-
-    /* FOOTER */
+    /* ================= FOOTER ================= */
 
     footer {
       background: #080d18;
@@ -584,18 +591,16 @@
       margin-top: 8px;
     }
 
-    /* MOBILE */
+    /* ================= MOBILE ================= */
 
     @media (max-width: 800px) {
 
       header {
-        min-height: auto;
-
         padding: 18px 5%;
 
-        gap: 15px;
-
         flex-direction: column;
+
+        gap: 15px;
       }
 
       nav {
@@ -603,32 +608,16 @@
 
         justify-content: center;
 
-        gap: 12px;
-
         flex-wrap: wrap;
-      }
 
-      nav a {
-        font-size: 13px;
+        gap: 12px;
       }
 
       .hero {
         min-height: 700px;
       }
 
-      .hero::after {
-        background:
-          linear-gradient(
-            rgba(7, 26, 53, 0.90),
-            rgba(7, 26, 53, 0.95)
-          );
-      }
-
       .hero-content {
-        text-align: center;
-      }
-
-      .hero-label small {
         text-align: center;
       }
 
@@ -648,6 +637,7 @@
       .search-panel select,
       .search-button {
         width: 100%;
+
         min-height: 52px;
       }
 
@@ -657,6 +647,7 @@
 
       .stats {
         grid-template-columns: 1fr;
+
         gap: 20px;
       }
 
@@ -676,31 +667,19 @@
         grid-template-columns: 1fr;
       }
 
-      .company-grid {
+      .sector-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (max-width: 450px) {
 
-      .logo {
-        font-size: 19px;
+      .sector-grid {
+        grid-template-columns: 1fr;
       }
 
       .hero h1 {
         font-size: 31px;
-      }
-
-      .section {
-        padding: 55px 16px;
-      }
-
-      .section-header h2 {
-        font-size: 25px;
-      }
-
-      .company-grid {
-        grid-template-columns: 1fr;
       }
     }
 
@@ -709,6 +688,7 @@
 
 
 <body>
+
 
   <!-- HEADER -->
 
@@ -732,7 +712,7 @@
         القطاعات
       </a>
 
-      <a href="#">
+      <a href="#about">
         عن المنصة
       </a>
 
@@ -785,96 +765,83 @@
       <div class="search-panel">
 
         <input
-          type="search"
           id="searchInput"
+          type="search"
           placeholder="ابحث عن وظيفة أو مهنة"
-          aria-label="البحث عن وظيفة أو مهنة"
         >
 
 
-        <select
-          id="citySelect"
-          aria-label="اختر الولاية"
-        >
+        <select id="citySelect">
 
-          <select
-  id="citySelect"
-  aria-label="اختر الولاية"
->
+          <option value="">
+            اختر الولاية
+          </option>
 
-  <option value="">
-    اختر الولاية
-  </option>
+          <option value="أدرار">أدرار</option>
+          <option value="الشلف">الشلف</option>
+          <option value="الأغواط">الأغواط</option>
+          <option value="أم البواقي">أم البواقي</option>
+          <option value="باتنة">باتنة</option>
+          <option value="بجاية">بجاية</option>
+          <option value="بسكرة">بسكرة</option>
+          <option value="بشار">بشار</option>
+          <option value="البليدة">البليدة</option>
+          <option value="البويرة">البويرة</option>
+          <option value="تمنراست">تمنراست</option>
+          <option value="تبسة">تبسة</option>
+          <option value="تلمسان">تلمسان</option>
+          <option value="تيارت">تيارت</option>
+          <option value="تيزي وزو">تيزي وزو</option>
+          <option value="الجزائر">الجزائر</option>
+          <option value="الجلفة">الجلفة</option>
+          <option value="جيجل">جيجل</option>
+          <option value="سطيف">سطيف</option>
+          <option value="سعيدة">سعيدة</option>
+          <option value="سكيكدة">سكيكدة</option>
+          <option value="سيدي بلعباس">سيدي بلعباس</option>
+          <option value="عنابة">عنابة</option>
+          <option value="قالمة">قالمة</option>
+          <option value="قسنطينة">قسنطينة</option>
+          <option value="المدية">المدية</option>
+          <option value="مستغانم">مستغانم</option>
+          <option value="المسيلة">المسيلة</option>
+          <option value="معسكر">معسكر</option>
+          <option value="ورقلة">ورقلة</option>
+          <option value="وهران">وهران</option>
+          <option value="البيض">البيض</option>
+          <option value="إليزي">إليزي</option>
+          <option value="برج بوعريريج">برج بوعريريج</option>
+          <option value="بومرداس">بومرداس</option>
+          <option value="الطارف">الطارف</option>
+          <option value="تندوف">تندوف</option>
+          <option value="تيسمسيلت">تيسمسيلت</option>
+          <option value="الوادي">الوادي</option>
+          <option value="خنشلة">خنشلة</option>
+          <option value="سوق أهراس">سوق أهراس</option>
+          <option value="تيبازة">تيبازة</option>
+          <option value="ميلة">ميلة</option>
+          <option value="عين الدفلى">عين الدفلى</option>
+          <option value="النعامة">النعامة</option>
+          <option value="عين تموشنت">عين تموشنت</option>
+          <option value="غرداية">غرداية</option>
+          <option value="غليزان">غليزان</option>
+          <option value="تيميمون">تيميمون</option>
+          <option value="برج باجي مختار">برج باجي مختار</option>
+          <option value="أولاد جلال">أولاد جلال</option>
+          <option value="بني عباس">بني عباس</option>
+          <option value="إن صالح">إن صالح</option>
+          <option value="إن قزام">إن قزام</option>
+          <option value="تقرت">تقرت</option>
+          <option value="جانت">جانت</option>
+          <option value="المغير">المغير</option>
+          <option value="المنيعة">المنيعة</option>
 
-  <option value="أدرار">أدرار</option>
-  <option value="الشلف">الشلف</option>
-  <option value="الأغواط">الأغواط</option>
-  <option value="أم البواقي">أم البواقي</option>
-  <option value="باتنة">باتنة</option>
-  <option value="بجاية">بجاية</option>
-  <option value="بسكرة">بسكرة</option>
-  <option value="بشار">بشار</option>
-  <option value="البليدة">البليدة</option>
-  <option value="البويرة">البويرة</option>
-  <option value="تمنراست">تمنراست</option>
-  <option value="تبسة">تبسة</option>
-  <option value="تلمسان">تلمسان</option>
-  <option value="تيارت">تيارت</option>
-  <option value="تيزي وزو">تيزي وزو</option>
-  <option value="الجزائر">الجزائر</option>
-  <option value="الجلفة">الجلفة</option>
-  <option value="جيجل">جيجل</option>
-  <option value="سطيف">سطيف</option>
-  <option value="سعيدة">سعيدة</option>
-  <option value="سكيكدة">سكيكدة</option>
-  <option value="سيدي بلعباس">سيدي بلعباس</option>
-  <option value="عنابة">عنابة</option>
-  <option value="قالمة">قالمة</option>
-  <option value="قسنطينة">قسنطينة</option>
-  <option value="المدية">المدية</option>
-  <option value="مستغانم">مستغانم</option>
-  <option value="المسيلة">المسيلة</option>
-  <option value="معسكر">معسكر</option>
-  <option value="ورقلة">ورقلة</option>
-  <option value="وهران">وهران</option>
-  <option value="البيض">البيض</option>
-  <option value="إليزي">إليزي</option>
-  <option value="برج بوعريريج">برج بوعريريج</option>
-  <option value="بومرداس">بومرداس</option>
-  <option value="الطارف">الطارف</option>
-  <option value="تندوف">تندوف</option>
-  <option value="تيسمسيلت">تيسمسيلت</option>
-  <option value="الوادي">الوادي</option>
-  <option value="خنشلة">خنشلة</option>
-  <option value="سوق أهراس">سوق أهراس</option>
-  <option value="تيبازة">تيبازة</option>
-  <option value="ميلة">ميلة</option>
-  <option value="عين الدفلى">عين الدفلى</option>
-  <option value="النعامة">النعامة</option>
-  <option value="عين تموشنت">عين تموشنت</option>
-  <option value="غرداية">غرداية</option>
-  <option value="غليزان">غليزان</option>
-  <option value="تيميمون">تيميمون</option>
-  <option value="برج باجي مختار">برج باجي مختار</option>
-  <option value="أولاد جلال">أولاد جلال</option>
-  <option value="بني عباس">بني عباس</option>
-  <option value="إن صالح">إن صالح</option>
-  <option value="إن قزام">إن قزام</option>
-  <option value="تقرت">تقرت</option>
-  <option value="جانت">جانت</option>
-  <option value="المغير">المغير</option>
-  <option value="المنيعة">المنيعة</option>
-
-</select>
-      
-
-
-        
+        </select>
 
 
         <button
-          class="search-button"
           id="searchButton"
+          class="search-button"
           type="button"
         >
           بحث عن فرص
@@ -945,45 +912,44 @@
       <div class="blue-line"></div>
 
       <p>
-        وظائف من مختلف مستويات قطاع الفندقة والمطاعم.
+        فرص مهنية من مختلف مستويات قطاع الفندقة والمطاعم.
       </p>
 
     </div>
 
 
-    <div class="jobs" id="jobsContainer">
-    </div>
+    <div class="jobs" id="jobsContainer"></div>
 
   </section>
 
 
   <!-- SECTORS -->
 
-  <section class="companies-section" id="sectors">
+  <section class="sectors-section" id="sectors">
 
     <div class="section">
 
       <div class="section-header">
 
         <h2>
-          قطاعات تبحث عن المواهب
+          قطاعات Job Link DZ
         </h2>
 
         <div class="blue-line"></div>
 
         <p>
-          نبدأ بالفندقة والمطاعم، وسنضيف قطاعات أخرى لاحقًا.
+          نبدأ بالفندقة والمطاعم مع إمكانية التوسع إلى قطاعات أخرى.
         </p>
 
       </div>
 
 
-      <div class="company-grid">
+      <div class="sector-grid">
 
 
-        <div class="company-card">
+        <div class="sector-card">
 
-          <div class="company-logo">
+          <div class="sector-icon">
             H
           </div>
 
@@ -998,9 +964,9 @@
         </div>
 
 
-        <div class="company-card">
+        <div class="sector-card">
 
-          <div class="company-logo">
+          <div class="sector-icon">
             R
           </div>
 
@@ -1015,9 +981,9 @@
         </div>
 
 
-        <div class="company-card">
+        <div class="sector-card">
 
-          <div class="company-logo">
+          <div class="sector-icon">
             IT
           </div>
 
@@ -1032,9 +998,9 @@
         </div>
 
 
-        <div class="company-card">
+        <div class="sector-card">
 
-          <div class="company-logo">
+          <div class="sector-icon">
             C
           </div>
 
@@ -1058,7 +1024,7 @@
 
   <!-- CTA -->
 
-  <section class="cta">
+  <section class="cta" id="about">
 
     <h2>
       مستعد لخطوتك القادمة؟
@@ -1094,7 +1060,7 @@
   </footer>
 
 
-  <!-- SEARCH ENGINE -->
+  <!-- ================= JOB DATABASE ================= -->
 
   <script>
 
@@ -1287,25 +1253,17 @@
     ];
 
 
-    const searchInput =
-      document.getElementById("searchInput");
-
-    const citySelect =
-      document.getElementById("citySelect");
-
-    const searchButton =
-      document.getElementById("searchButton");
+    /* ================= DISPLAY ================= */
 
     const jobsContainer =
       document.getElementById("jobsContainer");
 
 
-    function displayJobs(results) {
+    function showJobs(list) {
 
-      if (results.length === 0) {
+      if (list.length === 0) {
 
         jobsContainer.innerHTML = `
-
           <div style="
             grid-column: 1 / -1;
             text-align: center;
@@ -1321,11 +1279,10 @@
             </h3>
 
             <p>
-              جرّب البحث عن مهنة أخرى أو ولاية أخرى.
+              جرّب البحث عن مهنة أو ولاية أخرى.
             </p>
 
           </div>
-
         `;
 
         return;
@@ -1333,52 +1290,63 @@
 
 
       jobsContainer.innerHTML =
-        results.map(job => `
+        list.map(function(job) {
 
-          <div class="job-card">
+          return `
+            <div class="job-card">
 
-            <div class="company">
-              ${job.sector}
-            </div>
-
-            <h3>
-              ${job.title}
-            </h3>
-
-            <div class="job-info">
-
-              ${job.city}<br>
-
-              دوام كامل<br>
-
-              ${job.level}
-
-            </div>
-
-            <div class="tags">
-
-              <span class="tag">
-                ${job.type}
-              </span>
-
-              <span class="tag">
+              <div class="company">
                 ${job.sector}
-              </span>
+              </div>
+
+              <h3>
+                ${job.title}
+              </h3>
+
+              <div class="job-info">
+
+                ${job.city}<br>
+
+                دوام كامل<br>
+
+                ${job.level}
+
+              </div>
+
+              <div class="tags">
+
+                <span class="tag">
+                  ${job.type}
+                </span>
+
+                <span class="tag">
+                  ${job.sector}
+                </span>
+
+              </div>
+
+              <a href="#" class="apply">
+                عرض الوظيفة
+              </a>
 
             </div>
+          `;
 
-            <a
-              href="#"
-              class="apply"
-            >
-              عرض الوظيفة
-            </a>
-
-          </div>
-
-        `).join("");
+        }).join("");
 
     }
+
+
+    /* ================= SEARCH ================= */
+
+    const searchInput =
+      document.getElementById("searchInput");
+
+    const citySelect =
+      document.getElementById("citySelect");
+
+    const searchButton =
+      document.getElementById("searchButton");
 
 
     function searchJobs() {
@@ -1394,9 +1362,9 @@
 
 
       const results =
-        jobs.filter(job => {
+        jobs.filter(function(job) {
 
-          const searchableText =
+          const text =
             (
               job.title +
               " " +
@@ -1408,25 +1376,25 @@
             ).toLowerCase();
 
 
-          const matchesKeyword =
+          const keywordMatch =
             keyword === "" ||
-            searchableText.includes(keyword);
+            text.includes(keyword);
 
 
-          const matchesCity =
+          const cityMatch =
             city === "" ||
             job.city === city;
 
 
           return (
-            matchesKeyword &&
-            matchesCity
+            keywordMatch &&
+            cityMatch
           );
 
         });
 
 
-      displayJobs(results);
+      showJobs(results);
 
 
       document
@@ -1456,9 +1424,12 @@
     );
 
 
-    displayJobs(jobs);
+    /* ================= START ================= */
+
+    showJobs(jobs);
 
   </script>
 
 </body>
+
 </html>
