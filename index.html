@@ -4,147 +4,1072 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Job Link DZ | فرص العمل في الجزائر</title>
+  <title>Job Link DZ | منصة التوظيف الجزائرية</title>
+
+  <!-- Modern Arabic Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
-    body {
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #222;
+      padding: 0;
     }
+
+    body {
+      font-family: "Cairo", sans-serif;
+      background: #ffffff;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    /* ================= HEADER ================= */
 
     header {
-      background: #0b3d91;
-      color: white;
-      padding: 25px;
-      text-align: center;
+      height: 76px;
+      padding: 0 7%;
+      background: #ffffff;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      border-bottom: 1px solid #e5e7eb;
+
+      position: relative;
+      z-index: 10;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 32px;
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: #111827;
+      letter-spacing: -0.5px;
     }
 
-    header p {
-      margin: 10px 0 0;
-      font-size: 18px;
+    .logo span {
+      color: #2563eb;
     }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      color: #374151;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    .login {
+      border: 1px solid #2563eb;
+      color: #2563eb !important;
+      padding: 9px 17px;
+      border-radius: 7px;
+    }
+
+    .login:hover {
+      background: #2563eb;
+      color: #ffffff !important;
+    }
+
+    /* ================= HERO ================= */
 
     .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background: white;
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: #071a35;
     }
 
-    .hero h2 {
-      font-size: 30px;
-      margin-bottom: 15px;
+    /* Black & White Company Image + Cold Blue Overlay */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(7, 26, 53, 0.98) 0%,
+          rgba(7, 26, 53, 0.88) 45%,
+          rgba(7, 26, 53, 0.58) 100%
+        ),
+        url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=85");
+
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      filter: grayscale(100%);
+
+      transform: scale(1.02);
+
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+
+      width: 90%;
+      max-width: 1150px;
+
+      margin: auto;
+
+      color: #ffffff;
+      text-align: right;
+    }
+
+    .hero-label {
+      color: #60a5fa;
+      font-size: 14px;
+      font-weight: 700;
+
+      margin-bottom: 18px;
+
+      letter-spacing: 0.5px;
+    }
+
+    .hero h1 {
+      max-width: 720px;
+
+      font-size: 52px;
+      line-height: 1.25;
+
+      font-weight: 800;
+
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #60a5fa;
     }
 
     .hero p {
+      max-width: 650px;
+
+      color: #e5e7eb;
+
       font-size: 18px;
-      color: #555;
+      line-height: 1.9;
+
+      margin-bottom: 38px;
     }
 
-    .buttons {
-      margin-top: 30px;
+    /* ================= SEARCH ================= */
+
+    .search-panel {
+      max-width: 920px;
+
+      background: #ffffff;
+
+      padding: 9px;
+
+      border-radius: 10px;
+
+      display: flex;
+
+      gap: 8px;
+
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
     }
 
-    .button {
-      display: inline-block;
-      padding: 14px 25px;
-      margin: 8px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
+    .search-panel input,
+    .search-panel select {
+      flex: 1;
+
+      min-width: 190px;
+
+      padding: 16px;
+
+      border: none;
+
+      outline: none;
+
+      font-family: "Cairo", sans-serif;
+
+      font-size: 14px;
+
+      color: #111827;
+
+      background: #ffffff;
     }
 
-    .job {
-      background: #0b3d91;
-      color: white;
+    .search-panel input::placeholder {
+      color: #9ca3af;
+    }
+
+    .search-button {
+      border: none;
+
+      background: #2563eb;
+
+      color: #ffffff;
+
+      padding: 0 30px;
+
+      border-radius: 7px;
+
+      font-family: "Cairo", sans-serif;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition: 0.2s;
+    }
+
+    .search-button:hover {
+      background: #1d4ed8;
+    }
+
+    /* ================= STATS ================= */
+
+    .stats {
+      background: #111827;
+
+      color: #ffffff;
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      text-align: center;
+
+      padding: 30px 7%;
+    }
+
+    .stat {
+      border-left: 1px solid #374151;
+    }
+
+    .stat:last-child {
+      border-left: none;
+    }
+
+    .stat strong {
+      display: block;
+
+      color: #60a5fa;
+
+      font-size: 26px;
+
+      font-weight: 800;
+    }
+
+    .stat span {
+      color: #d1d5db;
+
+      font-size: 13px;
+    }
+
+    /* ================= SECTION ================= */
+
+    .section {
+      max-width: 1150px;
+
+      margin: auto;
+
+      padding: 75px 20px;
+    }
+
+    .section-header {
+      margin-bottom: 35px;
+    }
+
+    .section-header h2 {
+      color: #111827;
+
+      font-size: 30px;
+
+      font-weight: 800;
+    }
+
+    .section-header p {
+      color: #6b7280;
+
+      margin-top: 8px;
+
+      font-size: 14px;
+    }
+
+    .blue-line {
+      width: 55px;
+
+      height: 3px;
+
+      background: #2563eb;
+
+      margin-top: 13px;
+    }
+
+    /* ================= JOBS ================= */
+
+    .jobs {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 22px;
+    }
+
+    .job-card {
+      background: #ffffff;
+
+      border: 1px solid #e5e7eb;
+
+      border-radius: 12px;
+
+      padding: 25px;
+
+      transition: 0.25s;
+    }
+
+    .job-card:hover {
+      transform: translateY(-5px);
+
+      border-color: #bfdbfe;
+
+      box-shadow: 0 15px 35px rgba(37, 99, 235, 0.08);
     }
 
     .company {
-      background: #e9eef7;
-      color: #0b3d91;
+      color: #6b7280;
+
+      font-size: 13px;
+
+      margin-bottom: 10px;
     }
 
-    .section {
-      padding: 40px 20px;
+    .job-card h3 {
+      color: #111827;
+
+      font-size: 20px;
+
+      font-weight: 700;
+
+      margin-bottom: 10px;
+    }
+
+    .job-info {
+      color: #6b7280;
+
+      font-size: 13px;
+
+      line-height: 2;
+    }
+
+    .tags {
+      margin-top: 15px;
+    }
+
+    .tag {
+      display: inline-block;
+
+      background: #eff6ff;
+
+      color: #2563eb;
+
+      padding: 5px 10px;
+
+      border-radius: 20px;
+
+      font-size: 11px;
+
+      margin-left: 4px;
+    }
+
+    .apply {
+      display: block;
+
       text-align: center;
+
+      background: #111827;
+
+      color: #ffffff;
+
+      text-decoration: none;
+
+      padding: 12px;
+
+      border-radius: 7px;
+
+      margin-top: 20px;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      transition: 0.2s;
     }
 
-    .cards {
+    .apply:hover {
+      background: #2563eb;
+    }
+
+    /* ================= COMPANIES ================= */
+
+    .companies-section {
+      background: #f8fafc;
+
+      border-top: 1px solid #e5e7eb;
+
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .company-grid {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 18px;
+    }
+
+    .company-card {
+      background: #ffffff;
+
+      border: 1px solid #e5e7eb;
+
+      padding: 30px 15px;
+
+      border-radius: 10px;
+
+      text-align: center;
+
+      transition: 0.2s;
+    }
+
+    .company-card:hover {
+      border-color: #93c5fd;
+
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.07);
+    }
+
+    .company-logo {
+      width: 55px;
+
+      height: 55px;
+
+      margin: auto auto 14px;
+
       display: flex;
+
+      align-items: center;
+
       justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
+
+      background: #eff6ff;
+
+      color: #2563eb;
+
+      border-radius: 9px;
+
+      font-weight: 800;
+
+      font-size: 18px;
     }
 
-    .card {
-      background: white;
-      width: 260px;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    .company-card h3 {
+      color: #111827;
+
+      font-size: 14px;
     }
+
+    .company-card p {
+      color: #9ca3af;
+
+      font-size: 11px;
+
+      margin-top: 3px;
+    }
+
+    /* ================= CTA ================= */
+
+    .cta {
+      background: #eff6ff;
+
+      text-align: center;
+
+      padding: 75px 20px;
+
+      border-top: 1px solid #dbeafe;
+    }
+
+    .cta h2 {
+      color: #111827;
+
+      font-size: 32px;
+
+      font-weight: 800;
+
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      color: #6b7280;
+
+      margin-bottom: 25px;
+    }
+
+    .cta-button {
+      display: inline-block;
+
+      background: #2563eb;
+
+      color: #ffffff;
+
+      padding: 13px 28px;
+
+      border-radius: 7px;
+
+      text-decoration: none;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      transition: 0.2s;
+    }
+
+    .cta-button:hover {
+      background: #1d4ed8;
+    }
+
+    /* ================= FOOTER ================= */
 
     footer {
-      background: #0b3d91;
-      color: white;
+      background: #080d18;
+
+      color: #ffffff;
+
       text-align: center;
-      padding: 20px;
-      margin-top: 30px;
+
+      padding: 35px 20px;
     }
+
+    footer strong {
+      font-size: 20px;
+
+      color: #ffffff;
+    }
+
+    footer strong span {
+      color: #60a5fa;
+    }
+
+    footer p {
+      color: #9ca3af;
+
+      font-size: 12px;
+
+      margin-top: 8px;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 800px) {
+
+      header {
+        height: auto;
+
+        padding: 18px 5%;
+
+        gap: 15px;
+
+        flex-direction: column;
+      }
+
+      nav {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 14px;
+
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        min-height: 700px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .search-panel {
+        flex-direction: column;
+      }
+
+      .search-panel input,
+      .search-panel select,
+      .search-button {
+        width: 100%;
+
+        min-height: 52px;
+      }
+
+      .search-button {
+        padding: 14px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+      }
+
+      .stat {
+        border-left: none;
+
+        border-bottom: 1px solid #374151;
+
+        padding-bottom: 15px;
+      }
+
+      .stat:last-child {
+        border-bottom: none;
+      }
+
+      .jobs {
+        grid-template-columns: 1fr;
+      }
+
+      .company-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
   </style>
 </head>
 
+
 <body>
 
+
+  <!-- HEADER -->
+
   <header>
-    <h1>Job Link DZ</h1>
-    <p>منصة فرص العمل في الجزائر 🇩🇿</p>
+
+    <div class="logo">
+      JOB <span>LINK</span> DZ
+    </div>
+
+    <nav>
+
+      <a href="#">
+        الرئيسية
+      </a>
+
+      <a href="#">
+        الوظائف
+      </a>
+
+      <a href="#">
+        الشركات
+      </a>
+
+      <a href="#">
+        عن المنصة
+      </a>
+
+      <a href="#" class="login">
+        دخول / إنشاء حساب
+      </a>
+
+    </nav>
+
   </header>
 
-  <section class="hero">
-    <h2>ابحث عن فرصتك القادمة</h2>
-    <p>
-      Job Link DZ تربط الباحثين عن العمل بأصحاب المؤسسات والشركات في الجزائر.
-    </p>
 
-    <div class="buttons">
-      <a href="#" class="button job">أبحث عن عمل</a>
-      <a href="#" class="button company">أبحث عن موظفين</a>
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="hero-label">
+        منصة التوظيف الجزائرية
+      </div>
+
+      <h1>
+        ابنِ مستقبلك المهني
+        <span>مع أفضل الفرص</span>
+      </h1>
+
+      <p>
+        اكتشف الوظائف المناسبة لك،
+        وتواصل مع الشركات التي تبحث عن مهاراتك،
+        وابدأ خطوتك المهنية القادمة.
+      </p>
+
+      <div class="search-panel">
+
+        <input
+          type="text"
+          placeholder="ابحث عن وظيفة أو مهارة"
+        >
+
+        <select>
+
+          <option>
+            اختر الولاية
+          </option>
+
+          <option>سطيف</option>
+          <option>الجزائر</option>
+          <option>وهران</option>
+          <option>قسنطينة</option>
+          <option>عنابة</option>
+          <option>باتنة</option>
+          <option>بجاية</option>
+          <option>البليدة</option>
+
+        </select>
+
+        <button class="search-button">
+          بحث عن فرص
+        </button>
+
+      </div>
+
     </div>
+
   </section>
+
+
+  <!-- STATS -->
+
+  <section class="stats">
+
+    <div class="stat">
+
+      <strong>58</strong>
+
+      <span>
+        ولاية جزائرية
+      </span>
+
+    </div>
+
+    <div class="stat">
+
+      <strong>+ فرص</strong>
+
+      <span>
+        وظائف جديدة
+      </span>
+
+    </div>
+
+    <div class="stat">
+
+      <strong>+ شركات</strong>
+
+      <span>
+        تبحث عن المواهب
+      </span>
+
+    </div>
+
+  </section>
+
+
+  <!-- JOBS -->
 
   <section class="section">
-    <h2>لماذا Job Link DZ؟</h2>
 
-    <div class="cards">
+    <div class="section-header">
 
-      <div class="card">
-        <h3>🔎 فرص عمل</h3>
-        <p>اكتشف فرص العمل المناسبة لك في مختلف المجالات.</p>
+      <h2>
+        أحدث فرص العمل
+      </h2>
+
+      <div class="blue-line"></div>
+
+      <p>
+        اكتشف فرصًا جديدة تناسب مهاراتك وخبرتك.
+      </p>
+
+    </div>
+
+
+    <div class="jobs">
+
+
+      <div class="job-card">
+
+        <div class="company">
+          قطاع الفنادق والسياحة
+        </div>
+
+        <h3>
+          Chef de Rang
+        </h3>
+
+        <div class="job-info">
+          سطيف<br>
+          دوام كامل<br>
+          خبرة مطلوبة
+        </div>
+
+        <div class="tags">
+
+          <span class="tag">
+            CDI
+          </span>
+
+          <span class="tag">
+            Hôtellerie
+          </span>
+
+        </div>
+
+        <a href="#" class="apply">
+          عرض الوظيفة
+        </a>
+
       </div>
 
-      <div class="card">
-        <h3>🏢 شركات</h3>
-        <p>ساعد الشركات على الوصول إلى الكفاءات المناسبة.</p>
+
+      <div class="job-card">
+
+        <div class="company">
+          قطاع التكنولوجيا
+        </div>
+
+        <h3>
+          Développeur Web
+        </h3>
+
+        <div class="job-info">
+          الجزائر<br>
+          دوام كامل<br>
+          Junior
+        </div>
+
+        <div class="tags">
+
+          <span class="tag">
+            CDI
+          </span>
+
+          <span class="tag">
+            IT
+          </span>
+
+        </div>
+
+        <a href="#" class="apply">
+          عرض الوظيفة
+        </a>
+
       </div>
 
-      <div class="card">
-        <h3>🤝 ربط مباشر</h3>
-        <p>نهدف إلى تسهيل التواصل بين الباحثين عن العمل وأصحاب العمل.</p>
+
+      <div class="job-card">
+
+        <div class="company">
+          قطاع التجارة
+        </div>
+
+        <h3>
+          Assistant Commercial
+        </h3>
+
+        <div class="job-info">
+          قسنطينة<br>
+          دوام كامل<br>
+          مبتدئ
+        </div>
+
+        <div class="tags">
+
+          <span class="tag">
+            CDD
+          </span>
+
+          <span class="tag">
+            Commerce
+          </span>
+
+        </div>
+
+        <a href="#" class="apply">
+          عرض الوظيفة
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- SECTORS -->
+
+  <section class="companies-section">
+
+    <div class="section">
+
+      <div class="section-header">
+
+        <h2>
+          قطاعات تبحث عن المواهب
+        </h2>
+
+        <div class="blue-line"></div>
+
+        <p>
+          اكتشف المجالات التي توفر فرصًا مهنية في الجزائر.
+        </p>
+
+      </div>
+
+
+      <div class="company-grid">
+
+
+        <div class="company-card">
+
+          <div class="company-logo">
+            H
+          </div>
+
+          <h3>
+            الفنادق والسياحة
+          </h3>
+
+          <p>
+            Hospitality
+          </p>
+
+        </div>
+
+
+        <div class="company-card">
+
+          <div class="company-logo">
+            IT
+          </div>
+
+          <h3>
+            التكنولوجيا
+          </h3>
+
+          <p>
+            Technology
+          </p>
+
+        </div>
+
+
+        <div class="company-card">
+
+          <div class="company-logo">
+            C
+          </div>
+
+          <h3>
+            التجارة
+          </h3>
+
+          <p>
+            Commerce
+          </p>
+
+        </div>
+
+
+        <div class="company-card">
+
+          <div class="company-logo">
+            B
+          </div>
+
+          <h3>
+            البنوك والمالية
+          </h3>
+
+          <p>
+            Finance
+          </p>
+
+        </div>
+
+
       </div>
 
     </div>
+
   </section>
 
+
+  <!-- CTA -->
+
+  <section class="cta">
+
+    <h2>
+      مستعد لخطوتك القادمة؟
+    </h2>
+
+    <p>
+      ابدأ البحث عن فرصتك المهنية اليوم.
+    </p>
+
+    <a href="#" class="cta-button">
+      اكتشف الوظائف
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
   <footer>
-    <p>© 2026 Job Link DZ - جميع الحقوق محفوظة</p>
+
+    <strong>
+      JOB <span>LINK</span> DZ
+    </strong>
+
+    <p>
+      منصة التوظيف الجزائرية
+    </p>
+
+    <p>
+      © 2026 Job Link DZ
+    </p>
+
   </footer>
+
 
 </body>
 </html>
