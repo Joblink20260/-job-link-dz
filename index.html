@@ -7,10 +7,8 @@
 
   <title>Job Link DZ | منصة التوظيف الجزائرية</title>
 
-  <meta
-    name="description"
-    content="Job Link DZ - منصة التوظيف الجزائرية للباحثين عن العمل والشركات."
-  >
+  <meta name="description"
+        content="Job Link DZ - منصة التوظيف الجزائرية للباحثين عن العمل والشركات.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,19 +32,12 @@
 
     body {
       font-family: "Cairo", sans-serif;
-      background: #f5f7fa;
+      background: #ffffff;
       color: #111827;
-      line-height: 1.6;
     }
 
     a {
       text-decoration: none;
-    }
-
-    button,
-    input,
-    select {
-      font-family: inherit;
     }
 
     /* ================= HEADER ================= */
@@ -58,22 +49,18 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 25px;
 
       background: #ffffff;
       border-bottom: 1px solid #e5e7eb;
 
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      position: relative;
+      z-index: 10;
     }
 
     .logo {
       font-family: "Libre Baskerville", serif;
       font-size: 22px;
       font-weight: 700;
-
-      color: #111827;
       direction: ltr;
       white-space: nowrap;
     }
@@ -85,7 +72,7 @@
     nav {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 25px;
     }
 
     nav a {
@@ -98,64 +85,93 @@
       color: #2563eb;
     }
 
-    .nav-login {
+    .login-btn {
       border: 1px solid #2563eb;
-      color: #2563eb !important;
-      padding: 9px 16px;
+      color: #2563eb;
+      padding: 9px 17px;
       border-radius: 7px;
     }
 
-    .nav-login:hover {
+    .login-btn:hover {
       background: #2563eb;
-      color: #ffffff !important;
-    }
-
-    .nav-register {
-      background: #2563eb;
-      color: #ffffff !important;
-      padding: 10px 17px;
-      border-radius: 7px;
-    }
-
-    .nav-register:hover {
-      background: #1d4ed8;
+      color: #ffffff;
     }
 
     /* ================= HERO ================= */
 
     .hero {
+      min-height: 620px;
+
+      display: flex;
+      align-items: center;
+
+      position: relative;
+      overflow: hidden;
+
       background: #071a35;
-      color: #ffffff;
-      padding: 95px 20px 105px;
+    }
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background-image:
+        url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80");
+
+      background-size: cover;
+      background-position: center;
+
+      filter: grayscale(100%);
+
+      transform: scale(1.03);
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(7,26,53,0.97),
+          rgba(7,26,53,0.82),
+          rgba(7,26,53,0.45)
+        );
     }
 
     .hero-content {
+      position: relative;
+      z-index: 2;
+
+      width: 90%;
       max-width: 1150px;
+
       margin: auto;
+
+      color: #ffffff;
     }
 
     .hero-label {
       color: #60a5fa;
+
       font-size: 14px;
       font-weight: 700;
+
       margin-bottom: 18px;
     }
 
-    .hero-label span {
-      display: block;
-      color: #bfdbfe;
-      font-family: "Libre Baskerville", serif;
-      font-size: 10px;
-      margin-top: 5px;
-      letter-spacing: 1px;
-      direction: ltr;
-    }
-
     .hero h1 {
-      max-width: 800px;
+      max-width: 750px;
+
       font-size: 50px;
       line-height: 1.3;
+
       font-weight: 800;
+
       margin-bottom: 20px;
     }
 
@@ -163,141 +179,137 @@
       color: #60a5fa;
     }
 
-    .hero-text {
-      max-width: 680px;
-      color: #dbeafe;
+    .hero p {
+      max-width: 650px;
+
+      color: #e5e7eb;
+
       font-size: 17px;
       line-height: 1.9;
+
       margin-bottom: 35px;
     }
 
-    /* SEARCH */
+    /* ================= SEARCH ================= */
 
     .search-box {
-      max-width: 950px;
+      max-width: 900px;
 
-      display: grid;
-      grid-template-columns: 1.5fr 1fr auto;
+      display: flex;
+      gap: 8px;
 
       background: #ffffff;
-      padding: 8px;
+
+      padding: 9px;
+
       border-radius: 10px;
 
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
     }
 
     .search-box input,
     .search-box select {
+      flex: 1;
+
+      min-width: 200px;
+
       border: none;
       outline: none;
+
       padding: 15px;
-      font-size: 14px;
-      color: #111827;
+
       background: #ffffff;
+
+      color: #111827;
+
+      font-family: "Cairo", sans-serif;
+      font-size: 14px;
     }
 
-    .search-box button {
+    .search-button {
       border: none;
+
       background: #2563eb;
       color: #ffffff;
+
       padding: 0 28px;
+
       border-radius: 7px;
+
+      font-family: "Cairo", sans-serif;
+
       font-weight: 700;
+
       cursor: pointer;
     }
 
-    .search-box button:hover {
+    .search-button:hover {
       background: #1d4ed8;
-    }
-
-    /* ================= QUICK ACTIONS ================= */
-
-    .quick-actions {
-      max-width: 950px;
-      margin: 25px auto 0;
-
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .quick-actions a {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.18);
-      color: #ffffff;
-
-      padding: 9px 15px;
-      border-radius: 6px;
-
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .quick-actions a:hover {
-      background: #2563eb;
-      border-color: #2563eb;
     }
 
     /* ================= STATS ================= */
 
     .stats {
-      background: #111827;
-      color: #ffffff;
-
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+
+      background: #111827;
+
+      color: #ffffff;
+
+      text-align: center;
 
       padding: 28px 7%;
     }
 
-    .stat {
-      text-align: center;
-      border-left: 1px solid #374151;
-    }
-
-    .stat:last-child {
-      border-left: none;
-    }
-
     .stat strong {
       display: block;
+
       color: #60a5fa;
+
       font-size: 25px;
       font-weight: 800;
     }
 
     .stat span {
       color: #d1d5db;
+
       font-size: 13px;
     }
 
-    /* ================= MAIN ================= */
+    /* ================= SECTION ================= */
 
     .section {
       max-width: 1150px;
+
       margin: auto;
+
       padding: 70px 20px;
     }
 
-    .section-header {
-      margin-bottom: 30px;
+    .section-title {
+      margin-bottom: 35px;
     }
 
-    .section-header h2 {
-      font-size: 29px;
+    .section-title h2 {
+      font-size: 30px;
       font-weight: 800;
     }
 
-    .section-header p {
+    .section-title p {
       color: #6b7280;
-      font-size: 14px;
+
       margin-top: 7px;
+
+      font-size: 14px;
     }
 
     .blue-line {
       width: 55px;
       height: 3px;
+
       background: #2563eb;
+
       margin-top: 12px;
     }
 
@@ -305,215 +317,150 @@
 
     .jobs {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
+
       gap: 20px;
     }
 
     .job-card {
-      background: #ffffff;
       border: 1px solid #e5e7eb;
+
       border-radius: 12px;
-      padding: 23px;
+
+      padding: 24px;
+
+      background: #ffffff;
+
       transition: 0.2s;
     }
 
     .job-card:hover {
+      border-color: #bfdbfe;
+
+      box-shadow:
+        0 15px 35px rgba(37,99,235,0.08);
+
       transform: translateY(-4px);
-      border-color: #93c5fd;
-      box-shadow: 0 12px 30px rgba(15,23,42,0.08);
     }
 
-    .job-sector {
-      color: #2563eb;
-      font-size: 11px;
-      font-weight: 700;
+    .job-company {
+      color: #6b7280;
+
+      font-size: 12px;
+
       margin-bottom: 8px;
     }
 
     .job-card h3 {
       font-family: "Libre Baskerville", serif;
+
+      font-size: 18px;
+
+      margin-bottom: 10px;
+
       direction: ltr;
       text-align: right;
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .job-company {
-      color: #6b7280;
-      font-size: 13px;
-      margin-bottom: 10px;
     }
 
     .job-info {
       color: #6b7280;
-      font-size: 12px;
+
+      font-size: 13px;
+
       line-height: 2;
     }
 
-    .tags {
+    .job-tag {
+      display: inline-block;
+
+      background: #eff6ff;
+      color: #2563eb;
+
+      padding: 4px 9px;
+
+      border-radius: 20px;
+
+      font-size: 11px;
+
       margin-top: 12px;
     }
 
-    .tag {
-      display: inline-block;
-      background: #eff6ff;
-      color: #2563eb;
-      padding: 4px 9px;
-      border-radius: 20px;
-      font-size: 10px;
-      margin-left: 4px;
-    }
+    /* ================= COMPANY CTA ================= */
 
-    .job-button {
-      display: block;
-      margin-top: 17px;
-
-      background: #111827;
-      color: #ffffff;
-
-      text-align: center;
-
-      padding: 10px;
-      border-radius: 7px;
-
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .job-button:hover {
-      background: #2563eb;
-    }
-
-    .all-jobs {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .all-jobs a {
-      display: inline-block;
-      border: 1px solid #2563eb;
-      color: #2563eb;
-      padding: 11px 25px;
-      border-radius: 7px;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .all-jobs a:hover {
-      background: #2563eb;
-      color: #ffffff;
-    }
-
-    /* ================= SECTORS ================= */
-
-    .sectors-section {
+    .company-section {
       background: #f8fafc;
+
       border-top: 1px solid #e5e7eb;
       border-bottom: 1px solid #e5e7eb;
     }
 
-    .sector-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 17px;
-    }
-
-    .sector-card {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 10px;
-      padding: 27px 15px;
-      text-align: center;
-    }
-
-    .sector-icon {
-      width: 50px;
-      height: 50px;
-      margin: auto auto 12px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      background: #eff6ff;
-      color: #2563eb;
-
-      border-radius: 9px;
-
-      font-family: "Libre Baskerville", serif;
-      font-weight: 700;
-    }
-
-    .sector-card h3 {
-      font-size: 14px;
-    }
-
-    .sector-card p {
-      color: #9ca3af;
-      font-size: 10px;
-      margin-top: 4px;
-    }
-
-    /* ================= FOR COMPANIES ================= */
-
-    .companies {
-      background: #ffffff;
-    }
-
     .company-box {
-      background: #071a35;
-      color: #ffffff;
+      max-width: 1150px;
 
-      border-radius: 14px;
-      padding: 50px;
+      margin: auto;
+
+      padding: 70px 20px;
 
       display: flex;
+
       align-items: center;
       justify-content: space-between;
+
       gap: 30px;
     }
 
     .company-box h2 {
-      font-size: 28px;
+      font-size: 30px;
+
       margin-bottom: 10px;
     }
 
     .company-box p {
-      color: #cbd5e1;
-      font-size: 14px;
+      color: #6b7280;
+
       max-width: 600px;
+
+      font-size: 14px;
     }
 
     .company-button {
-      flex-shrink: 0;
+      background: #111827;
 
-      background: #2563eb;
       color: #ffffff;
 
-      padding: 13px 24px;
+      padding: 13px 25px;
+
       border-radius: 7px;
 
-      font-size: 13px;
+      font-size: 14px;
+
       font-weight: 700;
+
+      white-space: nowrap;
     }
 
     .company-button:hover {
-      background: #1d4ed8;
+      background: #2563eb;
     }
 
     /* ================= FOOTER ================= */
 
     footer {
       background: #080d18;
+
       color: #ffffff;
+
       text-align: center;
+
       padding: 35px 20px;
     }
 
     footer strong {
-      display: block;
       font-family: "Libre Baskerville", serif;
+
       font-size: 19px;
+
       direction: ltr;
     }
 
@@ -523,96 +470,83 @@
 
     footer p {
       color: #9ca3af;
-      font-size: 11px;
-      margin-top: 7px;
+
+      font-size: 12px;
+
+      margin-top: 8px;
     }
 
     /* ================= MOBILE ================= */
 
-    @media (max-width: 850px) {
+    @media (max-width: 800px) {
 
       header {
-        padding: 17px 5%;
+        padding: 18px 5%;
+
         flex-direction: column;
+
+        gap: 15px;
       }
 
       nav {
-        justify-content: center;
         flex-wrap: wrap;
-        gap: 10px;
+
+        justify-content: center;
+
+        gap: 12px;
       }
 
       .hero {
-        padding: 70px 20px;
+        min-height: 700px;
+      }
+
+      .hero-content {
+        text-align: center;
       }
 
       .hero h1 {
-        font-size: 36px;
+        font-size: 35px;
       }
 
       .search-box {
-        grid-template-columns: 1fr;
+        flex-direction: column;
       }
 
       .search-box input,
       .search-box select,
-      .search-box button {
-        min-height: 50px;
+      .search-button {
         width: 100%;
-      }
-
-      .search-box button {
-        padding: 12px;
+        min-height: 52px;
       }
 
       .stats {
         grid-template-columns: 1fr;
+
         gap: 18px;
-      }
-
-      .stat {
-        border-left: none;
-        border-bottom: 1px solid #374151;
-        padding-bottom: 15px;
-      }
-
-      .stat:last-child {
-        border-bottom: none;
       }
 
       .jobs {
         grid-template-columns: 1fr;
       }
 
-      .sector-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
       .company-box {
         flex-direction: column;
+
         text-align: center;
-        padding: 35px 22px;
-      }
-    }
-
-    @media (max-width: 450px) {
-
-      .sector-grid {
-        grid-template-columns: 1fr;
       }
 
-      .hero h1 {
-        font-size: 31px;
-      }
+      .company-button {
+        width: 100%;
 
+        text-align: center;
+      }
     }
 
   </style>
+
 </head>
 
-
 <body>
-
 
 <!-- ================= HEADER ================= -->
 
@@ -628,20 +562,18 @@
       الرئيسية
     </a>
 
-    <a href="jobs.html">
+    <a href="#jobs">
       الوظائف
     </a>
 
-    <a href="#sectors">
-      القطاعات
+    <a href="#companies">
+      للشركات
     </a>
 
-    <a href="login.html" class="nav-login">
-      تسجيل الدخول
-    </a>
+    <!-- الرابط الصحيح -->
 
-    <a href="register.html" class="nav-register">
-      إنشاء حساب
+    <a href="login.html" class="login-btn">
+      دخول / إنشاء حساب
     </a>
 
   </nav>
@@ -656,34 +588,29 @@
   <div class="hero-content">
 
     <div class="hero-label">
-
       منصة التوظيف الجزائرية
-
-      <span>
-        JOB LINK DZ
-      </span>
-
     </div>
-
 
     <h1>
 
       ابنِ مستقبلك المهني
+
       <span>
         مع الفرصة المناسبة
       </span>
 
     </h1>
 
+    <p>
 
-    <p class="hero-text">
-
-      ابحث عن وظيفة في الجزائر،
-      اكتشف الشركات،
-      وطوّر مسارك المهني من خلال منصة واحدة.
+      ابحث عن الوظيفة المناسبة لك،
+      واكتشف الشركات التي تبحث عن مهاراتك،
+      وابدأ خطوتك المهنية القادمة.
 
     </p>
 
+
+    <!-- SEARCH -->
 
     <div class="search-box">
 
@@ -696,50 +623,39 @@
       <select id="citySelect">
 
         <option value="">
-          كل الولايات
+          اختر الولاية
         </option>
 
         <option>الجزائر</option>
-        <option>سطيف</option>
         <option>وهران</option>
+        <option>سطيف</option>
         <option>قسنطينة</option>
         <option>عنابة</option>
         <option>باتنة</option>
         <option>بجاية</option>
         <option>البليدة</option>
         <option>تيزي وزو</option>
-        <option>بسكرة</option>
-        <option>برج بوعريريج</option>
         <option>تلمسان</option>
-        <option>سكيكدة</option>
+        <option>بسكرة</option>
         <option>ورقلة</option>
-        <option>غرداية</option>
+        <option>أدرار</option>
+        <option>الشلف</option>
+        <option>البويرة</option>
+        <option>جيجل</option>
+        <option>سكيكدة</option>
+        <option>مستغانم</option>
+        <option>بومرداس</option>
+        <option>تيبازة</option>
 
       </select>
 
       <button
-        id="searchButton"
         type="button"
+        class="search-button"
+        id="searchButton"
       >
         بحث عن فرص
       </button>
-
-    </div>
-
-
-    <div class="quick-actions">
-
-      <a href="jobs.html">
-        تصفح جميع الوظائف
-      </a>
-
-      <a href="register.html">
-        إنشاء ملف مهني
-      </a>
-
-      <a href="post-job.html">
-        للشركات: نشر وظيفة
-      </a>
 
     </div>
 
@@ -754,9 +670,7 @@
 
   <div class="stat">
 
-    <strong>
-      58
-    </strong>
+    <strong>58</strong>
 
     <span>
       ولاية جزائرية
@@ -764,28 +678,22 @@
 
   </div>
 
-
   <div class="stat">
 
-    <strong>
-      20+
-    </strong>
+    <strong>+ فرص</strong>
 
     <span>
-      مهنة في النسخة التجريبية
+      وظائف جديدة
     </span>
 
   </div>
 
-
   <div class="stat">
 
-    <strong>
-      2026
-    </strong>
+    <strong>+ شركات</strong>
 
     <span>
-      بداية Job Link DZ
+      تبحث عن المواهب
     </span>
 
   </div>
@@ -797,7 +705,7 @@
 
 <section class="section" id="jobs">
 
-  <div class="section-header">
+  <div class="section-title">
 
     <h2>
       أحدث فرص العمل
@@ -806,155 +714,49 @@
     <div class="blue-line"></div>
 
     <p>
-      اكتشف بعض الفرص الموجودة في النسخة التجريبية للمنصة.
+      اكتشف بعض الفرص المهنية المتاحة على Job Link DZ.
     </p>
 
   </div>
 
 
-  <div class="jobs" id="jobsContainer"></div>
-
-
-  <div class="all-jobs">
-
-    <a href="jobs.html">
-      مشاهدة جميع الوظائف
-    </a>
+  <div class="jobs" id="jobsContainer">
 
   </div>
 
 </section>
 
 
-<!-- ================= SECTORS ================= -->
+<!-- ================= COMPANIES ================= -->
 
-<section class="sectors-section" id="sectors">
+<section class="company-section" id="companies">
 
-  <div class="section">
+  <div class="company-box">
 
-    <div class="section-header">
+    <div>
 
       <h2>
-        قطاعات Job Link DZ
+        أنت شركة؟
       </h2>
 
-      <div class="blue-line"></div>
-
       <p>
-        نبدأ بمجموعة من القطاعات مع إمكانية التوسع مستقبلاً.
+
+        أنشئ حساب شركتك على Job Link DZ،
+        وانشر عروض العمل للوصول إلى المرشحين المناسبين.
+
       </p>
 
     </div>
 
 
-    <div class="sector-grid">
+    <!-- لاحقًا سنربطه بحساب الشركة -->
 
-
-      <div class="sector-card">
-
-        <div class="sector-icon">
-          H
-        </div>
-
-        <h3>
-          الفنادق
-        </h3>
-
-        <p>
-          Hospitality
-        </p>
-
-      </div>
-
-
-      <div class="sector-card">
-
-        <div class="sector-icon">
-          R
-        </div>
-
-        <h3>
-          المطاعم
-        </h3>
-
-        <p>
-          Restauration
-        </p>
-
-      </div>
-
-
-      <div class="sector-card">
-
-        <div class="sector-icon">
-          IT
-        </div>
-
-        <h3>
-          التكنولوجيا
-        </h3>
-
-        <p>
-          Technology
-        </p>
-
-      </div>
-
-
-      <div class="sector-card">
-
-        <div class="sector-icon">
-          C
-        </div>
-
-        <h3>
-          التجارة
-        </h3>
-
-        <p>
-          Commerce
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ================= COMPANY CTA ================= -->
-
-<section class="companies">
-
-  <div class="section">
-
-    <div class="company-box">
-
-      <div>
-
-        <h2>
-          هل تمثل شركة؟
-        </h2>
-
-        <p>
-          أنشئ حضور شركتك على Job Link DZ،
-          وانشر فرص العمل للوصول إلى المرشحين المناسبين.
-        </p>
-
-      </div>
-
-
-      <a
-        href="post-job.html"
-        class="company-button"
-      >
-        نشر وظيفة
-      </a>
-
-    </div>
+    <a
+      href="register.html"
+      class="company-button"
+    >
+      إنشاء حساب شركة
+    </a>
 
   </div>
 
@@ -988,49 +790,43 @@
 
     {
       title: "Chef de Rang",
-      company: "Hôtel",
+      company: "Hotel",
       city: "سطيف",
-      sector: "Hôtellerie & Restauration",
       type: "CDI"
     },
 
     {
       title: "Réceptionniste",
-      company: "Hôtel",
+      company: "Hotel",
       city: "الجزائر",
-      sector: "Hôtellerie",
+      type: "CDI"
+    },
+
+    {
+      title: "Serveur / Serveuse",
+      company: "Restaurant",
+      city: "وهران",
       type: "CDD"
     },
 
     {
       title: "Chef de Cuisine",
-      company: "Restaurant",
-      city: "وهران",
-      sector: "Restauration",
+      company: "Hotel",
+      city: "قسنطينة",
       type: "CDI"
     },
 
     {
-      title: "Serveur",
+      title: "Commis de Cuisine",
       company: "Restaurant",
-      city: "قسنطينة",
-      sector: "Restauration",
+      city: "سطيف",
       type: "CDD"
     },
 
     {
-      title: "Gouvernante",
-      company: "Hôtel",
-      city: "عنابة",
-      sector: "Hôtellerie",
-      type: "CDI"
-    },
-
-    {
-      title: "Chef de Partie",
-      company: "Hôtel",
-      city: "سطيف",
-      sector: "Cuisine",
+      title: "Responsable F&B",
+      company: "Hotel",
+      city: "الجزائر",
       type: "CDI"
     }
 
@@ -1041,53 +837,67 @@
     document.getElementById("jobsContainer");
 
 
-  function showJobs(list) {
+  function displayJobs(list) {
+
+    if (list.length === 0) {
+
+      jobsContainer.innerHTML = `
+
+        <div style="
+          grid-column:1/-1;
+          text-align:center;
+          padding:50px;
+          color:#6b7280;
+        ">
+
+          <h3 style="
+            color:#111827;
+            margin-bottom:8px;
+          ">
+            لا توجد وظائف مطابقة
+          </h3>
+
+          <p>
+            جرّب البحث عن مهنة أو ولاية أخرى.
+          </p>
+
+        </div>
+
+      `;
+
+      return;
+    }
+
 
     jobsContainer.innerHTML =
+
       list.map(function(job) {
 
         return `
 
           <div class="job-card">
 
-            <div class="job-sector">
-              ${job.sector}
+            <div class="job-company">
+              ${job.company}
             </div>
 
             <h3>
               ${job.title}
             </h3>
 
-            <div class="job-company">
-              ${job.company}
-            </div>
-
             <div class="job-info">
 
-              ${job.city}<br>
+              الولاية: ${job.city}<br>
+
+              نوع العقد: ${job.type}<br>
 
               دوام كامل
 
             </div>
 
-            <div class="tags">
-
-              <span class="tag">
-                ${job.type}
-              </span>
-
-              <span class="tag">
-                ${job.sector}
-              </span>
-
-            </div>
-
-            <a
-              href="jobs.html"
-              class="job-button"
-            >
-              عرض الوظيفة
-            </a>
+            <span class="job-tag">
+              ${job.type}
+            </span>
 
           </div>
 
@@ -1098,29 +908,20 @@
   }
 
 
-  showJobs(jobs);
-
-
-  const searchInput =
-    document.getElementById("searchInput");
-
-  const citySelect =
-    document.getElementById("citySelect");
-
-  const searchButton =
-    document.getElementById("searchButton");
-
-
   function searchJobs() {
 
     const keyword =
-      searchInput.value
+      document
+        .getElementById("searchInput")
+        .value
         .trim()
         .toLowerCase();
 
 
     const city =
-      citySelect.value;
+      document
+        .getElementById("citySelect")
+        .value;
 
 
     const results =
@@ -1132,9 +933,7 @@
             " " +
             job.company +
             " " +
-            job.city +
-            " " +
-            job.sector
+            job.city
           ).toLowerCase();
 
 
@@ -1153,37 +952,7 @@
       });
 
 
-    if (results.length === 0) {
-
-      jobsContainer.innerHTML = `
-
-        <div style="
-          grid-column: 1 / -1;
-          text-align: center;
-          padding: 50px 20px;
-          color: #6b7280;
-        ">
-
-          <h3 style="
-            color: #111827;
-            margin-bottom: 8px;
-          ">
-            لا توجد وظائف مطابقة
-          </h3>
-
-          <p>
-            جرّب مهنة أو ولاية أخرى.
-          </p>
-
-        </div>
-
-      `;
-
-    } else {
-
-      showJobs(results);
-
-    }
+    displayJobs(results);
 
 
     document
@@ -1195,25 +964,31 @@
   }
 
 
-  searchButton.addEventListener(
-    "click",
-    searchJobs
-  );
+  document
+    .getElementById("searchButton")
+    .addEventListener(
+      "click",
+      searchJobs
+    );
 
 
-  searchInput.addEventListener(
-    "keydown",
-    function(event) {
+  document
+    .getElementById("searchInput")
+    .addEventListener(
+      "keydown",
+      function(event) {
 
-      if (event.key === "Enter") {
-        searchJobs();
+        if (event.key === "Enter") {
+          searchJobs();
+        }
+
       }
+    );
 
-    }
-  );
+
+  displayJobs(jobs);
 
 </script>
-
 
 </body>
 
