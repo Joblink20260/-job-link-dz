@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Post a Job | Job Link DZ</title>
+  <title>نشر وظيفة | Job Link DZ</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,6 @@
   >
 
   <style>
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -30,17 +29,13 @@
       min-height: 100vh;
     }
 
-    /* HEADER */
-
     header {
       min-height: 76px;
       padding: 15px 7%;
-
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-
       background: #ffffff;
       border-bottom: 1px solid #e5e7eb;
     }
@@ -57,18 +52,22 @@
       color: #2563eb;
     }
 
-    .back {
-      color: #2563eb;
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #374151;
       text-decoration: none;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
     }
 
-    .back:hover {
-      color: #1d4ed8;
+    nav a:hover {
+      color: #2563eb;
     }
-
-    /* PAGE */
 
     .page {
       width: 92%;
@@ -82,10 +81,8 @@
     }
 
     .title h1 {
-      font-family: "Cairo", sans-serif;
       font-size: 34px;
       font-weight: 800;
-      color: #111827;
     }
 
     .title h1 span {
@@ -98,7 +95,7 @@
       direction: ltr;
       margin-top: 10px;
       color: #374151;
-      font-size: 18px;
+      font-size: 17px;
     }
 
     .title p {
@@ -107,16 +104,12 @@
       font-size: 14px;
     }
 
-    /* FORM CARD */
-
     .form-card {
       background: #ffffff;
       border: 1px solid #e5e7eb;
       border-radius: 14px;
       padding: 35px;
-
-      box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
     }
 
     .form-section {
@@ -124,25 +117,12 @@
     }
 
     .form-section h2 {
-      font-family: "Cairo", sans-serif;
       font-size: 19px;
       font-weight: 800;
       margin-bottom: 20px;
       color: #111827;
-
       border-right: 3px solid #2563eb;
       padding-right: 10px;
-    }
-
-    .form-section h2.english {
-      font-family: "Libre Baskerville", serif;
-      direction: ltr;
-      text-align: left;
-
-      border-right: none;
-      border-left: 3px solid #2563eb;
-      padding-left: 10px;
-      padding-right: 0;
     }
 
     .grid {
@@ -167,28 +147,17 @@
       color: #374151;
     }
 
-    label.english {
-      font-family: "Libre Baskerville", serif;
-      direction: ltr;
-      text-align: left;
-    }
-
     input,
     select,
     textarea {
       width: 100%;
-
       padding: 13px 14px;
-
       border: 1px solid #d1d5db;
       border-radius: 7px;
-
       background: #ffffff;
       color: #111827;
-
       font-family: "Cairo", sans-serif;
       font-size: 14px;
-
       outline: none;
       transition: 0.2s;
     }
@@ -197,9 +166,7 @@
     select:focus,
     textarea:focus {
       border-color: #2563eb;
-
-      box-shadow:
-        0 0 0 3px rgba(37, 99, 235, 0.08);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
     }
 
     textarea {
@@ -207,35 +174,22 @@
       resize: vertical;
     }
 
-    .hint {
-      color: #9ca3af;
-      font-size: 11px;
-    }
-
-    /* BUTTON */
-
     .submit-area {
       border-top: 1px solid #e5e7eb;
       padding-top: 25px;
-
       display: flex;
       justify-content: flex-end;
     }
 
     .submit-button {
       border: none;
-
       background: #2563eb;
       color: #ffffff;
-
       padding: 14px 35px;
-
       border-radius: 7px;
-
       font-family: "Cairo", sans-serif;
       font-size: 14px;
       font-weight: 700;
-
       cursor: pointer;
       transition: 0.2s;
     }
@@ -244,34 +198,21 @@
       background: #1d4ed8;
     }
 
-    /* MESSAGE */
-
     #message {
       display: none;
-
       margin-top: 20px;
       padding: 15px;
-
       border-radius: 8px;
-
-      background: #eff6ff;
-      color: #1d4ed8;
-
       text-align: center;
-
       font-size: 13px;
       font-weight: 600;
     }
 
-    /* FOOTER */
-
     footer {
       margin-top: 60px;
       padding: 30px 20px;
-
       background: #080d18;
       color: #ffffff;
-
       text-align: center;
     }
 
@@ -291,12 +232,16 @@
       margin-top: 7px;
     }
 
-    /* MOBILE */
-
     @media (max-width: 700px) {
 
       header {
         padding: 15px 5%;
+        flex-direction: column;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       .page {
@@ -327,491 +272,410 @@
       .submit-button {
         width: 100%;
       }
-
     }
-
   </style>
-
 </head>
-
 
 <body>
 
+<header>
 
-  <!-- HEADER -->
+  <div class="logo">
+    JOB <span>LINK</span> DZ
+  </div>
 
-  <header>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="jobs.html">الوظائف</a>
+  </nav>
 
-    <div class="logo">
-      JOB <span>LINK</span> DZ
+</header>
+
+<main class="page">
+
+  <div class="title">
+
+    <h1>
+      نشر <span>وظيفة</span>
+    </h1>
+
+    <div class="english-title">
+      Post a Job
     </div>
 
-    <a
-      href="index.html"
-      class="back"
-    >
-      العودة إلى الرئيسية
-    </a>
-
-  </header>
-
-
-  <!-- PAGE -->
-
-  <main class="page">
-
-
-    <div class="title">
-
-      <h1>
-        نشر <span>وظيفة</span>
-      </h1>
-
-      <div class="english-title">
-        Post a Job
-      </div>
-
-      <div class="french-title">
-        Publier une offre d'emploi
-      </div>
-
-      <p>
-        ساعد شركتك على الوصول إلى المواهب المناسبة في الجزائر.
-      </p>
-
+    <div class="french-title">
+      Publier une offre d'emploi
     </div>
 
+    <p>
+      ساعد شركتك على الوصول إلى المواهب المناسبة في الجزائر.
+    </p>
 
-    <div class="form-card">
+  </div>
 
+  <div class="form-card">
 
-      <!-- COMPANY -->
+    <div class="form-section">
 
-      <div class="form-section">
+      <h2>معلومات الشركة</h2>
 
-        <h2>
-          معلومات الشركة
-        </h2>
+      <div class="grid">
 
-        <h2 class="english">
-          Company Information
-        </h2>
+        <div class="field">
+          <label for="companyName">اسم الشركة</label>
 
+          <input
+            id="companyName"
+            type="text"
+            placeholder="مثال: Hotel XYZ"
+          >
+        </div>
 
-        <div class="grid">
+        <div class="field">
 
+          <label for="companySector">القطاع</label>
 
-          <div class="field">
+          <select id="companySector">
 
-            <label for="companyName">
-              اسم الشركة
-            </label>
+            <option value="">اختر القطاع</option>
+            <option>الفنادق</option>
+            <option>المطاعم</option>
+            <option>السياحة</option>
+            <option>التكنولوجيا</option>
+            <option>التجارة</option>
+            <option>البنوك والمالية</option>
+            <option>النقل واللوجستيك</option>
+            <option>البناء والأشغال العمومية</option>
+            <option>الصحة</option>
+            <option>قطاعات أخرى</option>
 
-            <input
-              id="companyName"
-              type="text"
-              placeholder="مثال: Hotel XYZ"
-            >
-
-          </div>
-
-
-          <div class="field">
-
-            <label for="companySector">
-              القطاع
-            </label>
-
-            <select id="companySector">
-
-              <option value="">
-                اختر القطاع
-              </option>
-
-              <option>
-                الفنادق
-              </option>
-
-              <option>
-                المطاعم
-              </option>
-
-              <option>
-                السياحة
-              </option>
-
-              <option>
-                التكنولوجيا
-              </option>
-
-              <option>
-                التجارة
-              </option>
-
-              <option>
-                البنوك والمالية
-              </option>
-
-              <option>
-                النقل واللوجستيك
-              </option>
-
-              <option>
-                البناء والأشغال العمومية
-              </option>
-
-              <option>
-                الصحة
-              </option>
-
-              <option>
-                قطاعات أخرى
-              </option>
-
-            </select>
-
-          </div>
-
+          </select>
 
         </div>
 
       </div>
 
+    </div>
 
-      <!-- JOB -->
+    <div class="form-section">
 
-      <div class="form-section">
+      <h2>معلومات الوظيفة</h2>
 
-        <h2>
-          معلومات الوظيفة
-        </h2>
+      <div class="grid">
 
-        <h2 class="english">
-          Job Information
-        </h2>
+        <div class="field">
 
+          <label for="jobTitle">المسمى الوظيفي</label>
 
-        <div class="grid">
+          <input
+            id="jobTitle"
+            type="text"
+            placeholder="مثال: Chef de Rang"
+          >
 
+        </div>
 
-          <div class="field">
+        <div class="field">
 
-            <label for="jobTitle">
-              المسمى الوظيفي
-            </label>
+          <label for="city">الولاية</label>
 
-            <input
-              id="jobTitle"
-              type="text"
-              placeholder="مثال: Chef de Rang"
-            >
+          <select id="city">
 
-          </div>
+            <option value="">اختر الولاية</option>
 
+            <option>أدرار</option>
+            <option>الشلف</option>
+            <option>الأغواط</option>
+            <option>أم البواقي</option>
+            <option>باتنة</option>
+            <option>بجاية</option>
+            <option>بسكرة</option>
+            <option>بشار</option>
+            <option>البليدة</option>
+            <option>البويرة</option>
+            <option>تمنراست</option>
+            <option>تبسة</option>
+            <option>تلمسان</option>
+            <option>تيارت</option>
+            <option>تيزي وزو</option>
+            <option>الجزائر</option>
+            <option>الجلفة</option>
+            <option>جيجل</option>
+            <option>سطيف</option>
+            <option>سعيدة</option>
+            <option>سكيكدة</option>
+            <option>سيدي بلعباس</option>
+            <option>عنابة</option>
+            <option>قالمة</option>
+            <option>قسنطينة</option>
+            <option>المدية</option>
+            <option>مستغانم</option>
+            <option>المسيلة</option>
+            <option>معسكر</option>
+            <option>ورقلة</option>
+            <option>وهران</option>
+            <option>البيض</option>
+            <option>إليزي</option>
+            <option>برج بوعريريج</option>
+            <option>بومرداس</option>
+            <option>الطارف</option>
+            <option>تندوف</option>
+            <option>تيسمسيلت</option>
+            <option>الوادي</option>
+            <option>خنشلة</option>
+            <option>سوق أهراس</option>
+            <option>تيبازة</option>
+            <option>ميلة</option>
+            <option>عين الدفلى</option>
+            <option>النعامة</option>
+            <option>عين تموشنت</option>
+            <option>غرداية</option>
+            <option>غليزان</option>
+            <option>تيميمون</option>
+            <option>برج باجي مختار</option>
+            <option>أولاد جلال</option>
+            <option>بني عباس</option>
+            <option>إن صالح</option>
+            <option>إن قزام</option>
+            <option>تقرت</option>
+            <option>جانت</option>
+            <option>المغير</option>
+            <option>المنيعة</option>
 
-          <div class="field">
+          </select>
 
-            <label for="city">
-              الولاية
-            </label>
+        </div>
 
-            <select id="city">
+        <div class="field">
 
-              <option value="">
-                اختر الولاية
-              </option>
+          <label for="category">المهنة / التصنيف</label>
 
-              <option>أدرار</option>
-              <option>الشلف</option>
-              <option>الأغواط</option>
-              <option>أم البواقي</option>
-              <option>باتنة</option>
-              <option>بجاية</option>
-              <option>بسكرة</option>
-              <option>بشار</option>
-              <option>البليدة</option>
-              <option>البويرة</option>
-              <option>تمنراست</option>
-              <option>تبسة</option>
-              <option>تلمسان</option>
-              <option>تيارت</option>
-              <option>تيزي وزو</option>
-              <option>الجزائر</option>
-              <option>الجلفة</option>
-              <option>جيجل</option>
-              <option>سطيف</option>
-              <option>سعيدة</option>
-              <option>سكيكدة</option>
-              <option>سيدي بلعباس</option>
-              <option>عنابة</option>
-              <option>قالمة</option>
-              <option>قسنطينة</option>
-              <option>المدية</option>
-              <option>مستغانم</option>
-              <option>المسيلة</option>
-              <option>معسكر</option>
-              <option>ورقلة</option>
-              <option>وهران</option>
-              <option>البيض</option>
-              <option>إليزي</option>
-              <option>برج بوعريريج</option>
-              <option>بومرداس</option>
-              <option>الطارف</option>
-              <option>تندوف</option>
-              <option>تيسمسيلت</option>
-              <option>الوادي</option>
-              <option>خنشلة</option>
-              <option>سوق أهراس</option>
-              <option>تيبازة</option>
-              <option>ميلة</option>
-              <option>عين الدفلى</option>
-              <option>النعامة</option>
-              <option>عين تموشنت</option>
-              <option>غرداية</option>
-              <option>غليزان</option>
-              <option>تيميمون</option>
-              <option>برج باجي مختار</option>
-              <option>أولاد جلال</option>
-              <option>بني عباس</option>
-              <option>إن صالح</option>
-              <option>إن قزام</option>
-              <option>تقرت</option>
-              <option>جانت</option>
-              <option>المغير</option>
-              <option>المنيعة</option>
+          <select id="category">
 
-            </select>
+            <option value="">اختر المهنة</option>
 
-          </div>
+            <option>Plongeur</option>
+            <option>Serveur</option>
+            <option>Chef de Rang</option>
+            <option>Maître d'Hôtel</option>
+            <option>Réceptionniste</option>
+            <option>Gouvernante</option>
+            <option>Commis de cuisine</option>
+            <option>Chef de Partie</option>
+            <option>Sous-Chef</option>
+            <option>Chef de Cuisine</option>
+            <option>F&B Manager</option>
+            <option>Directeur d'Hôtel</option>
+            <option>Directeur Général</option>
+            <option>أخرى</option>
 
+          </select>
 
-          <div class="field">
+        </div>
 
-            <label for="contract">
-              نوع العقد
-            </label>
+        <div class="field">
 
-            <select id="contract">
+          <label for="contract">نوع العقد</label>
 
-              <option value="">
-                اختر نوع العقد
-              </option>
+          <select id="contract">
 
-              <option>CDI</option>
-              <option>CDD</option>
-              <option>Stage</option>
-              <option>Freelance</option>
+            <option value="">اختر نوع العقد</option>
+            <option>CDI</option>
+            <option>CDD</option>
+            <option>Stage</option>
+            <option>Freelance</option>
+            <option>Temps partiel</option>
 
-            </select>
+          </select>
 
-          </div>
+        </div>
 
+        <div class="field">
 
-          <div class="field">
+          <label for="experience">الخبرة المطلوبة</label>
 
-            <label for="experience">
-              الخبرة المطلوبة
-            </label>
+          <select id="experience">
 
-            <select id="experience">
+            <option value="">اختر مستوى الخبرة</option>
+            <option>بدون خبرة</option>
+            <option>أقل من سنة</option>
+            <option>1 - 3 سنوات</option>
+            <option>3 - 5 سنوات</option>
+            <option>أكثر من 5 سنوات</option>
 
-              <option value="">
-                اختر مستوى الخبرة
-              </option>
+          </select>
 
-              <option>
-                بدون خبرة
-              </option>
+        </div>
 
-              <option>
-                أقل من سنة
-              </option>
+        <div class="field">
 
-              <option>
-                1 - 3 سنوات
-              </option>
+          <label for="salary">الراتب</label>
 
-              <option>
-                3 - 5 سنوات
-              </option>
+          <input
+            id="salary"
+            type="text"
+            placeholder="مثال: 50,000 - 70,000 DA"
+          >
 
-              <option>
-                أكثر من 5 سنوات
-              </option>
+        </div>
 
-            </select>
+        <div class="field">
 
-          </div>
+          <label for="deadline">آخر أجل للتقديم</label>
 
+          <input
+            id="deadline"
+            type="date"
+          >
 
-          <div class="field">
+        </div>
 
-            <label for="salary">
-              الراتب
-            </label>
+        <div class="field full">
 
-            <input
-              id="salary"
-              type="text"
-              placeholder="مثال: 50,000 - 70,000 DA"
-            >
+          <label for="description">وصف الوظيفة</label>
 
-          </div>
+          <textarea
+            id="description"
+            placeholder="اكتب تفاصيل الوظيفة، المهام، المؤهلات المطلوبة..."
+          ></textarea>
 
+        </div>
 
-          <div class="field">
+        <div class="field full">
 
-            <label for="deadline">
-              آخر أجل للتقديم
-            </label>
+          <label for="contact">
+            البريد الإلكتروني أو وسيلة التواصل
+          </label>
 
-            <input
-              id="deadline"
-              type="date"
-            >
-
-          </div>
-
-
-          <div class="field full">
-
-            <label for="description">
-              وصف الوظيفة
-            </label>
-
-            <textarea
-              id="description"
-              placeholder="اكتب تفاصيل الوظيفة، المهام، المؤهلات المطلوبة..."
-            ></textarea>
-
-          </div>
-
-
-          <div class="field full">
-
-            <label for="contact">
-              البريد الإلكتروني أو وسيلة التواصل
-            </label>
-
-            <input
-              id="contact"
-              type="text"
-              placeholder="example@email.com"
-            >
-
-            <span class="hint">
-              ستستخدم هذه المعلومات للتواصل مع المرشحين.
-            </span>
-
-          </div>
-
+          <input
+            id="contact"
+            type="text"
+            placeholder="example@email.com"
+          >
 
         </div>
 
       </div>
 
+    </div>
 
-      <!-- SUBMIT -->
+    <div class="submit-area">
 
-      <div class="submit-area">
-
-        <button
-          type="button"
-          class="submit-button"
-          id="submitJob"
-        >
-          نشر الوظيفة
-        </button>
-
-      </div>
-
-
-      <div id="message"></div>
-
+      <button
+        type="button"
+        class="submit-button"
+        id="submitJob"
+      >
+        نشر الوظيفة
+      </button>
 
     </div>
 
-  </main>
+    <div id="message"></div>
 
+  </div>
 
-  <!-- FOOTER -->
+</main>
 
-  <footer>
+<footer>
 
-    <strong>
-      JOB <span>LINK</span> DZ
-    </strong>
+  <strong>
+    JOB <span>LINK</span> DZ
+  </strong>
 
-    <p>
-      منصة التوظيف الجزائرية
-    </p>
+  <p>منصة التوظيف الجزائرية</p>
 
-    <p>
-      © 2026 Job Link DZ
-    </p>
+  <p>© 2026 Job Link DZ</p>
 
-  </footer>
+</footer>
 
+<script>
 
-  <script>
+  const submitJob = document.getElementById("submitJob");
+  const message = document.getElementById("message");
 
-    const submitJob =
-      document.getElementById("submitJob");
+  submitJob.addEventListener("click", function () {
 
-    const message =
-      document.getElementById("message");
+    const company = document.getElementById("companyName").value.trim();
+    const sector = document.getElementById("companySector").value;
+    const title = document.getElementById("jobTitle").value.trim();
+    const city = document.getElementById("city").value;
+    const category = document.getElementById("category").value;
+    const contract = document.getElementById("contract").value;
+    const experience = document.getElementById("experience").value;
+    const salary = document.getElementById("salary").value.trim();
+    const deadline = document.getElementById("deadline").value;
+    const description = document.getElementById("description").value.trim();
+    const contact = document.getElementById("contact").value.trim();
 
+    if (
+      company === "" ||
+      title === "" ||
+      city === "" ||
+      category === "" ||
+      contract === "" ||
+      contact === ""
+    ) {
 
-    submitJob.addEventListener(
-      "click",
-      function () {
+      message.style.display = "block";
+      message.style.background = "#fef2f2";
+      message.style.color = "#b91c1c";
 
-        const company =
-          document.getElementById("companyName").value.trim();
+      message.textContent =
+        "يرجى إدخال جميع المعلومات الأساسية: الشركة، الوظيفة، الولاية، المهنة، نوع العقد ووسيلة التواصل.";
 
-        const title =
-          document.getElementById("jobTitle").value.trim();
+      return;
+    }
 
-        const city =
-          document.getElementById("city").value;
+    const newJob = {
 
-        const contact =
-          document.getElementById("contact").value.trim();
+      id: Date.now(),
 
+      company: company,
+      sector: sector,
+      title: title,
+      city: city,
+      category: category,
+      contract: contract,
+      experience: experience,
+      salary: salary,
+      deadline: deadline,
+      description: description,
+      contact: contact,
 
-        if (
-          company === "" ||
-          title === "" ||
-          city === "" ||
-          contact === ""
-        ) {
+      createdAt: new Date().toISOString()
 
-          message.style.display = "block";
+    };
 
-          message.style.background = "#fef2f2";
-          message.style.color = "#b91c1c";
+    const existingJobs =
+      JSON.parse(localStorage.getItem("jobLinkJobs")) || [];
 
-          message.textContent =
-            "يرجى إدخال اسم الشركة والمسمى الوظيفي والولاية ووسيلة التواصل.";
+    existingJobs.unshift(newJob);
 
-          return;
-        }
-
-
-        message.style.display = "block";
-
-        message.style.background = "#eff6ff";
-        message.style.color = "#1d4ed8";
-
-        message.textContent =
-          "تم تجهيز إعلان الوظيفة بنجاح. سيتم ربط النشر بقاعدة البيانات في المرحلة القادمة.";
-
-      }
+    localStorage.setItem(
+      "jobLinkJobs",
+      JSON.stringify(existingJobs)
     );
 
-  </script>
+    message.style.display = "block";
+    message.style.background = "#ecfdf5";
+    message.style.color = "#047857";
 
+    message.textContent =
+      "تم نشر الوظيفة بنجاح على هذا الجهاز.";
+
+    submitJob.disabled = true;
+    submitJob.style.opacity = "0.6";
+
+    setTimeout(function () {
+
+      window.location.href = "jobs.html";
+
+    }, 1200);
+
+  });
+
+</script>
 
 </body>
-
 </html>
