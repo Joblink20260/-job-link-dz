@@ -7,7 +7,10 @@
 
   <title>Job Link DZ | منصة التوظيف الجزائرية</title>
 
-  <meta name="description" content="Job Link DZ - منصة التوظيف الجزائرية للباحثين عن العمل والشركات.">
+  <meta
+    name="description"
+    content="Job Link DZ - منصة التوظيف الجزائرية للباحثين عن العمل والشركات."
+  >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,9 +34,13 @@
 
     body {
       font-family: "Cairo", sans-serif;
-      background: #ffffff;
+      background: #f5f7fa;
       color: #111827;
       line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
     }
 
     button,
@@ -51,12 +58,14 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 25px;
 
       background: #ffffff;
       border-bottom: 1px solid #e5e7eb;
 
-      position: relative;
-      z-index: 10;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
@@ -65,7 +74,6 @@
       font-weight: 700;
 
       color: #111827;
-
       direction: ltr;
       white-space: nowrap;
     }
@@ -77,130 +85,77 @@
     nav {
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 22px;
     }
 
     nav a {
       color: #374151;
-      text-decoration: none;
-
       font-size: 14px;
       font-weight: 600;
-
-      transition: 0.2s;
     }
 
     nav a:hover {
       color: #2563eb;
     }
 
-    .login {
+    .nav-login {
       border: 1px solid #2563eb;
       color: #2563eb !important;
-
-      padding: 9px 17px;
+      padding: 9px 16px;
       border-radius: 7px;
     }
 
-    .login:hover {
+    .nav-login:hover {
       background: #2563eb;
       color: #ffffff !important;
+    }
+
+    .nav-register {
+      background: #2563eb;
+      color: #ffffff !important;
+      padding: 10px 17px;
+      border-radius: 7px;
+    }
+
+    .nav-register:hover {
+      background: #1d4ed8;
     }
 
     /* ================= HERO ================= */
 
     .hero {
-      min-height: 650px;
-
-      display: flex;
-      align-items: center;
-
-      position: relative;
-      overflow: hidden;
-
       background: #071a35;
-    }
-
-    .hero::before {
-      content: "";
-
-      position: absolute;
-      inset: 0;
-
-      background-image:
-        url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80");
-
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-
-      filter: grayscale(100%);
-
-      transform: scale(1.03);
-    }
-
-    .hero::after {
-      content: "";
-
-      position: absolute;
-      inset: 0;
-
-      background:
-        linear-gradient(
-          90deg,
-          rgba(7,26,53,0.97) 0%,
-          rgba(7,26,53,0.88) 45%,
-          rgba(7,26,53,0.48) 100%
-        );
+      color: #ffffff;
+      padding: 95px 20px 105px;
     }
 
     .hero-content {
-      position: relative;
-      z-index: 2;
-
-      width: 90%;
       max-width: 1150px;
-
       margin: auto;
-
-      color: #ffffff;
-
-      text-align: right;
     }
 
     .hero-label {
       color: #60a5fa;
-
       font-size: 14px;
       font-weight: 700;
-
       margin-bottom: 18px;
     }
 
-    .hero-label small {
+    .hero-label span {
       display: block;
-
-      margin-top: 4px;
-
       color: #bfdbfe;
-
       font-family: "Libre Baskerville", serif;
-
       font-size: 10px;
-      font-weight: 400;
-
+      margin-top: 5px;
       letter-spacing: 1px;
-
       direction: ltr;
     }
 
     .hero h1 {
-      max-width: 720px;
-
-      font-size: 52px;
-      line-height: 1.25;
+      max-width: 800px;
+      font-size: 50px;
+      line-height: 1.3;
       font-weight: 800;
-
       margin-bottom: 20px;
     }
 
@@ -208,90 +163,95 @@
       color: #60a5fa;
     }
 
-    .hero p {
-      max-width: 650px;
-
-      color: #e5e7eb;
-
-      font-size: 18px;
+    .hero-text {
+      max-width: 680px;
+      color: #dbeafe;
+      font-size: 17px;
       line-height: 1.9;
-
-      margin-bottom: 38px;
+      margin-bottom: 35px;
     }
 
-    /* ================= SEARCH ================= */
+    /* SEARCH */
 
-    .search-panel {
-      max-width: 920px;
+    .search-box {
+      max-width: 950px;
 
-      display: flex;
-      gap: 8px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr auto;
 
       background: #ffffff;
-
-      padding: 9px;
-
+      padding: 8px;
       border-radius: 10px;
 
-      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
     }
 
-    .search-panel input,
-    .search-panel select {
-      flex: 1;
-
-      min-width: 190px;
-
-      padding: 16px;
-
+    .search-box input,
+    .search-box select {
       border: none;
       outline: none;
-
-      background: #ffffff;
-
-      color: #111827;
-
+      padding: 15px;
       font-size: 14px;
+      color: #111827;
+      background: #ffffff;
     }
 
-    .search-button {
+    .search-box button {
       border: none;
-
       background: #2563eb;
       color: #ffffff;
-
-      padding: 0 30px;
-
+      padding: 0 28px;
       border-radius: 7px;
-
       font-weight: 700;
-
       cursor: pointer;
-
-      transition: 0.2s;
     }
 
-    .search-button:hover {
+    .search-box button:hover {
       background: #1d4ed8;
+    }
+
+    /* ================= QUICK ACTIONS ================= */
+
+    .quick-actions {
+      max-width: 950px;
+      margin: 25px auto 0;
+
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .quick-actions a {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: #ffffff;
+
+      padding: 9px 15px;
+      border-radius: 6px;
+
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .quick-actions a:hover {
+      background: #2563eb;
+      border-color: #2563eb;
     }
 
     /* ================= STATS ================= */
 
     .stats {
-      display: grid;
-
-      grid-template-columns: repeat(3, 1fr);
-
       background: #111827;
-
       color: #ffffff;
 
-      text-align: center;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
 
-      padding: 30px 7%;
+      padding: 28px 7%;
     }
 
     .stat {
+      text-align: center;
       border-left: 1px solid #374151;
     }
 
@@ -301,195 +261,177 @@
 
     .stat strong {
       display: block;
-
       color: #60a5fa;
-
-      font-size: 26px;
+      font-size: 25px;
       font-weight: 800;
     }
 
     .stat span {
       color: #d1d5db;
-
       font-size: 13px;
     }
 
-    /* ================= SECTION ================= */
+    /* ================= MAIN ================= */
 
     .section {
       max-width: 1150px;
-
       margin: auto;
-
-      padding: 75px 20px;
+      padding: 70px 20px;
     }
 
     .section-header {
-      margin-bottom: 35px;
+      margin-bottom: 30px;
     }
 
     .section-header h2 {
-      color: #111827;
-
-      font-size: 30px;
+      font-size: 29px;
       font-weight: 800;
     }
 
     .section-header p {
       color: #6b7280;
-
-      margin-top: 8px;
-
       font-size: 14px;
+      margin-top: 7px;
     }
 
     .blue-line {
       width: 55px;
       height: 3px;
-
       background: #2563eb;
-
-      margin-top: 13px;
+      margin-top: 12px;
     }
 
     /* ================= JOBS ================= */
 
     .jobs {
       display: grid;
-
       grid-template-columns: repeat(3, 1fr);
-
-      gap: 22px;
+      gap: 20px;
     }
 
     .job-card {
       background: #ffffff;
-
       border: 1px solid #e5e7eb;
-
       border-radius: 12px;
-
-      padding: 25px;
-
-      transition: 0.25s;
+      padding: 23px;
+      transition: 0.2s;
     }
 
     .job-card:hover {
-      transform: translateY(-5px);
-
-      border-color: #bfdbfe;
-
-      box-shadow:
-        0 15px 35px rgba(37,99,235,0.08);
+      transform: translateY(-4px);
+      border-color: #93c5fd;
+      box-shadow: 0 12px 30px rgba(15,23,42,0.08);
     }
 
-    .company {
-      color: #6b7280;
-
-      font-size: 13px;
-
-      margin-bottom: 10px;
+    .job-sector {
+      color: #2563eb;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 8px;
     }
 
     .job-card h3 {
-      color: #111827;
-
       font-family: "Libre Baskerville", serif;
-
-      font-size: 18px;
-
-      margin-bottom: 12px;
-
       direction: ltr;
       text-align: right;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .job-company {
+      color: #6b7280;
+      font-size: 13px;
+      margin-bottom: 10px;
     }
 
     .job-info {
       color: #6b7280;
-
-      font-size: 13px;
-
+      font-size: 12px;
       line-height: 2;
     }
 
     .tags {
-      margin-top: 15px;
+      margin-top: 12px;
     }
 
     .tag {
       display: inline-block;
-
       background: #eff6ff;
       color: #2563eb;
-
-      padding: 5px 10px;
-
+      padding: 4px 9px;
       border-radius: 20px;
-
-      font-size: 11px;
-
+      font-size: 10px;
       margin-left: 4px;
     }
 
-    .apply {
+    .job-button {
       display: block;
+      margin-top: 17px;
 
       background: #111827;
       color: #ffffff;
 
       text-align: center;
 
-      padding: 12px;
-
+      padding: 10px;
       border-radius: 7px;
 
-      margin-top: 20px;
+      font-size: 12px;
+      font-weight: 700;
+    }
 
+    .job-button:hover {
+      background: #2563eb;
+    }
+
+    .all-jobs {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .all-jobs a {
+      display: inline-block;
+      border: 1px solid #2563eb;
+      color: #2563eb;
+      padding: 11px 25px;
+      border-radius: 7px;
       font-size: 13px;
       font-weight: 700;
     }
 
-    .apply:hover {
+    .all-jobs a:hover {
       background: #2563eb;
+      color: #ffffff;
     }
 
     /* ================= SECTORS ================= */
 
     .sectors-section {
       background: #f8fafc;
-
       border-top: 1px solid #e5e7eb;
       border-bottom: 1px solid #e5e7eb;
     }
 
     .sector-grid {
       display: grid;
-
       grid-template-columns: repeat(4, 1fr);
-
-      gap: 18px;
+      gap: 17px;
     }
 
     .sector-card {
       background: #ffffff;
-
       border: 1px solid #e5e7eb;
-
-      padding: 30px 15px;
-
       border-radius: 10px;
-
+      padding: 27px 15px;
       text-align: center;
     }
 
     .sector-icon {
-      width: 55px;
-      height: 55px;
-
-      margin: 0 auto 14px;
+      width: 50px;
+      height: 50px;
+      margin: auto auto 12px;
 
       display: flex;
-
       align-items: center;
       justify-content: center;
 
@@ -499,83 +441,79 @@
       border-radius: 9px;
 
       font-family: "Libre Baskerville", serif;
-
       font-weight: 700;
     }
 
     .sector-card h3 {
-      color: #111827;
-
       font-size: 14px;
     }
 
     .sector-card p {
       color: #9ca3af;
-
-      font-family: "Libre Baskerville", serif;
-
       font-size: 10px;
-
       margin-top: 4px;
     }
 
-    /* ================= CTA ================= */
+    /* ================= FOR COMPANIES ================= */
 
-    .cta {
-      background: #eff6ff;
-
-      text-align: center;
-
-      padding: 75px 20px;
+    .companies {
+      background: #ffffff;
     }
 
-    .cta h2 {
-      color: #111827;
+    .company-box {
+      background: #071a35;
+      color: #ffffff;
 
-      font-size: 32px;
+      border-radius: 14px;
+      padding: 50px;
 
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .company-box h2 {
+      font-size: 28px;
       margin-bottom: 10px;
     }
 
-    .cta p {
-      color: #6b7280;
-
-      margin-bottom: 25px;
+    .company-box p {
+      color: #cbd5e1;
+      font-size: 14px;
+      max-width: 600px;
     }
 
-    .cta-button {
-      display: inline-block;
+    .company-button {
+      flex-shrink: 0;
 
       background: #2563eb;
       color: #ffffff;
 
-      padding: 13px 28px;
-
+      padding: 13px 24px;
       border-radius: 7px;
 
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
+    }
+
+    .company-button:hover {
+      background: #1d4ed8;
     }
 
     /* ================= FOOTER ================= */
 
     footer {
       background: #080d18;
-
       color: #ffffff;
-
       text-align: center;
-
       padding: 35px 20px;
     }
 
     footer strong {
       display: block;
-
       font-family: "Libre Baskerville", serif;
-
       font-size: 19px;
-
       direction: ltr;
     }
 
@@ -585,77 +523,56 @@
 
     footer p {
       color: #9ca3af;
-
-      font-size: 12px;
-
-      margin-top: 8px;
+      font-size: 11px;
+      margin-top: 7px;
     }
 
     /* ================= MOBILE ================= */
 
-    @media (max-width: 800px) {
+    @media (max-width: 850px) {
 
       header {
-        padding: 18px 5%;
-
+        padding: 17px 5%;
         flex-direction: column;
-
-        gap: 15px;
       }
 
       nav {
-        width: 100%;
-
         justify-content: center;
-
         flex-wrap: wrap;
-
-        gap: 12px;
+        gap: 10px;
       }
 
       .hero {
-        min-height: 700px;
-      }
-
-      .hero-content {
-        text-align: center;
+        padding: 70px 20px;
       }
 
       .hero h1 {
         font-size: 36px;
       }
 
-      .hero p {
-        font-size: 15px;
+      .search-box {
+        grid-template-columns: 1fr;
       }
 
-      .search-panel {
-        flex-direction: column;
-      }
-
-      .search-panel input,
-      .search-panel select,
-      .search-button {
+      .search-box input,
+      .search-box select,
+      .search-box button {
+        min-height: 50px;
         width: 100%;
-
-        min-height: 52px;
       }
 
-      .search-button {
-        padding: 14px;
+      .search-box button {
+        padding: 12px;
       }
 
       .stats {
         grid-template-columns: 1fr;
-
-        gap: 20px;
+        gap: 18px;
       }
 
       .stat {
         border-left: none;
-
         border-bottom: 1px solid #374151;
-
         padding-bottom: 15px;
       }
 
@@ -670,6 +587,12 @@
       .sector-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .company-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 35px 22px;
+      }
     }
 
     @media (max-width: 450px) {
@@ -681,6 +604,7 @@
       .hero h1 {
         font-size: 31px;
       }
+
     }
 
   </style>
@@ -690,745 +614,606 @@
 <body>
 
 
-  <!-- HEADER -->
+<!-- ================= HEADER ================= -->
 
-  <header>
+<header>
 
-    <div class="logo">
-      JOB <span>LINK</span> DZ
-    </div>
+  <div class="logo">
+    JOB <span>LINK</span> DZ
+  </div>
 
-    <nav>
+  <nav>
 
-      <a href="#">
-        الرئيسية
-      </a>
+    <a href="index.html">
+      الرئيسية
+    </a>
 
-      <a href="#jobs">
-        الوظائف
-      </a>
+    <a href="jobs.html">
+      الوظائف
+    </a>
 
-      <a href="#sectors">
-        القطاعات
-      </a>
+    <a href="#sectors">
+      القطاعات
+    </a>
 
-      <a href="#about">
-        عن المنصة
-      </a>
+    <a href="login.html" class="nav-login">
+      تسجيل الدخول
+    </a>
 
-      <a href="#" class="login">
-        دخول / إنشاء حساب
-      </a>
+    <a href="register.html" class="nav-register">
+      إنشاء حساب
+    </a>
 
-    </nav>
+  </nav>
 
-  </header>
-
-
-  <!-- HERO -->
-
-  <section class="hero">
-
-    <div class="hero-content">
-
-      <div class="hero-label">
-
-        منصة التوظيف الجزائرية
-
-        <small>
-          ABDELMOUAINMAAMRI
-        </small>
-
-      </div>
+</header>
 
 
-      <h1>
+<!-- ================= HERO ================= -->
 
-        ابنِ مستقبلك المهني
+<section class="hero">
 
-        <span>
-          مع أفضل الفرص
-        </span>
+  <div class="hero-content">
 
-      </h1>
+    <div class="hero-label">
 
-
-      <p>
-
-        اكتشف الوظائف المناسبة لك،
-        وتواصل مع الشركات التي تبحث عن مهاراتك،
-        وابدأ خطوتك المهنية القادمة.
-
-      </p>
-
-
-      <div class="search-panel">
-
-        <input
-          id="searchInput"
-          type="search"
-          placeholder="ابحث عن وظيفة أو مهنة"
-        >
-
-
-        <select id="citySelect">
-
-          <option value="">
-            اختر الولاية
-          </option>
-
-          <option value="أدرار">أدرار</option>
-          <option value="الشلف">الشلف</option>
-          <option value="الأغواط">الأغواط</option>
-          <option value="أم البواقي">أم البواقي</option>
-          <option value="باتنة">باتنة</option>
-          <option value="بجاية">بجاية</option>
-          <option value="بسكرة">بسكرة</option>
-          <option value="بشار">بشار</option>
-          <option value="البليدة">البليدة</option>
-          <option value="البويرة">البويرة</option>
-          <option value="تمنراست">تمنراست</option>
-          <option value="تبسة">تبسة</option>
-          <option value="تلمسان">تلمسان</option>
-          <option value="تيارت">تيارت</option>
-          <option value="تيزي وزو">تيزي وزو</option>
-          <option value="الجزائر">الجزائر</option>
-          <option value="الجلفة">الجلفة</option>
-          <option value="جيجل">جيجل</option>
-          <option value="سطيف">سطيف</option>
-          <option value="سعيدة">سعيدة</option>
-          <option value="سكيكدة">سكيكدة</option>
-          <option value="سيدي بلعباس">سيدي بلعباس</option>
-          <option value="عنابة">عنابة</option>
-          <option value="قالمة">قالمة</option>
-          <option value="قسنطينة">قسنطينة</option>
-          <option value="المدية">المدية</option>
-          <option value="مستغانم">مستغانم</option>
-          <option value="المسيلة">المسيلة</option>
-          <option value="معسكر">معسكر</option>
-          <option value="ورقلة">ورقلة</option>
-          <option value="وهران">وهران</option>
-          <option value="البيض">البيض</option>
-          <option value="إليزي">إليزي</option>
-          <option value="برج بوعريريج">برج بوعريريج</option>
-          <option value="بومرداس">بومرداس</option>
-          <option value="الطارف">الطارف</option>
-          <option value="تندوف">تندوف</option>
-          <option value="تيسمسيلت">تيسمسيلت</option>
-          <option value="الوادي">الوادي</option>
-          <option value="خنشلة">خنشلة</option>
-          <option value="سوق أهراس">سوق أهراس</option>
-          <option value="تيبازة">تيبازة</option>
-          <option value="ميلة">ميلة</option>
-          <option value="عين الدفلى">عين الدفلى</option>
-          <option value="النعامة">النعامة</option>
-          <option value="عين تموشنت">عين تموشنت</option>
-          <option value="غرداية">غرداية</option>
-          <option value="غليزان">غليزان</option>
-          <option value="تيميمون">تيميمون</option>
-          <option value="برج باجي مختار">برج باجي مختار</option>
-          <option value="أولاد جلال">أولاد جلال</option>
-          <option value="بني عباس">بني عباس</option>
-          <option value="إن صالح">إن صالح</option>
-          <option value="إن قزام">إن قزام</option>
-          <option value="تقرت">تقرت</option>
-          <option value="جانت">جانت</option>
-          <option value="المغير">المغير</option>
-          <option value="المنيعة">المنيعة</option>
-
-        </select>
-
-
-        <button
-          id="searchButton"
-          class="search-button"
-          type="button"
-        >
-          بحث عن فرص
-        </button>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- STATS -->
-
-  <section class="stats">
-
-    <div class="stat">
-
-      <strong>
-        58
-      </strong>
+      منصة التوظيف الجزائرية
 
       <span>
-        ولاية جزائرية
+        JOB LINK DZ
       </span>
 
     </div>
 
 
-    <div class="stat">
+    <h1>
 
-      <strong>
-        + فرص
-      </strong>
-
+      ابنِ مستقبلك المهني
       <span>
-        وظائف جديدة
+        مع الفرصة المناسبة
       </span>
+
+    </h1>
+
+
+    <p class="hero-text">
+
+      ابحث عن وظيفة في الجزائر،
+      اكتشف الشركات،
+      وطوّر مسارك المهني من خلال منصة واحدة.
+
+    </p>
+
+
+    <div class="search-box">
+
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="ابحث عن وظيفة أو مهنة"
+      >
+
+      <select id="citySelect">
+
+        <option value="">
+          كل الولايات
+        </option>
+
+        <option>الجزائر</option>
+        <option>سطيف</option>
+        <option>وهران</option>
+        <option>قسنطينة</option>
+        <option>عنابة</option>
+        <option>باتنة</option>
+        <option>بجاية</option>
+        <option>البليدة</option>
+        <option>تيزي وزو</option>
+        <option>بسكرة</option>
+        <option>برج بوعريريج</option>
+        <option>تلمسان</option>
+        <option>سكيكدة</option>
+        <option>ورقلة</option>
+        <option>غرداية</option>
+
+      </select>
+
+      <button
+        id="searchButton"
+        type="button"
+      >
+        بحث عن فرص
+      </button>
 
     </div>
 
 
-    <div class="stat">
+    <div class="quick-actions">
 
-      <strong>
-        + شركات
-      </strong>
+      <a href="jobs.html">
+        تصفح جميع الوظائف
+      </a>
 
-      <span>
-        تبحث عن المواهب
-      </span>
+      <a href="register.html">
+        إنشاء ملف مهني
+      </a>
+
+      <a href="post-job.html">
+        للشركات: نشر وظيفة
+      </a>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <!-- JOBS -->
+<!-- ================= STATS ================= -->
 
-  <section class="section" id="jobs">
+<section class="stats">
+
+  <div class="stat">
+
+    <strong>
+      58
+    </strong>
+
+    <span>
+      ولاية جزائرية
+    </span>
+
+  </div>
+
+
+  <div class="stat">
+
+    <strong>
+      20+
+    </strong>
+
+    <span>
+      مهنة في النسخة التجريبية
+    </span>
+
+  </div>
+
+
+  <div class="stat">
+
+    <strong>
+      2026
+    </strong>
+
+    <span>
+      بداية Job Link DZ
+    </span>
+
+  </div>
+
+</section>
+
+
+<!-- ================= JOBS ================= -->
+
+<section class="section" id="jobs">
+
+  <div class="section-header">
+
+    <h2>
+      أحدث فرص العمل
+    </h2>
+
+    <div class="blue-line"></div>
+
+    <p>
+      اكتشف بعض الفرص الموجودة في النسخة التجريبية للمنصة.
+    </p>
+
+  </div>
+
+
+  <div class="jobs" id="jobsContainer"></div>
+
+
+  <div class="all-jobs">
+
+    <a href="jobs.html">
+      مشاهدة جميع الوظائف
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ================= SECTORS ================= -->
+
+<section class="sectors-section" id="sectors">
+
+  <div class="section">
 
     <div class="section-header">
 
       <h2>
-        أحدث فرص العمل
+        قطاعات Job Link DZ
       </h2>
 
       <div class="blue-line"></div>
 
       <p>
-        فرص مهنية من مختلف مستويات قطاع الفندقة والمطاعم.
+        نبدأ بمجموعة من القطاعات مع إمكانية التوسع مستقبلاً.
       </p>
 
     </div>
 
 
-    <div class="jobs" id="jobsContainer"></div>
-
-  </section>
+    <div class="sector-grid">
 
 
-  <!-- SECTORS -->
+      <div class="sector-card">
 
-  <section class="sectors-section" id="sectors">
+        <div class="sector-icon">
+          H
+        </div>
 
-    <div class="section">
-
-      <div class="section-header">
-
-        <h2>
-          قطاعات Job Link DZ
-        </h2>
-
-        <div class="blue-line"></div>
+        <h3>
+          الفنادق
+        </h3>
 
         <p>
-          نبدأ بالفندقة والمطاعم مع إمكانية التوسع إلى قطاعات أخرى.
+          Hospitality
         </p>
 
       </div>
 
 
-      <div class="sector-grid">
+      <div class="sector-card">
 
-
-        <div class="sector-card">
-
-          <div class="sector-icon">
-            H
-          </div>
-
-          <h3>
-            الفنادق
-          </h3>
-
-          <p>
-            Hospitality
-          </p>
-
+        <div class="sector-icon">
+          R
         </div>
 
+        <h3>
+          المطاعم
+        </h3>
 
-        <div class="sector-card">
-
-          <div class="sector-icon">
-            R
-          </div>
-
-          <h3>
-            المطاعم
-          </h3>
-
-          <p>
-            Restauration
-          </p>
-
-        </div>
-
-
-        <div class="sector-card">
-
-          <div class="sector-icon">
-            IT
-          </div>
-
-          <h3>
-            التكنولوجيا
-          </h3>
-
-          <p>
-            Technology
-          </p>
-
-        </div>
-
-
-        <div class="sector-card">
-
-          <div class="sector-icon">
-            C
-          </div>
-
-          <h3>
-            التجارة
-          </h3>
-
-          <p>
-            Commerce
-          </p>
-
-        </div>
-
+        <p>
+          Restauration
+        </p>
 
       </div>
 
+
+      <div class="sector-card">
+
+        <div class="sector-icon">
+          IT
+        </div>
+
+        <h3>
+          التكنولوجيا
+        </h3>
+
+        <p>
+          Technology
+        </p>
+
+      </div>
+
+
+      <div class="sector-card">
+
+        <div class="sector-icon">
+          C
+        </div>
+
+        <h3>
+          التجارة
+        </h3>
+
+        <p>
+          Commerce
+        </p>
+
+      </div>
+
+
     </div>
 
-  </section>
-
-
-  <!-- CTA -->
+  </div>
 
-  <section class="cta" id="about">
-
-    <h2>
-      مستعد لخطوتك القادمة؟
-    </h2>
-
-    <p>
-      ابدأ البحث عن فرصتك المهنية اليوم.
-    </p>
-
-    <a href="#jobs" class="cta-button">
-      اكتشف الوظائف
-    </a>
-
-  </section>
-
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <strong>
-      JOB <span>LINK</span> DZ
-    </strong>
-
-    <p>
-      منصة التوظيف الجزائرية
-    </p>
-
-    <p>
-      © 2026 Job Link DZ
-    </p>
-
-  </footer>
-
-
-  <!-- ================= JOB DATABASE ================= -->
-
-  <script>
-
-    const jobs = [
-
-      {
-        title: "Directeur Général",
-        sector: "Hôtellerie",
-        city: "الجزائر",
-        type: "CDI",
-        level: "Direction"
-      },
-
-      {
-        title: "Directeur d’Hôtel",
-        sector: "Hôtellerie",
-        city: "وهران",
-        type: "CDI",
-        level: "Direction"
-      },
-
-      {
-        title: "Directeur de la Restauration",
-        sector: "Restauration",
-        city: "الجزائر",
-        type: "CDI",
-        level: "Direction"
-      },
-
-      {
-        title: "Responsable F&B",
-        sector: "Restauration",
-        city: "قسنطينة",
-        type: "CDI",
-        level: "Management"
-      },
-
-      {
-        title: "Chef de Réception",
-        sector: "Hôtellerie",
-        city: "سطيف",
-        type: "CDI",
-        level: "Management"
-      },
-
-      {
-        title: "Réceptionniste",
-        sector: "Hôtellerie",
-        city: "سطيف",
-        type: "CDI",
-        level: "Employé"
-      },
-
-      {
-        title: "Night Auditor",
-        sector: "Hôtellerie",
-        city: "الجزائر",
-        type: "CDI",
-        level: "Employé"
-      },
-
-      {
-        title: "Gouvernant(e)",
-        sector: "Hôtellerie",
-        city: "وهران",
-        type: "CDD",
-        level: "Management"
-      },
-
-      {
-        title: "Maître d’Hôtel",
-        sector: "Restauration",
-        city: "سطيف",
-        type: "CDI",
-        level: "Management"
-      },
-
-      {
-        title: "Chef de Rang",
-        sector: "Restauration",
-        city: "سطيف",
-        type: "CDI",
-        level: "Employé"
-      },
-
-      {
-        title: "Demi-Chef de Rang",
-        sector: "Restauration",
-        city: "قسنطينة",
-        type: "CDI",
-        level: "Employé"
-      },
-
-      {
-        title: "Serveur / Serveuse",
-        sector: "Restauration",
-        city: "الجزائر",
-        type: "CDD",
-        level: "Employé"
-      },
-
-      {
-        title: "Commis de Salle",
-        sector: "Restauration",
-        city: "سطيف",
-        type: "CDD",
-        level: "Débutant"
-      },
-
-      {
-        title: "Chef de Cuisine",
-        sector: "Cuisine",
-        city: "الجزائر",
-        type: "CDI",
-        level: "Management"
-      },
-
-      {
-        title: "Sous-Chef",
-        sector: "Cuisine",
-        city: "وهران",
-        type: "CDI",
-        level: "Management"
-      },
-
-      {
-        title: "Chef de Partie",
-        sector: "Cuisine",
-        city: "سطيف",
-        type: "CDI",
-        level: "Employé"
-      },
-
-      {
-        title: "Commis de Cuisine",
-        sector: "Cuisine",
-        city: "قسنطينة",
-        type: "CDD",
-        level: "Débutant"
-      },
-
-      {
-        title: "Plongeur",
-        sector: "Cuisine",
-        city: "سطيف",
-        type: "CDD",
-        level: "Débutant"
-      },
-
-      {
-        title: "Chef Barman",
-        sector: "Bar",
-        city: "الجزائر",
-        type: "CDI",
-        level: "Management"
-      },
-
-      {
-        title: "Barman / Barmaid",
-        sector: "Bar",
-        city: "وهران",
-        type: "CDI",
-        level: "Employé"
-      },
-
-      {
-        title: "Sales Manager",
-        sector: "Commercial",
-        city: "الجزائر",
-        type: "CDI",
-        level: "Management"
-      },
-
-      {
-        title: "Event Manager",
-        sector: "Événementiel",
-        city: "قسنطينة",
-        type: "CDI",
-        level: "Management"
-      },
-
-      {
-        title: "Banquet Manager",
-        sector: "Événementiel",
-        city: "سطيف",
-        type: "CDI",
-        level: "Management"
-      }
-
-    ];
-
-
-    /* ================= DISPLAY ================= */
-
-    const jobsContainer =
-      document.getElementById("jobsContainer");
-
-
-    function showJobs(list) {
-
-      if (list.length === 0) {
-
-        jobsContainer.innerHTML = `
-          <div style="
-            grid-column: 1 / -1;
-            text-align: center;
-            padding: 50px 20px;
-            color: #6b7280;
-          ">
-
-            <h3 style="
-              color: #111827;
-              margin-bottom: 10px;
-            ">
-              لا توجد وظائف مطابقة
-            </h3>
-
-            <p>
-              جرّب البحث عن مهنة أو ولاية أخرى.
-            </p>
-
-          </div>
-        `;
-
-        return;
-      }
-
-
-      jobsContainer.innerHTML =
-        list.map(function(job) {
-
-          return `
-            <div class="job-card">
-
-              <div class="company">
-                ${job.sector}
-              </div>
-
-              <h3>
-                ${job.title}
-              </h3>
-
-              <div class="job-info">
-
-                ${job.city}<br>
-
-                دوام كامل<br>
-
-                ${job.level}
-
-              </div>
-
-              <div class="tags">
-
-                <span class="tag">
-                  ${job.type}
-                </span>
-
-                <span class="tag">
-                  ${job.sector}
-                </span>
-
-              </div>
-
-              <a href="#" class="apply">
-                عرض الوظيفة
-              </a>
-
-            </div>
-          `;
-
-        }).join("");
+</section>
 
+
+<!-- ================= COMPANY CTA ================= -->
+
+<section class="companies">
+
+  <div class="section">
+
+    <div class="company-box">
+
+      <div>
+
+        <h2>
+          هل تمثل شركة؟
+        </h2>
+
+        <p>
+          أنشئ حضور شركتك على Job Link DZ،
+          وانشر فرص العمل للوصول إلى المرشحين المناسبين.
+        </p>
+
+      </div>
+
+
+      <a
+        href="post-job.html"
+        class="company-button"
+      >
+        نشر وظيفة
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <strong>
+    JOB <span>LINK</span> DZ
+  </strong>
+
+  <p>
+    منصة التوظيف الجزائرية
+  </p>
+
+  <p>
+    © 2026 Job Link DZ
+  </p>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+  const jobs = [
+
+    {
+      title: "Chef de Rang",
+      company: "Hôtel",
+      city: "سطيف",
+      sector: "Hôtellerie & Restauration",
+      type: "CDI"
+    },
+
+    {
+      title: "Réceptionniste",
+      company: "Hôtel",
+      city: "الجزائر",
+      sector: "Hôtellerie",
+      type: "CDD"
+    },
+
+    {
+      title: "Chef de Cuisine",
+      company: "Restaurant",
+      city: "وهران",
+      sector: "Restauration",
+      type: "CDI"
+    },
+
+    {
+      title: "Serveur",
+      company: "Restaurant",
+      city: "قسنطينة",
+      sector: "Restauration",
+      type: "CDD"
+    },
+
+    {
+      title: "Gouvernante",
+      company: "Hôtel",
+      city: "عنابة",
+      sector: "Hôtellerie",
+      type: "CDI"
+    },
+
+    {
+      title: "Chef de Partie",
+      company: "Hôtel",
+      city: "سطيف",
+      sector: "Cuisine",
+      type: "CDI"
     }
 
-
-    /* ================= SEARCH ================= */
-
-    const searchInput =
-      document.getElementById("searchInput");
-
-    const citySelect =
-      document.getElementById("citySelect");
-
-    const searchButton =
-      document.getElementById("searchButton");
+  ];
 
 
-    function searchJobs() {
-
-      const keyword =
-        searchInput.value
-          .trim()
-          .toLowerCase();
+  const jobsContainer =
+    document.getElementById("jobsContainer");
 
 
-      const city =
-        citySelect.value;
+  function showJobs(list) {
+
+    jobsContainer.innerHTML =
+      list.map(function(job) {
+
+        return `
+
+          <div class="job-card">
+
+            <div class="job-sector">
+              ${job.sector}
+            </div>
+
+            <h3>
+              ${job.title}
+            </h3>
+
+            <div class="job-company">
+              ${job.company}
+            </div>
+
+            <div class="job-info">
+
+              ${job.city}<br>
+
+              دوام كامل
+
+            </div>
+
+            <div class="tags">
+
+              <span class="tag">
+                ${job.type}
+              </span>
+
+              <span class="tag">
+                ${job.sector}
+              </span>
+
+            </div>
+
+            <a
+              href="jobs.html"
+              class="job-button"
+            >
+              عرض الوظيفة
+            </a>
+
+          </div>
+
+        `;
+
+      }).join("");
+
+  }
 
 
-      const results =
-        jobs.filter(function(job) {
-
-          const text =
-            (
-              job.title +
-              " " +
-              job.sector +
-              " " +
-              job.level +
-              " " +
-              job.city
-            ).toLowerCase();
+  showJobs(jobs);
 
 
-          const keywordMatch =
-            keyword === "" ||
-            text.includes(keyword);
+  const searchInput =
+    document.getElementById("searchInput");
+
+  const citySelect =
+    document.getElementById("citySelect");
+
+  const searchButton =
+    document.getElementById("searchButton");
 
 
-          const cityMatch =
-            city === "" ||
-            job.city === city;
+  function searchJobs() {
+
+    const keyword =
+      searchInput.value
+        .trim()
+        .toLowerCase();
 
 
-          return (
-            keywordMatch &&
-            cityMatch
-          );
+    const city =
+      citySelect.value;
 
-        });
 
+    const results =
+      jobs.filter(function(job) {
+
+        const text =
+          (
+            job.title +
+            " " +
+            job.company +
+            " " +
+            job.city +
+            " " +
+            job.sector
+          ).toLowerCase();
+
+
+        const keywordMatch =
+          keyword === "" ||
+          text.includes(keyword);
+
+
+        const cityMatch =
+          city === "" ||
+          job.city === city;
+
+
+        return keywordMatch && cityMatch;
+
+      });
+
+
+    if (results.length === 0) {
+
+      jobsContainer.innerHTML = `
+
+        <div style="
+          grid-column: 1 / -1;
+          text-align: center;
+          padding: 50px 20px;
+          color: #6b7280;
+        ">
+
+          <h3 style="
+            color: #111827;
+            margin-bottom: 8px;
+          ">
+            لا توجد وظائف مطابقة
+          </h3>
+
+          <p>
+            جرّب مهنة أو ولاية أخرى.
+          </p>
+
+        </div>
+
+      `;
+
+    } else {
 
       showJobs(results);
 
-
-      document
-        .getElementById("jobs")
-        .scrollIntoView({
-          behavior: "smooth"
-        });
-
     }
 
 
-    searchButton.addEventListener(
-      "click",
-      searchJobs
-    );
+    document
+      .getElementById("jobs")
+      .scrollIntoView({
+        behavior: "smooth"
+      });
+
+  }
 
 
-    searchInput.addEventListener(
-      "keydown",
-      function(event) {
+  searchButton.addEventListener(
+    "click",
+    searchJobs
+  );
 
-        if (event.key === "Enter") {
-          searchJobs();
-        }
 
+  searchInput.addEventListener(
+    "keydown",
+    function(event) {
+
+      if (event.key === "Enter") {
+        searchJobs();
       }
-    );
 
+    }
+  );
 
-    /* ================= START ================= */
+</script>
 
-    showJobs(jobs);
-
-  </script>
 
 </body>
 
