@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,6 +17,7 @@
   >
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -31,9 +34,11 @@
       background: #ffffff;
       min-height: 76px;
       padding: 0 7%;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       border-bottom: 1px solid #e5e7eb;
     }
 
@@ -41,7 +46,8 @@
       font-family: "Libre Baskerville", serif;
       font-weight: 700;
       font-size: 22px;
-      color: #111827;
+      direction: ltr;
+      white-space: nowrap;
     }
 
     .logo span {
@@ -92,10 +98,13 @@
     .filters {
       background: white;
       padding: 20px;
+
       border: 1px solid #e5e7eb;
       border-radius: 12px;
+
       display: grid;
       grid-template-columns: repeat(4, 1fr);
+
       gap: 12px;
       margin-bottom: 35px;
     }
@@ -103,10 +112,14 @@
     .filters input,
     .filters select {
       width: 100%;
+
       padding: 14px;
+
       border: 1px solid #d1d5db;
       border-radius: 7px;
+
       outline: none;
+
       font-family: "Cairo", sans-serif;
       background: white;
     }
@@ -124,16 +137,22 @@
 
     .job-card {
       background: white;
+
       border: 1px solid #e5e7eb;
       border-radius: 12px;
+
       padding: 23px;
+
       transition: 0.2s;
     }
 
     .job-card:hover {
       transform: translateY(-4px);
+
       border-color: #93c5fd;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+
+      box-shadow:
+        0 12px 30px rgba(15, 23, 42, 0.08);
     }
 
     .sector {
@@ -167,23 +186,34 @@
 
     .tag {
       display: inline-block;
+
       background: #eff6ff;
       color: #2563eb;
+
       padding: 4px 9px;
+
       border-radius: 20px;
+
       font-size: 11px;
+
       margin-left: 4px;
     }
 
     .apply {
       display: block;
+
       margin-top: 18px;
+
       background: #111827;
       color: white;
+
       text-align: center;
       text-decoration: none;
+
       padding: 11px;
+
       border-radius: 7px;
+
       font-size: 13px;
       font-weight: 700;
     }
@@ -192,11 +222,31 @@
       background: #2563eb;
     }
 
+    .empty {
+      display: none;
+
+      background: white;
+
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+
+      padding: 40px;
+
+      text-align: center;
+
+      color: #6b7280;
+
+      grid-column: 1 / -1;
+    }
+
     footer {
       margin-top: 40px;
+
       background: #080d18;
       color: white;
+
       text-align: center;
+
       padding: 30px 20px;
     }
 
@@ -215,9 +265,12 @@
     }
 
     @media (max-width: 850px) {
+
       header {
         padding: 18px 5%;
+
         flex-direction: column;
+
         gap: 15px;
       }
 
@@ -237,8 +290,11 @@
       .page-title h1 {
         font-size: 30px;
       }
+
     }
+
   </style>
+
 </head>
 
 <body>
@@ -250,16 +306,29 @@
   </div>
 
   <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="jobs.html">الوظائف</a>
-    <a href="post-job.html">نشر وظيفة</a>
+
+    <a href="index.html">
+      الرئيسية
+    </a>
+
+    <a href="jobs.html">
+      الوظائف
+    </a>
+
+    <a href="post-job.html">
+      نشر وظيفة
+    </a>
+
   </nav>
 
 </header>
 
+
 <section class="page-title">
 
-  <h1>فرص العمل</h1>
+  <h1>
+    فرص العمل
+  </h1>
 
   <p>
     اكتشف الوظائف المناسبة لمهاراتك وخبرتك في الجزائر
@@ -267,7 +336,9 @@
 
 </section>
 
+
 <main class="container">
+
 
   <div class="filters">
 
@@ -277,8 +348,13 @@
       placeholder="ابحث عن وظيفة أو شركة"
     >
 
+
     <select id="citySelect">
-      <option value="">كل الولايات</option>
+
+      <option value="">
+        كل الولايات
+      </option>
+
       <option>أدرار</option>
       <option>الشلف</option>
       <option>الأغواط</option>
@@ -337,232 +413,112 @@
       <option>جانت</option>
       <option>المغير</option>
       <option>المنيعة</option>
+
     </select>
 
-    <select id="categorySelect">
-      <option value="">كل المهن</option>
-      <option>Plongeur</option>
-      <option>Serveur</option>
-      <option>Chef de Rang</option>
-      <option>Maître d'Hôtel</option>
-      <option>Réceptionniste</option>
-      <option>Gouvernante</option>
-      <option>Commis de cuisine</option>
-      <option>Chef de Partie</option>
-      <option>Sous-Chef</option>
-      <option>Chef de Cuisine</option>
-      <option>F&B Manager</option>
-      <option>Directeur d'Hôtel</option>
-      <option>Directeur Général</option>
+
+    <select id="sectorSelect">
+
+      <option value="">
+        كل القطاعات
+      </option>
+
+      <option>
+        الفنادق
+      </option>
+
+      <option>
+        المطاعم
+      </option>
+
+      <option>
+        السياحة
+      </option>
+
+      <option>
+        التكنولوجيا
+      </option>
+
+      <option>
+        التجارة
+      </option>
+
+      <option>
+        البنوك والمالية
+      </option>
+
+      <option>
+        النقل واللوجستيك
+      </option>
+
+      <option>
+        البناء والأشغال العمومية
+      </option>
+
+      <option>
+        الصحة
+      </option>
+
+      <option>
+        قطاعات أخرى
+      </option>
+
+      <option>
+        Hôtellerie & Restauration
+      </option>
+
     </select>
+
 
     <select id="contractSelect">
-      <option value="">كل العقود</option>
-      <option>CDI</option>
-      <option>CDD</option>
-      <option>Stage</option>
-      <option>Temps partiel</option>
+
+      <option value="">
+        كل العقود
+      </option>
+
+      <option>
+        CDI
+      </option>
+
+      <option>
+        CDD
+      </option>
+
+      <option>
+        Stage
+      </option>
+
+      <option>
+        Freelance
+      </option>
+
+      <option>
+        Temps partiel
+      </option>
+
     </select>
 
   </div>
+
 
   <div class="jobs" id="jobsContainer">
 
-    <div class="job-card"
-         data-city="سطيف"
-         data-category="Chef de Rang"
-         data-contract="CDI">
 
-      <div class="sector">
-        Hôtellerie & Restauration
-      </div>
+    <!-- JOBS ARE GENERATED BY JAVASCRIPT -->
 
-      <h2>Chef de Rang</h2>
 
-      <div class="company">
-        Hôtel — Sétif
-      </div>
+    <div class="empty" id="emptyMessage">
 
-      <div class="info">
-        سطيف<br>
-        دوام كامل<br>
-        خبرة: 1 - 3 سنوات
-      </div>
-
-      <div class="tags">
-        <span class="tag">CDI</span>
-        <span class="tag">Hôtellerie</span>
-      </div>
-
-      <a href="#" class="apply">
-        عرض الوظيفة
-      </a>
+      لا توجد وظائف مطابقة للبحث الحالي.
 
     </div>
 
-    <div class="job-card"
-         data-city="الجزائر"
-         data-category="Réceptionniste"
-         data-contract="CDD">
-
-      <div class="sector">
-        Hôtellerie
-      </div>
-
-      <h2>Réceptionniste</h2>
-
-      <div class="company">
-        Hôtel — Alger
-      </div>
-
-      <div class="info">
-        الجزائر<br>
-        دوام كامل<br>
-        خبرة: مبتدئ
-      </div>
-
-      <div class="tags">
-        <span class="tag">CDD</span>
-        <span class="tag">Front Office</span>
-      </div>
-
-      <a href="#" class="apply">
-        عرض الوظيفة
-      </a>
-
-    </div>
-
-    <div class="job-card"
-         data-city="وهران"
-         data-category="Chef de Cuisine"
-         data-contract="CDI">
-
-      <div class="sector">
-        Hôtellerie & Restauration
-      </div>
-
-      <h2>Chef de Cuisine</h2>
-
-      <div class="company">
-        Hôtel — Oran
-      </div>
-
-      <div class="info">
-        وهران<br>
-        دوام كامل<br>
-        خبرة: 3 - 5 سنوات
-      </div>
-
-      <div class="tags">
-        <span class="tag">CDI</span>
-        <span class="tag">Cuisine</span>
-      </div>
-
-      <a href="#" class="apply">
-        عرض الوظيفة
-      </a>
-
-    </div>
-
-    <div class="job-card"
-         data-city="قسنطينة"
-         data-category="Serveur"
-         data-contract="CDD">
-
-      <div class="sector">
-        Restauration
-      </div>
-
-      <h2>Serveur</h2>
-
-      <div class="company">
-        Restaurant — Constantine
-      </div>
-
-      <div class="info">
-        قسنطينة<br>
-        دوام كامل<br>
-        خبرة: مبتدئ
-      </div>
-
-      <div class="tags">
-        <span class="tag">CDD</span>
-        <span class="tag">Service</span>
-      </div>
-
-      <a href="#" class="apply">
-        عرض الوظيفة
-      </a>
-
-    </div>
-
-    <div class="job-card"
-         data-city="عنابة"
-         data-category="Gouvernante"
-         data-contract="CDI">
-
-      <div class="sector">
-        Hôtellerie
-      </div>
-
-      <h2>Gouvernante</h2>
-
-      <div class="company">
-        Hôtel — Annaba
-      </div>
-
-      <div class="info">
-        عنابة<br>
-        دوام كامل<br>
-        خبرة: 2 - 4 سنوات
-      </div>
-
-      <div class="tags">
-        <span class="tag">CDI</span>
-        <span class="tag">Housekeeping</span>
-      </div>
-
-      <a href="#" class="apply">
-        عرض الوظيفة
-      </a>
-
-    </div>
-
-    <div class="job-card"
-         data-city="الجزائر"
-         data-category="Directeur Général"
-         data-contract="CDI">
-
-      <div class="sector">
-        Hôtellerie
-      </div>
-
-      <h2>Directeur Général</h2>
-
-      <div class="company">
-        Hôtel — Alger
-      </div>
-
-      <div class="info">
-        الجزائر<br>
-        دوام كامل<br>
-        خبرة: 5+ سنوات
-      </div>
-
-      <div class="tags">
-        <span class="tag">CDI</span>
-        <span class="tag">Management</span>
-      </div>
-
-      <a href="#" class="apply">
-        عرض الوظيفة
-      </a>
-
-    </div>
 
   </div>
 
+
 </main>
+
 
 <footer>
 
@@ -570,68 +526,389 @@
     JOB <span>LINK</span> DZ
   </strong>
 
-  <p>منصة التوظيف الجزائرية</p>
+  <p>
+    منصة التوظيف الجزائرية
+  </p>
 
-  <p>© 2026 Job Link DZ</p>
+  <p>
+    © 2026 Job Link DZ
+  </p>
 
 </footer>
 
+
 <script>
 
-  const searchInput = document.getElementById("searchInput");
-  const citySelect = document.getElementById("citySelect");
-  const categorySelect = document.getElementById("categorySelect");
-  const contractSelect = document.getElementById("contractSelect");
+  const searchInput =
+    document.getElementById("searchInput");
 
-  const jobCards = document.querySelectorAll(".job-card");
+  const citySelect =
+    document.getElementById("citySelect");
 
-  function filterJobs() {
+  const sectorSelect =
+    document.getElementById("sectorSelect");
 
-    const search = searchInput.value.toLowerCase().trim();
-    const city = citySelect.value;
-    const category = categorySelect.value;
-    const contract = contractSelect.value;
+  const contractSelect =
+    document.getElementById("contractSelect");
 
-    jobCards.forEach(function(card) {
+  const jobsContainer =
+    document.getElementById("jobsContainer");
 
-      const text = card.innerText.toLowerCase();
+  const emptyMessage =
+    document.getElementById("emptyMessage");
 
-      const cardCity = card.dataset.city;
-      const cardCategory = card.dataset.category;
-      const cardContract = card.dataset.contract;
+
+  /*
+    الوظائف التجريبية
+  */
+
+  const demoJobs = [
+
+    {
+      id: "demo1",
+      company: "Hôtel Sétif",
+      sector: "Hôtellerie & Restauration",
+      title: "Chef de Rang",
+      city: "سطيف",
+      contract: "CDI",
+      experience: "1 - 3 سنوات",
+      salary: "حسب الخبرة"
+    },
+
+    {
+      id: "demo2",
+      company: "Hôtel Alger",
+      sector: "الفنادق",
+      title: "Réceptionniste",
+      city: "الجزائر",
+      contract: "CDD",
+      experience: "بدون خبرة",
+      salary: "حسب الخبرة"
+    },
+
+    {
+      id: "demo3",
+      company: "Restaurant Oran",
+      sector: "المطاعم",
+      title: "Chef de Cuisine",
+      city: "وهران",
+      contract: "CDI",
+      experience: "3 - 5 سنوات",
+      salary: "حسب الخبرة"
+    },
+
+    {
+      id: "demo4",
+      company: "Restaurant Constantine",
+      sector: "المطاعم",
+      title: "Serveur",
+      city: "قسنطينة",
+      contract: "CDD",
+      experience: "بدون خبرة",
+      salary: "حسب الخبرة"
+    }
+
+  ];
+
+
+  /*
+    قراءة الوظائف المنشورة
+  */
+
+  const savedJobs =
+    JSON.parse(
+      localStorage.getItem("jobLinkJobs")
+    ) || [];
+
+
+  /*
+    الوظائف الجديدة أولاً
+  */
+
+  const allJobs = [
+    ...savedJobs,
+    ...demoJobs
+  ];
+
+
+  /*
+    إنشاء بطاقة الوظيفة
+  */
+
+  function createJobCard(job) {
+
+    const card =
+      document.createElement("div");
+
+    card.className = "job-card";
+
+
+    card.dataset.city =
+      job.city || "";
+
+    card.dataset.sector =
+      job.sector || "";
+
+    card.dataset.contract =
+      job.contract || "";
+
+
+    card.innerHTML = `
+
+      <div class="sector">
+        ${job.sector || "قطاع غير محدد"}
+      </div>
+
+      <h2>
+        ${job.title || "وظيفة"}
+      </h2>
+
+      <div class="company">
+        ${job.company || "شركة"}
+      </div>
+
+      <div class="info">
+
+        ${job.city || "الجزائر"}<br>
+
+        ${job.contract || "غير محدد"}<br>
+
+        الخبرة:
+        ${job.experience || "غير محددة"}
+
+      </div>
+
+      <div class="tags">
+
+        <span class="tag">
+          ${job.contract || "وظيفة"}
+        </span>
+
+        ${
+          job.salary
+          ?
+          `<span class="tag">${job.salary}</span>`
+          :
+          ""
+        }
+
+      </div>
+
+      <a
+        href="#"
+        class="apply"
+        data-id="${job.id}"
+      >
+        عرض الوظيفة
+      </a>
+
+    `;
+
+
+    return card;
+
+  }
+
+
+  /*
+    عرض الوظائف
+  */
+
+  function renderJobs() {
+
+    const oldCards =
+      jobsContainer.querySelectorAll(".job-card");
+
+    oldCards.forEach(function(card) {
+
+      card.remove();
+
+    });
+
+
+    const search =
+      searchInput.value
+        .toLowerCase()
+        .trim();
+
+
+    const city =
+      citySelect.value;
+
+
+    const sector =
+      sectorSelect.value;
+
+
+    const contract =
+      contractSelect.value;
+
+
+    let visibleJobs = 0;
+
+
+    allJobs.forEach(function(job) {
+
+
+      const searchableText = (
+
+        (job.title || "") +
+        " " +
+        (job.company || "") +
+        " " +
+        (job.sector || "") +
+        " " +
+        (job.city || "")
+
+      ).toLowerCase();
+
 
       const matchesSearch =
-        search === "" || text.includes(search);
+        search === "" ||
+        searchableText.includes(search);
+
 
       const matchesCity =
-        city === "" || cardCity === city;
+        city === "" ||
+        job.city === city;
 
-      const matchesCategory =
-        category === "" || cardCategory === category;
+
+      const matchesSector =
+        sector === "" ||
+        job.sector === sector;
+
 
       const matchesContract =
-        contract === "" || cardContract === contract;
+        contract === "" ||
+        job.contract === contract;
+
 
       if (
+
         matchesSearch &&
         matchesCity &&
-        matchesCategory &&
+        matchesSector &&
         matchesContract
+
       ) {
-        card.style.display = "";
-      } else {
-        card.style.display = "none";
+
+        const card =
+          createJobCard(job);
+
+        jobsContainer.insertBefore(
+          card,
+          emptyMessage
+        );
+
+        visibleJobs++;
+
       }
 
     });
+
+
+    if (visibleJobs === 0) {
+
+      emptyMessage.style.display =
+        "block";
+
+    } else {
+
+      emptyMessage.style.display =
+        "none";
+
+    }
+
   }
 
-  searchInput.addEventListener("input", filterJobs);
-  citySelect.addEventListener("change", filterJobs);
-  categorySelect.addEventListener("change", filterJobs);
-  contractSelect.addEventListener("change", filterJobs);
+
+  /*
+    الفلاتر
+  */
+
+  searchInput.addEventListener(
+    "input",
+    renderJobs
+  );
+
+
+  citySelect.addEventListener(
+    "change",
+    renderJobs
+  );
+
+
+  sectorSelect.addEventListener(
+    "change",
+    renderJobs
+  );
+
+
+  contractSelect.addEventListener(
+    "change",
+    renderJobs
+  );
+
+
+  /*
+    البداية
+  */
+
+  renderJobs();
+
+
+  /*
+    زر عرض الوظيفة
+  */
+
+  jobsContainer.addEventListener(
+    "click",
+    function(event) {
+
+      const link =
+        event.target.closest(".apply");
+
+
+      if (!link) {
+        return;
+      }
+
+
+      event.preventDefault();
+
+
+      const id =
+        String(link.dataset.id);
+
+
+      const job =
+        allJobs.find(function(item) {
+
+          return String(item.id) === id;
+
+        });
+
+
+      if (!job) {
+        return;
+      }
+
+
+      localStorage.setItem(
+        "selectedJob",
+        JSON.stringify(job)
+      );
+
+
+      alert(
+        "تم اختيار الوظيفة. سنبني صفحة تفاصيل الوظيفة في الخطوة القادمة."
+      );
+
+    }
+  );
 
 </script>
 
 </body>
+
 </html>
