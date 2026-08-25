@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>تسجيل الدخول | Job Link DZ</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Cairo", sans-serif;
+      background: #f5f7fa;
+      color: #111827;
+      min-height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER */
+
+    header {
+      min-height: 76px;
+      padding: 0 7%;
+
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: "Libre Baskerville", serif;
+      font-size: 21px;
+      font-weight: 700;
+
+      direction: ltr;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: #2563eb;
+    }
+
+    .home-link {
+      text-decoration: none;
+      color: #2563eb;
+
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .home-link:hover {
+      color: #1d4ed8;
+    }
+
+    /* MAIN */
+
+    main {
+      flex: 1;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 50px 20px;
+    }
+
+    .login-card {
+      width: 100%;
+      max-width: 450px;
+
+      background: #ffffff;
+
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+
+      padding: 38px;
+
+      box-shadow:
+        0 15px 40px rgba(15, 23, 42, 0.06);
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .title h1 {
+      font-size: 28px;
+      font-weight: 800;
+
+      color: #111827;
+    }
+
+    .title h1 span {
+      color: #2563eb;
+    }
+
+    .title p {
+      margin-top: 8px;
+
+      color: #6b7280;
+      font-size: 13px;
+    }
+
+    /* FORM */
+
+    .field {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: #374151;
+
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    input {
+      width: 100%;
+
+      padding: 13px 14px;
+
+      border: 1px solid #d1d5db;
+      border-radius: 7px;
+
+      outline: none;
+
+      font-family: "Cairo", sans-serif;
+      font-size: 14px;
+
+      background: #ffffff;
+    }
+
+    input:focus {
+      border-color: #2563eb;
+
+      box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.08);
+    }
+
+    .password-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-bottom: 7px;
+    }
+
+    .password-row label {
+      margin-bottom: 0;
+    }
+
+    .forgot {
+      color: #2563eb;
+
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+    .forgot:hover {
+      text-decoration: underline;
+    }
+
+    /* BUTTON */
+
+    .login-button {
+      width: 100%;
+
+      margin-top: 5px;
+
+      border: none;
+      border-radius: 7px;
+
+      padding: 13px;
+
+      background: #2563eb;
+      color: #ffffff;
+
+      font-family: "Cairo", sans-serif;
+
+      font-size: 14px;
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition: 0.2s;
+    }
+
+    .login-button:hover {
+      background: #1d4ed8;
+    }
+
+    /* DIVIDER */
+
+    .divider {
+      display: flex;
+      align-items: center;
+
+      gap: 12px;
+
+      margin: 25px 0;
+
+      color: #9ca3af;
+
+      font-size: 12px;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+
+      height: 1px;
+
+      flex: 1;
+
+      background: #e5e7eb;
+    }
+
+    /* REGISTER */
+
+    .register {
+      text-align: center;
+
+      color: #6b7280;
+
+      font-size: 13px;
+    }
+
+    .register a {
+      color: #2563eb;
+
+      text-decoration: none;
+
+      font-weight: 700;
+    }
+
+    .register a:hover {
+      text-decoration: underline;
+    }
+
+    /* MESSAGE */
+
+    #message {
+      display: none;
+
+      margin-top: 15px;
+
+      padding: 12px;
+
+      border-radius: 7px;
+
+      text-align: center;
+
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #080d18;
+
+      color: #ffffff;
+
+      text-align: center;
+
+      padding: 25px 20px;
+    }
+
+    footer strong {
+      font-family: "Libre Baskerville", serif;
+      direction: ltr;
+    }
+
+    footer strong span {
+      color: #60a5fa;
+    }
+
+    footer p {
+      color: #9ca3af;
+
+      font-size: 11px;
+
+      margin-top: 7px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+
+      header {
+        padding: 0 5%;
+      }
+
+      .login-card {
+        padding: 25px 20px;
+      }
+
+      .title h1 {
+        font-size: 25px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+  <div class="logo">
+    JOB <span>LINK</span> DZ
+  </div>
+
+  <a
+    href="index.html"
+    class="home-link"
+  >
+    الرئيسية
+  </a>
+
+</header>
+
+
+<main>
+
+  <div class="login-card">
+
+
+    <div class="title">
+
+      <h1>
+        تسجيل <span>الدخول</span>
+      </h1>
+
+      <p>
+        ادخل إلى حسابك في Job Link DZ
+      </p>
+
+    </div>
+
+
+    <form id="loginForm">
+
+
+      <div class="field">
+
+        <label for="email">
+          البريد الإلكتروني
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          placeholder="example@email.com"
+          required
+        >
+
+      </div>
+
+
+      <div class="field">
+
+        <div class="password-row">
+
+          <label for="password">
+            كلمة المرور
+          </label>
+
+          <a
+            href="#"
+            class="forgot"
+            id="forgotPassword"
+          >
+            نسيت كلمة المرور؟
+          </a>
+
+        </div>
+
+
+        <input
+          type="password"
+          id="password"
+          placeholder="••••••••"
+          required
+        >
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="login-button"
+      >
+        تسجيل الدخول
+      </button>
+
+
+    </form>
+
+
+    <div id="message"></div>
+
+
+    <div class="divider">
+      أو
+    </div>
+
+
+    <div class="register">
+
+      ليس لديك حساب؟
+
+      <a href="register.html">
+        إنشاء حساب جديد
+      </a>
+
+    </div>
+
+
+  </div>
+
+</main>
+
+
+<footer>
+
+  <strong>
+    JOB <span>LINK</span> DZ
+  </strong>
+
+  <p>
+    منصة التوظيف الجزائرية
+  </p>
+
+  <p>
+    © 2026 Job Link DZ
+  </p>
+
+</footer>
+
+
+<script>
+
+  const loginForm =
+    document.getElementById("loginForm");
+
+  const message =
+    document.getElementById("message");
+
+
+  loginForm.addEventListener(
+    "submit",
+    function(event) {
+
+      event.preventDefault();
+
+
+      const email =
+        document
+          .getElementById("email")
+          .value
+          .trim();
+
+
+      const password =
+        document
+          .getElementById("password")
+          .value;
+
+
+      /*
+        هذه واجهة تجريبية فقط.
+        لن ننشئ حسابات حقيقية حتى نربط
+        المنصة بقاعدة بيانات وBackend.
+      */
+
+
+      if (
+        email === "" ||
+        password === ""
+      ) {
+
+        message.style.display = "block";
+
+        message.style.background = "#fef2f2";
+        message.style.color = "#b91c1c";
+
+        message.textContent =
+          "يرجى إدخال البريد الإلكتروني وكلمة المرور.";
+
+        return;
+
+      }
+
+
+      message.style.display = "block";
+
+      message.style.background = "#eff6ff";
+      message.style.color = "#1d4ed8";
+
+      message.textContent =
+        "واجهة تسجيل الدخول جاهزة. سيتم تفعيل الحسابات الحقيقية بعد ربط قاعدة البيانات.";
+
+    }
+  );
+
+
+  document
+    .getElementById("forgotPassword")
+    .addEventListener(
+      "click",
+      function(event) {
+
+        event.preventDefault();
+
+        alert(
+          "استرجاع كلمة المرور سيتم تفعيله مع نظام الحسابات."
+        );
+
+      }
+    );
+
+</script>
+
+
+</body>
+
+</html>
