@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إنشاء حساب شركة | Job Link DZ</title>
+  <meta
+    name="description"
+    content="أنشئ حساب شركتك على Job Link DZ وانشر فرص العمل وابحث عن الكفاءات الجزائرية."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Cairo", sans-serif;
+      background: #f5f7fa;
+      color: #111827;
+      min-height: 100vh;
+    }
+    /* ================= HEADER ================= */
+    header {
+      min-height: 76px;
+      padding: 0 7%;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-family: "Libre Baskerville", serif;
+      font-size: 21px;
+      font-weight: 700;
+      direction: ltr;
+      white-space: nowrap;
+    }
+    .logo span {
+      color: #2563eb;
+    }
+    .back-link {
+      color: #2563eb;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    /* ================= MAIN ================= */
+    main {
+      min-height: calc(100vh - 76px);
+      display: flex;
+      justify-content: center;
+      padding: 55px 20px;
+    }
+    .container {
+      width: 100%;
+      max-width: 1050px;
+      display: grid;
+      grid-template-columns: 0.9fr 1.4fr;
+      gap: 25px;
+      align-items: stretch;
+    }
+    /* ================= BRAND PANEL ================= */
+    .brand-panel {
+      background: #071a35;
+      color: #ffffff;
+      border-radius: 16px;
+      padding: 45px 38px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .brand-panel::before {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border: 1px solid rgba(96,165,250,0.25);
+      border-radius: 50%;
+      top: -100px;
+      left: -100px;
+    }
+    .brand-panel::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border: 1px solid rgba(96,165,250,0.2);
+      border-radius: 50%;
+      bottom: -80px;
+      right: -60px;
+    }
+    .brand-label {
+      position: relative;
+      z-index: 2;
+      color: #60a5fa;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+    .brand-panel h1 {
+      position: relative;
+      z-index: 2;
+      font-size: 34px;
+      line-height: 1.4;
+      margin-bottom: 18px;
+    }
+    .brand-panel h1 span {
+      color: #60a5fa;
+    }
+    .brand-panel > p {
+      position: relative;
+      z-index: 2;
+      color: #dbeafe;
+      font-size: 14px;
+      line-height: 2;
+      margin-bottom: 30px;
+    }
+    .benefits {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      gap: 13px;
+    }
+    .benefit {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #e5e7eb;
+      font-size: 13px;
+    }
+    .benefit-icon {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(37,99,235,0.2);
+      color: #60a5fa;
+      border: 1px solid rgba(96,165,250,0.2);
+      border-radius: 8px;
+      font-weight: 800;
+    }
+    /* ================= FORM CARD ================= */
+    .form-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 38px;
+      box-shadow: 0 15px 45px rgba(15,23,42,0.06);
+    }
+    .form-header {
+      margin-bottom: 28px;
+    }
+    .form-header h2 {
+      font-size: 27px;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+    .form-header h2 span {
+      color: #2563eb;
+    }
+    .form-header p {
+      color: #6b7280;
+      font-size: 13px;
+    }
+    /* ================= FORM ================= */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 17px;
+    }
+    .field {
+      display: flex;
+      flex-direction: column;
+    }
+    .full {
+      grid-column: 1 / -1;
+    }
+    label {
+      color: #374151;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+    input,
+    select {
+      width: 100%;
+      padding: 12px 13px;
+      border: 1px solid #d1d5db;
+      border-radius: 7px;
+      outline: none;
+      background: #ffffff;
+      color: #111827;
+      font-family: "Cairo", sans-serif;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+    input:focus,
+    select:focus {
+      border-color: #2563eb;
+      box-shadow:
+        0 0 0 3px rgba(37,99,235,0.08);
+    }
+    input::placeholder {
+      color: #9ca3af;
+    }
+    .hint {
+      color: #9ca3af;
+      font-size: 10px;
+      margin-top: 5px;
+    }
+    /* ================= TERMS ================= */
+    .terms {
+      margin-top: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      color: #6b7280;
+      font-size: 11px;
+      line-height: 1.7;
+    }
+    .terms input {
+      width: 15px;
+      height: 15px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .terms a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    /* ================= BUTTON ================= */
+    .submit-button {
+      width: 100%;
+      border: none;
+      border-radius: 7px;
+      background: #2563eb;
+      color: #ffffff;
+      padding: 14px;
+      margin-top: 22px;
+      font-family: "Cairo", sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .submit-button:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+    }
+    /* ================= LOGIN ================= */
+    .login-text {
+      text-align: center;
+      color: #6b7280;
+      font-size: 12px;
+      margin-top: 20px;
+    }
+    .login-text a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    /* ================= MESSAGE ================= */
+    #message {
+      display: none;
+      padding: 12px;
+      margin-top: 15px;
+      border-radius: 7px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    /* ================= FOOTER ================= */
+    footer {
+      background: #080d18;
+      color: #ffffff;
+      text-align: center;
+      padding: 25px 20px;
+    }
+    footer strong {
+      font-family: "Libre Baskerville", serif;
+      direction: ltr;
+    }
+    footer strong span {
+      color: #60a5fa;
+    }
+    footer p {
+      color: #9ca3af;
+      font-size: 10px;
+      margin-top: 6px;
+    }
+    .founder {
+      color: #60a5fa !important;
+      font-family: "Libre Baskerville", serif;
+      direction: ltr;
+      letter-spacing: 1px;
+    }
+    /* ================= MOBILE ================= */
+    @media (max-width: 800px) {
+      main {
+        padding: 30px 15px;
+      }
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .brand-panel {
+        padding: 32px 25px;
+      }
+      .brand-panel h1 {
+        font-size: 28px;
+      }
+      .form-card {
+        padding: 25px 20px;
+      }
+    }
+    @media (max-width: 500px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      .full {
+        grid-column: auto;
+      }
+      header {
+        padding: 0 5%;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="logo">
+    JOB <span>LINK</span> DZ
+  </div>
+  <a href="register.html" class="back-link">
+    العودة إلى التسجيل
+  </a>
+</header>
+<!-- ================= MAIN ================= -->
+<main>
+  <div class="container">
+    <!-- BRAND -->
+    <section class="brand-panel">
+      <div class="brand-label">
+        JOB LINK DZ
+      </div>
+      <h1>
+        ابنِ فريقك
+        <span>مع أفضل الكفاءات.</span>
+      </h1>
+      <p>
+        أنشئ حضور شركتك على Job Link DZ،
+        وانشر فرص العمل للوصول إلى الباحثين عن عمل
+        في مختلف الولايات الجزائرية.
+      </p>
+      <div class="benefits">
+        <div class="benefit">
+          <div class="benefit-icon">
+            01
+          </div>
+          <span>
+            إنشاء ملف احترافي لشركتك
+          </span>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">
+            02
+          </div>
+          <span>
+            نشر فرص العمل والوصول إلى المواهب
+          </span>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">
+            03
+          </div>
+          <span>
+            إدارة الوظائف والمتقدمين مستقبلاً
+          </span>
+        </div>
+      </div>
+    </section>
+    <!-- FORM -->
+    <section class="form-card">
+      <div class="form-header">
+        <h2>
+          إنشاء حساب <span>شركة</span>
+        </h2>
+        <p>
+          ابدأ ببناء حضور شركتك على Job Link DZ.
+        </p>
+      </div>
+      <form id="companyForm">
+        <div class="form-grid">
+          <div class="field full">
+            <label for="companyName">
+              اسم الشركة
+            </label>
+            <input
+              id="companyName"
+              type="text"
+              placeholder="مثال: شركة ABC"
+              required
+            >
+          </div>
+          <div class="field">
+            <label for="email">
+              البريد الإلكتروني المهني
+            </label>
+            <input
+              id="email"
+              type="email"
+              placeholder="company@email.com"
+              required
+            >
+          </div>
+          <div class="field">
+            <label for="phone">
+              رقم الهاتف
+            </label>
+            <input
+              id="phone"
+              type="tel"
+              placeholder="05 XX XX XX XX"
+              required
+            >
+          </div>
+          <div class="field">
+            <label for="city">
+              الولاية
+            </label>
+            <select id="city" required>
+              <option value="">
+                اختر الولاية
+              </option>
+              <option>أدرار</option>
+              <option>الشلف</option>
+              <option>الأغواط</option>
+              <option>أم البواقي</option>
+              <option>باتنة</option>
+              <option>بجاية</option>
+              <option>بسكرة</option>
+              <option>بشار</option>
+              <option>البليدة</option>
+              <option>البويرة</option>
+              <option>تمنراست</option>
+              <option>تبسة</option>
+              <option>تلمسان</option>
+              <option>تيارت</option>
+              <option>تيزي وزو</option>
+              <option>الجزائر</option>
+              <option>الجلفة</option>
+              <option>جيجل</option>
+              <option>سطيف</option>
+              <option>سعيدة</option>
+              <option>سكيكدة</option>
+              <option>سيدي بلعباس</option>
+              <option>عنابة</option>
+              <option>قالمة</option>
+              <option>قسنطينة</option>
+              <option>المدية</option>
+              <option>مستغانم</option>
+              <option>المسيلة</option>
+              <option>معسكر</option>
+              <option>ورقلة</option>
+              <option>وهران</option>
+              <option>البيض</option>
+              <option>إليزي</option>
+              <option>برج بوعريريج</option>
+              <option>بومرداس</option>
+              <option>الطارف</option>
+              <option>تندوف</option>
+              <option>تيسمسيلت</option>
+              <option>الوادي</option>
+              <option>خنشلة</option>
+              <option>سوق أهراس</option>
+              <option>تيبازة</option>
+              <option>ميلة</option>
+              <option>عين الدفلى</option>
+              <option>النعامة</option>
+              <option>عين تموشنت</option>
+              <option>غرداية</option>
+              <option>غليزان</option>
+              <option>تيميمون</option>
+              <option>برج باجي مختار</option>
+              <option>أولاد جلال</option>
+              <option>بني عباس</option>
+              <option>إن صالح</option>
+              <option>إن قزام</option>
+              <option>تقرت</option>
+              <option>جانت</option>
+              <option>المغير</option>
+              <option>المنيعة</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="sector">
+              قطاع الشركة
+            </label>
+            <select id="sector" required>
+              <option value="">
+                اختر القطاع
+              </option>
+              <option>الفندقة</option>
+              <option>المطاعم</option>
+              <option>التكنولوجيا</option>
+              <option>التجارة</option>
+              <option>الصناعة</option>
+              <option>البناء والأشغال العمومية</option>
+              <option>النقل واللوجستيك</option>
+              <option>السياحة</option>
+              <option>الصحة</option>
+              <option>التعليم</option>
+              <option>الخدمات</option>
+              <option>قطاعات أخرى</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="password">
+              كلمة المرور
+            </label>
+            <input
+              id="password"
+              type="password"
+              placeholder="أنشئ كلمة مرور"
+              minlength="8"
+              required
+            >
+            <span class="hint">
+              يجب أن تحتوي على 8 أحرف على الأقل.
+            </span>
+          </div>
+          <div class="field">
+            <label for="confirmPassword">
+              تأكيد كلمة المرور
+            </label>
+            <input
+              id="confirmPassword"
+              type="password"
+              placeholder="أعد كتابة كلمة المرور"
+              minlength="8"
+              required
+            >
+          </div>
+        </div>
+        <label class="terms">
+          <input
+            id="terms"
+            type="checkbox"
+            required
+          >
+          <span>
+            أوافق على شروط استخدام Job Link DZ
+            وسياسة المنصة.
+          </span>
+        </label>
+        <button
+          type="submit"
+          class="submit-button"
+        >
+          إنشاء حساب الشركة
+        </button>
+      </form>
+      <div id="message"></div>
+      <div class="login-text">
+        لديك حساب بالفعل؟
+        <a href="login.html">
+          تسجيل الدخول
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+<!-- ================= FOOTER ================= -->
+<footer>
+  <strong>
+    JOB <span>LINK</span> DZ
+  </strong>
+  <p>
+    منصة التوظيف الجزائرية
+  </p>
+  <p class="founder">
+    By ABDELMOUAINMAAMRI
+  </p>
+  <p>
+    © 2026 Job Link DZ
+  </p>
+</footer>
+<!-- ================= SCRIPT ================= -->
+<script>
+  const form =
+    document.getElementById("companyForm");
+  const message =
+    document.getElementById("message");
+  form.addEventListener(
+    "submit",
+    function(event) {
+      event.preventDefault();
+      const password =
+        document.getElementById("password").value;
+      const confirmPassword =
+        document.getElementById("confirmPassword").value;
+      if (password !== confirmPassword) {
+        message.style.display = "block";
+        message.style.background = "#fef2f2";
+        message.style.color = "#b91c1c";
+        message.textContent =
+          "كلمتا المرور غير متطابقتين.";
+        return;
+      }
+      message.style.display = "block";
+      message.style.background = "#eff6ff";
+      message.style.color = "#1d4ed8";
+      message.textContent =
+        "تم تجهيز نموذج حساب الشركة. سيتم تفعيل الحسابات الحقيقية بعد ربط قاعدة البيانات.";
+    }
+  );
+</script>
+</body>
+</html>
