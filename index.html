@@ -1,107 +1,203 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Job Link DZ | منصة التوظيف الجزائرية</title>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Job Link DZ | منصة التوظيف الجزائرية
+  </title>
+
+  <meta
+    name="description"
+    content="Job Link DZ - منصة التوظيف الجزائرية للباحثين عن العمل والشركات."
+  >
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
   <link
     href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap"
-    rel="stylesheet">
+    rel="stylesheet"
+  >
+
   <style>
+
+    /* ================= RESET ================= */
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     html {
       scroll-behavior: smooth;
     }
+
     body {
       font-family: "Cairo", sans-serif;
       background: #ffffff;
       color: #111827;
       line-height: 1.6;
     }
+
+    a,
     button,
     input,
     select {
       font-family: inherit;
     }
+
+    a {
+      text-decoration: none;
+    }
+
+
     /* ================= HEADER ================= */
+
     header {
       min-height: 76px;
       padding: 0 7%;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       background: #ffffff;
+
       border-bottom: 1px solid #e5e7eb;
+
       position: relative;
       z-index: 10;
     }
+
     .logo {
       font-family: "Libre Baskerville", serif;
+
       font-size: 22px;
       font-weight: 700;
+
       color: #111827;
+
       direction: ltr;
+
       white-space: nowrap;
     }
+
     .logo span {
       color: #2563eb;
     }
+
     nav {
       display: flex;
       align-items: center;
-      gap: 26px;
+
+      gap: 12px;
+
+      flex-wrap: wrap;
     }
+
     nav a {
       color: #374151;
-      text-decoration: none;
-      font-size: 14px;
+
+      font-size: 13px;
       font-weight: 600;
+
       transition: 0.2s;
     }
+
     nav a:hover {
       color: #2563eb;
     }
+
     .login {
       border: 1px solid #2563eb;
+
       color: #2563eb !important;
-      padding: 9px 17px;
+
+      padding: 9px 15px;
+
       border-radius: 7px;
     }
+
     .login:hover {
       background: #2563eb;
+
       color: #ffffff !important;
     }
+
+    .company-link {
+      border: 1px solid #111827;
+
+      color: #111827 !important;
+
+      padding: 9px 15px;
+
+      border-radius: 7px;
+    }
+
+    .company-link:hover {
+      background: #111827;
+
+      color: #ffffff !important;
+    }
+
+
     /* ================= HERO ================= */
+
     .hero {
       min-height: 650px;
+
       display: flex;
       align-items: center;
+
       position: relative;
+
       overflow: hidden;
+
       background: #071a35;
     }
+
     .hero::before {
       content: "";
+
       position: absolute;
+
       inset: 0;
+
       background-image:
         url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80");
+
       background-size: cover;
+
       background-position: center;
+
       background-repeat: no-repeat;
+
       filter: grayscale(100%);
+
       transform: scale(1.03);
     }
+
     .hero::after {
       content: "";
+
       position: absolute;
+
       inset: 0;
+
       background:
         linear-gradient(
           90deg,
@@ -110,621 +206,1033 @@
           rgba(7,26,53,0.48) 100%
         );
     }
+
     .hero-content {
       position: relative;
+
       z-index: 2;
+
       width: 90%;
+
       max-width: 1150px;
+
       margin: auto;
+
       color: #ffffff;
+
       text-align: right;
     }
+
+
     /* ================= BRAND ================= */
+
     .hero-label {
       color: #60a5fa;
+
       font-size: 15px;
+
       font-weight: 800;
+
       margin-bottom: 20px;
     }
+
     .hero-label .founder {
       display: block;
+
       margin-top: 7px;
+
       color: #dbeafe;
+
       font-family: "Libre Baskerville", serif;
+
       font-size: 11px;
+
       font-weight: 400;
+
       letter-spacing: 1.2px;
+
       direction: ltr;
+
       text-align: right;
     }
+
     .hero h1 {
       max-width: 720px;
+
       font-size: 52px;
+
       line-height: 1.25;
+
       font-weight: 800;
+
       margin-bottom: 20px;
     }
+
     .hero h1 span {
       color: #60a5fa;
     }
+
     .hero p {
       max-width: 650px;
+
       color: #e5e7eb;
+
       font-size: 18px;
+
       line-height: 1.9;
+
       margin-bottom: 38px;
     }
+
+
     /* ================= SEARCH ================= */
+
     .search-panel {
       max-width: 920px;
+
       display: flex;
+
       gap: 8px;
+
       background: #ffffff;
+
       padding: 9px;
+
       border-radius: 10px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+
+      box-shadow:
+        0 20px 50px rgba(0,0,0,0.25);
     }
+
     .search-panel input,
     .search-panel select {
       flex: 1;
+
       min-width: 190px;
+
       padding: 16px;
+
       border: none;
+
       outline: none;
+
       background: #ffffff;
+
       color: #111827;
+
       font-size: 14px;
     }
+
     .search-button {
       border: none;
+
       background: #2563eb;
+
       color: #ffffff;
+
       padding: 0 30px;
+
       border-radius: 7px;
+
       font-weight: 700;
+
       cursor: pointer;
+
       transition: 0.2s;
     }
+
     .search-button:hover {
       background: #1d4ed8;
     }
+
+
     /* ================= STATS ================= */
+
     .stats {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
+
       background: #111827;
+
       color: #ffffff;
+
       text-align: center;
+
       padding: 30px 7%;
     }
+
     .stat {
       border-left: 1px solid #374151;
     }
+
     .stat:last-child {
       border-left: none;
     }
+
     .stat strong {
       display: block;
+
       color: #60a5fa;
+
       font-size: 26px;
+
       font-weight: 800;
     }
+
     .stat span {
       color: #d1d5db;
+
       font-size: 13px;
     }
+
+
     /* ================= SECTION ================= */
+
     .section {
       max-width: 1150px;
+
       margin: auto;
+
       padding: 75px 20px;
     }
+
     .section-header {
       margin-bottom: 35px;
     }
+
     .section-header h2 {
       color: #111827;
+
       font-size: 30px;
+
       font-weight: 800;
     }
+
     .section-header p {
       color: #6b7280;
+
       margin-top: 8px;
+
       font-size: 14px;
     }
+
     .blue-line {
       width: 55px;
+
       height: 3px;
+
       background: #2563eb;
+
       margin-top: 13px;
     }
+
+
     /* ================= JOBS ================= */
+
     .jobs {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
+
       gap: 22px;
     }
+
     .job-card {
       background: #ffffff;
+
       border: 1px solid #e5e7eb;
+
       border-radius: 12px;
+
       padding: 25px;
+
       transition: 0.25s;
     }
+
     .job-card:hover {
       transform: translateY(-5px);
+
       border-color: #bfdbfe;
+
       box-shadow:
         0 15px 35px rgba(37,99,235,0.08);
     }
+
     .company {
       color: #6b7280;
+
       font-size: 13px;
+
       margin-bottom: 10px;
     }
+
     .job-card h3 {
       color: #111827;
+
       font-family: "Libre Baskerville", serif;
+
       font-size: 18px;
+
       margin-bottom: 12px;
+
       direction: ltr;
+
       text-align: right;
     }
+
     .job-info {
       color: #6b7280;
+
       font-size: 13px;
+
       line-height: 2;
     }
+
     .tags {
       margin-top: 15px;
     }
+
     .tag {
       display: inline-block;
+
       background: #eff6ff;
+
       color: #2563eb;
+
       padding: 5px 10px;
+
       border-radius: 20px;
+
       font-size: 11px;
+
       margin-left: 4px;
     }
+
     .apply {
       display: block;
+
       background: #111827;
+
       color: #ffffff;
+
       text-align: center;
+
       padding: 12px;
+
       border-radius: 7px;
+
       margin-top: 20px;
+
       font-size: 13px;
+
       font-weight: 700;
-      text-decoration: none;
     }
+
     .apply:hover {
       background: #2563eb;
     }
+
+
     /* ================= SECTORS ================= */
+
     .sectors-section {
       background: #f8fafc;
+
       border-top: 1px solid #e5e7eb;
+
       border-bottom: 1px solid #e5e7eb;
     }
+
     .sector-grid {
       display: grid;
+
       grid-template-columns: repeat(4, 1fr);
+
       gap: 18px;
     }
+
     .sector-card {
       background: #ffffff;
+
       border: 1px solid #e5e7eb;
+
       padding: 30px 15px;
+
       border-radius: 10px;
+
       text-align: center;
+
+      transition: 0.2s;
     }
+
+    .sector-card:hover {
+      transform: translateY(-4px);
+
+      border-color: #bfdbfe;
+    }
+
     .sector-icon {
       width: 55px;
+
       height: 55px;
+
       margin: 0 auto 14px;
+
       display: flex;
+
       align-items: center;
+
       justify-content: center;
+
       background: #eff6ff;
+
       color: #2563eb;
+
       border-radius: 9px;
+
       font-family: "Libre Baskerville", serif;
+
       font-weight: 700;
     }
+
     .sector-card h3 {
       color: #111827;
+
       font-size: 14px;
     }
+
     .sector-card p {
       color: #9ca3af;
+
       font-family: "Libre Baskerville", serif;
+
       font-size: 10px;
+
       margin-top: 4px;
     }
+
+
     /* ================= CTA ================= */
+
     .cta {
       background: #eff6ff;
+
       text-align: center;
+
       padding: 75px 20px;
     }
+
     .cta h2 {
       color: #111827;
+
       font-size: 32px;
+
       margin-bottom: 10px;
     }
+
     .cta p {
       color: #6b7280;
+
       margin-bottom: 25px;
     }
+
     .cta-button {
       display: inline-block;
+
       background: #2563eb;
+
       color: #ffffff;
+
       padding: 13px 28px;
+
       border-radius: 7px;
+
       font-size: 14px;
+
       font-weight: 700;
-      text-decoration: none;
     }
+
     .cta-button:hover {
       background: #1d4ed8;
     }
+
+
     /* ================= FOOTER ================= */
+
     footer {
       background: #080d18;
+
       color: #ffffff;
+
       text-align: center;
+
       padding: 35px 20px;
     }
+
     footer strong {
       display: block;
+
       font-family: "Libre Baskerville", serif;
+
       font-size: 19px;
+
       direction: ltr;
     }
+
     footer strong span {
       color: #60a5fa;
     }
+
     footer p {
       color: #9ca3af;
+
       font-size: 12px;
+
       margin-top: 8px;
     }
+
     .footer-founder {
       color: #60a5fa !important;
+
       font-family: "Libre Baskerville", serif;
+
       font-size: 10px !important;
+
       letter-spacing: 1px;
+
       direction: ltr;
     }
+
+
     /* ================= MOBILE ================= */
+
     @media (max-width: 800px) {
+
       header {
         padding: 18px 5%;
+
         flex-direction: column;
+
         gap: 15px;
       }
+
       nav {
         width: 100%;
+
         justify-content: center;
+
         flex-wrap: wrap;
-        gap: 12px;
+
+        gap: 10px;
       }
+
       .hero {
         min-height: 700px;
       }
+
       .hero-content {
         text-align: center;
       }
+
       .hero-label .founder {
         text-align: center;
       }
+
       .hero h1 {
         font-size: 36px;
       }
+
       .hero p {
         font-size: 15px;
       }
+
       .search-panel {
         flex-direction: column;
       }
+
       .search-panel input,
       .search-panel select,
       .search-button {
         width: 100%;
+
         min-height: 52px;
       }
+
       .search-button {
         padding: 14px;
       }
+
       .stats {
         grid-template-columns: 1fr;
+
         gap: 20px;
       }
+
       .stat {
         border-left: none;
+
         border-bottom: 1px solid #374151;
+
         padding-bottom: 15px;
       }
+
       .stat:last-child {
         border-bottom: none;
       }
+
       .jobs {
         grid-template-columns: 1fr;
       }
+
       .sector-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
+
+
     @media (max-width: 450px) {
+
       .sector-grid {
         grid-template-columns: 1fr;
       }
+
       .hero h1 {
         font-size: 31px;
       }
+
       .hero-label {
         font-size: 14px;
       }
+
+      .logo {
+        font-size: 19px;
+      }
+
     }
+
   </style>
+
 </head>
+
+
 <body>
+
+
   <!-- ================= HEADER ================= -->
+
   <header>
-<div class="logo">
-  JOB <span>LINK</span> DZ
-</div>
-<nav>
-  <a href="index.html">
-    الرئيسية
-  </a>
-  <a href="#jobs">
-    الوظائف
-  </a>
-  <a href="#sectors">
-    القطاعات
-  </a>
-  <a href="#about">
-    عن المنصة
-  </a>
-  <a href="login.html" class="login">
-    دخول / إنشاء حساب
-  </a>
-</nav>
+
+    <div class="logo">
+      JOB <span>LINK</span> DZ
+    </div>
+
+    <nav>
+
+      <a href="index.html">
+        الرئيسية
+      </a>
+
+      <a href="jobs.html">
+        الوظائف
+      </a>
+
+      <a href="#sectors">
+        القطاعات
+      </a>
+
+      <a href="#about">
+        عن المنصة
+      </a>
+
+      <a
+        href="company-register.html"
+        class="company-link"
+      >
+        للشركات
+      </a>
+
+      <a
+        href="login.html"
+        class="login"
+      >
+        دخول / إنشاء حساب
+      </a>
+
+    </nav>
+
   </header>
+
+
   <!-- ================= HERO ================= -->
+
   <section class="hero">
-<div class="hero-content">
-  <div class="hero-label">
-    منصة التوظيف الجزائرية
-    <span class="founder">
-      By ABDELMOUAINMAAMRI
-    </span>
-  </div>
-  <h1>
-    ابنِ مستقبلك المهني
-    <span>
-      مع أفضل الفرص
-    </span>
-  </h1>
-  <p>
-    اكتشف الوظائف المناسبة لك،
-    وتواصل مع الشركات التي تبحث عن مهاراتك،
-    وابدأ خطوتك المهنية القادمة.
-  </p>
-  <!-- SEARCH -->
-  <div class="search-panel">
-    <input
-      id="searchInput"
-      type="search"
-      placeholder="ابحث عن وظيفة أو مهنة"
-    >
-    <select id="citySelect">
-      <option value="">
-        اختر الولاية
-      </option>
-      <option value="أدرار">أدرار</option>
-      <option value="الشلف">الشلف</option>
-      <option value="الأغواط">الأغواط</option>
-      <option value="أم البواقي">أم البواقي</option>
-      <option value="باتنة">باتنة</option>
-      <option value="بجاية">بجاية</option>
-      <option value="بسكرة">بسكرة</option>
-      <option value="بشار">بشار</option>
-      <option value="البليدة">البليدة</option>
-      <option value="البويرة">البويرة</option>
-      <option value="تمنراست">تمنراست</option>
-      <option value="تبسة">تبسة</option>
-      <option value="تلمسان">تلمسان</option>
-      <option value="تيارت">تيارت</option>
-      <option value="تيزي وزو">تيزي وزو</option>
-      <option value="الجزائر">الجزائر</option>
-      <option value="الجلفة">الجلفة</option>
-      <option value="جيجل">جيجل</option>
-      <option value="سطيف">سطيف</option>
-      <option value="سعيدة">سعيدة</option>
-      <option value="سكيكدة">سكيكدة</option>
-      <option value="سيدي بلعباس">سيدي بلعباس</option>
-      <option value="عنابة">عنابة</option>
-      <option value="قالمة">قالمة</option>
-      <option value="قسنطينة">قسنطينة</option>
-      <option value="المدية">المدية</option>
-      <option value="مستغانم">مستغانم</option>
-      <option value="المسيلة">المسيلة</option>
-      <option value="معسكر">معسكر</option>
-      <option value="ورقلة">ورقلة</option>
-      <option value="وهران">وهران</option>
-      <option value="البيض">البيض</option>
-      <option value="إليزي">إليزي</option>
-      <option value="برج بوعريريج">برج بوعريريج</option>
-      <option value="بومرداس">بومرداس</option>
-      <option value="الطارف">الطارف</option>
-      <option value="تندوف">تندوف</option>
-      <option value="تيسمسيلت">تيسمسيلت</option>
-      <option value="الوادي">الوادي</option>
-      <option value="خنشلة">خنشلة</option>
-      <option value="سوق أهراس">سوق أهراس</option>
-      <option value="تيبازة">تيبازة</option>
-      <option value="ميلة">ميلة</option>
-      <option value="عين الدفلى">عين الدفلى</option>
-      <option value="النعامة">النعامة</option>
-      <option value="عين تموشنت">عين تموشنت</option>
-      <option value="غرداية">غرداية</option>
-      <option value="غليزان">غليزان</option>
-      <option value="تيميمون">تيميمون</option>
-      <option value="برج باجي مختار">برج باجي مختار</option>
-      <option value="أولاد جلال">أولاد جلال</option>
-      <option value="بني عباس">بني عباس</option>
-      <option value="إن صالح">إن صالح</option>
-      <option value="إن قزام">إن قزام</option>
-      <option value="تقرت">تقرت</option>
-      <option value="جانت">جانت</option>
-      <option value="المغير">المغير</option>
-      <option value="المنيعة">المنيعة</option>
-    </select>
-    <button
-      id="searchButton"
-      class="search-button"
-      type="button"
-    >
-      بحث عن فرص
-    </button>
-  </div>
-</div>
+
+    <div class="hero-content">
+
+
+      <!-- BRAND -->
+
+      <div class="hero-label">
+
+        منصة التوظيف الجزائرية
+
+        <span class="founder">
+          By ABDELMOUAINMAAMRI
+        </span>
+
+      </div>
+
+
+      <h1>
+
+        ابنِ مستقبلك المهني
+
+        <span>
+          مع أفضل الفرص
+        </span>
+
+      </h1>
+
+
+      <p>
+
+        اكتشف الوظائف المناسبة لك،
+        وتواصل مع الشركات التي تبحث عن مهاراتك،
+        وابدأ خطوتك المهنية القادمة.
+
+      </p>
+
+
+      <!-- SEARCH -->
+
+      <div class="search-panel">
+
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="ابحث عن وظيفة أو مهنة"
+          aria-label="البحث عن وظيفة"
+        >
+
+
+        <select
+          id="citySelect"
+          aria-label="اختر الولاية"
+        >
+
+          <option value="">
+            اختر الولاية
+          </option>
+
+          <option value="أدرار">أدرار</option>
+          <option value="الشلف">الشلف</option>
+          <option value="الأغواط">الأغواط</option>
+          <option value="أم البواقي">أم البواقي</option>
+          <option value="باتنة">باتنة</option>
+          <option value="بجاية">بجاية</option>
+          <option value="بسكرة">بسكرة</option>
+          <option value="بشار">بشار</option>
+          <option value="البليدة">البليدة</option>
+          <option value="البويرة">البويرة</option>
+          <option value="تمنراست">تمنراست</option>
+          <option value="تبسة">تبسة</option>
+          <option value="تلمسان">تلمسان</option>
+          <option value="تيارت">تيارت</option>
+          <option value="تيزي وزو">تيزي وزو</option>
+          <option value="الجزائر">الجزائر</option>
+          <option value="الجلفة">الجلفة</option>
+          <option value="جيجل">جيجل</option>
+          <option value="سطيف">سطيف</option>
+          <option value="سعيدة">سعيدة</option>
+          <option value="سكيكدة">سكيكدة</option>
+          <option value="سيدي بلعباس">سيدي بلعباس</option>
+          <option value="عنابة">عنابة</option>
+          <option value="قالمة">قالمة</option>
+          <option value="قسنطينة">قسنطينة</option>
+          <option value="المدية">المدية</option>
+          <option value="مستغانم">مستغانم</option>
+          <option value="المسيلة">المسيلة</option>
+          <option value="معسكر">معسكر</option>
+          <option value="ورقلة">ورقلة</option>
+          <option value="وهران">وهران</option>
+          <option value="البيض">البيض</option>
+          <option value="إليزي">إليزي</option>
+          <option value="برج بوعريريج">برج بوعريريج</option>
+          <option value="بومرداس">بومرداس</option>
+          <option value="الطارف">الطارف</option>
+          <option value="تندوف">تندوف</option>
+          <option value="تيسمسيلت">تيسمسيلت</option>
+          <option value="الوادي">الوادي</option>
+          <option value="خنشلة">خنشلة</option>
+          <option value="سوق أهراس">سوق أهراس</option>
+          <option value="تيبازة">تيبازة</option>
+          <option value="ميلة">ميلة</option>
+          <option value="عين الدفلى">عين الدفلى</option>
+          <option value="النعامة">النعامة</option>
+          <option value="عين تموشنت">عين تموشنت</option>
+          <option value="غرداية">غرداية</option>
+          <option value="غليزان">غليزان</option>
+          <option value="تيميمون">تيميمون</option>
+          <option value="برج باجي مختار">برج باجي مختار</option>
+          <option value="أولاد جلال">أولاد جلال</option>
+          <option value="بني عباس">بني عباس</option>
+          <option value="إن صالح">إن صالح</option>
+          <option value="إن قزام">إن قزام</option>
+          <option value="تقرت">تقرت</option>
+          <option value="جانت">جانت</option>
+          <option value="المغير">المغير</option>
+          <option value="المنيعة">المنيعة</option>
+
+        </select>
+
+
+        <button
+          id="searchButton"
+          class="search-button"
+          type="button"
+        >
+          بحث عن فرص
+        </button>
+
+      </div>
+
+    </div>
+
   </section>
+
+
   <!-- ================= STATS ================= -->
+
   <section class="stats">
-<div class="stat">
-  <strong>
-    58
-  </strong>
-  <span>
-    ولاية جزائرية
-  </span>
-</div>
-<div class="stat">
-  <strong>
-    + فرص
-  </strong>
-  <span>
-    وظائف جديدة
-  </span>
-</div>
-<div class="stat">
-  <strong>
-    + شركات
-  </strong>
-  <span>
-    تبحث عن المواهب
-  </span>
-</div>
+
+    <div class="stat">
+
+      <strong>
+        58
+      </strong>
+
+      <span>
+        ولاية جزائرية
+      </span>
+
+    </div>
+
+
+    <div class="stat">
+
+      <strong>
+        + فرص
+      </strong>
+
+      <span>
+        وظائف جديدة
+      </span>
+
+    </div>
+
+
+    <div class="stat">
+
+      <strong>
+        + شركات
+      </strong>
+
+      <span>
+        تبحث عن المواهب
+      </span>
+
+    </div>
+
   </section>
+
+
   <!-- ================= JOBS ================= -->
-  <section class="section" id="jobs">
-<div class="section-header">
-  <h2>
-    أحدث فرص العمل
-  </h2>
-  <div class="blue-line"></div>
-  <p>
-    فرص مهنية من مختلف مستويات قطاع الفندقة والمطاعم.
-  </p>
-</div>
-<div class="jobs" id="jobsContainer"></div>
+
+  <section
+    class="section"
+    id="jobs"
+  >
+
+    <div class="section-header">
+
+      <h2>
+        أحدث فرص العمل
+      </h2>
+
+      <div class="blue-line"></div>
+
+      <p>
+        فرص مهنية من مختلف مستويات قطاع الفندقة والمطاعم.
+      </p>
+
+    </div>
+
+
+    <div
+      class="jobs"
+      id="jobsContainer"
+    ></div>
+
   </section>
+
+
   <!-- ================= SECTORS ================= -->
-  <section class="sectors-section" id="sectors">
-<div class="section">
-  <div class="section-header">
-    <h2>
-      قطاعات Job Link DZ
-    </h2>
-    <div class="blue-line"></div>
-    <p>
-      نبدأ بالفندقة والمطاعم مع إمكانية التوسع إلى قطاعات أخرى.
-    </p>
-  </div>
-  <div class="sector-grid">
-    <div class="sector-card">
-      <div class="sector-icon">
-        H
+
+  <section
+    class="sectors-section"
+    id="sectors"
+  >
+
+    <div class="section">
+
+      <div class="section-header">
+
+        <h2>
+          قطاعات Job Link DZ
+        </h2>
+
+        <div class="blue-line"></div>
+
+        <p>
+          نبدأ بالفندقة والمطاعم مع إمكانية التوسع إلى قطاعات أخرى.
+        </p>
+
       </div>
-      <h3>
-        الفنادق
-      </h3>
-      <p>
-        Hospitality
-      </p>
-    </div>
-    <div class="sector-card">
-      <div class="sector-icon">
-        R
+
+
+      <div class="sector-grid">
+
+
+        <div class="sector-card">
+
+          <div class="sector-icon">
+            H
+          </div>
+
+          <h3>
+            الفنادق
+          </h3>
+
+          <p>
+            Hospitality
+          </p>
+
+        </div>
+
+
+        <div class="sector-card">
+
+          <div class="sector-icon">
+            R
+          </div>
+
+          <h3>
+            المطاعم
+          </h3>
+
+          <p>
+            Restauration
+          </p>
+
+        </div>
+
+
+        <div class="sector-card">
+
+          <div class="sector-icon">
+            IT
+          </div>
+
+          <h3>
+            التكنولوجيا
+          </h3>
+
+          <p>
+            Technology
+          </p>
+
+        </div>
+
+
+        <div class="sector-card">
+
+          <div class="sector-icon">
+            C
+          </div>
+
+          <h3>
+            التجارة
+          </h3>
+
+          <p>
+            Commerce
+          </p>
+
+        </div>
+
+
       </div>
-      <h3>
-        المطاعم
-      </h3>
-      <p>
-        Restauration
-      </p>
+
     </div>
-    <div class="sector-card">
-      <div class="sector-icon">
-        IT
-      </div>
-      <h3>
-        التكنولوجيا
-      </h3>
-      <p>
-        Technology
-      </p>
-    </div>
-    <div class="sector-card">
-      <div class="sector-icon">
-        C
-      </div>
-      <h3>
-        التجارة
-      </h3>
-      <p>
-        Commerce
-      </p>
-    </div>
-  </div>
-</div>
+
   </section>
+
+
   <!-- ================= CTA ================= -->
-  <section class="cta" id="about">
-<h2>
-  مستعد لخطوتك القادمة؟
-</h2>
-<p>
-  ابدأ البحث عن فرصتك المهنية اليوم.
-</p>
-<a href="#jobs" class="cta-button">
-  اكتشف الوظائف
-</a>
+
+  <section
+    class="cta"
+    id="about"
+  >
+
+    <h2>
+      مستعد لخطوتك القادمة؟
+    </h2>
+
+    <p>
+      ابدأ البحث عن فرصتك المهنية اليوم.
+    </p>
+
+    <a
+      href="jobs.html"
+      class="cta-button"
+    >
+      اكتشف الوظائف
+    </a>
+
   </section>
+
+
   <!-- ================= FOOTER ================= -->
+
   <footer>
-<strong>
-  JOB <span>LINK</span> DZ
-</strong>
-<p>
-  منصة التوظيف الجزائرية
-</p>
-<p class="footer-founder">
-  By ABDELMOUAINMAAMRI
-</p>
-<p>
-  © 2026 Job Link DZ
-</p>
+
+    <strong>
+      JOB <span>LINK</span> DZ
+    </strong>
+
+    <p>
+      منصة التوظيف الجزائرية
+    </p>
+
+    <p class="footer-founder">
+      By ABDELMOUAINMAAMRI
+    </p>
+
+    <p>
+      © 2026 Job Link DZ
+    </p>
+
   </footer>
+
+
   <!-- ================= JOB DATABASE ================= -->
+
   <script>
+
     const jobs = [
+
       {
         title: "Directeur Général",
         sector: "Hôtellerie",
@@ -732,6 +1240,7 @@
         type: "CDI",
         level: "Direction"
       },
+
       {
         title: "Directeur d’Hôtel",
         sector: "Hôtellerie",
@@ -739,6 +1248,7 @@
         type: "CDI",
         level: "Direction"
       },
+
       {
         title: "Directeur de la Restauration",
         sector: "Restauration",
@@ -746,6 +1256,7 @@
         type: "CDI",
         level: "Direction"
       },
+
       {
         title: "Responsable F&B",
         sector: "Restauration",
@@ -753,6 +1264,7 @@
         type: "CDI",
         level: "Management"
       },
+
       {
         title: "Chef de Réception",
         sector: "Hôtellerie",
@@ -760,6 +1272,7 @@
         type: "CDI",
         level: "Management"
       },
+
       {
         title: "Réceptionniste",
         sector: "Hôtellerie",
@@ -767,6 +1280,7 @@
         type: "CDI",
         level: "Employé"
       },
+
       {
         title: "Night Auditor",
         sector: "Hôtellerie",
@@ -774,6 +1288,7 @@
         type: "CDI",
         level: "Employé"
       },
+
       {
         title: "Gouvernant(e)",
         sector: "Hôtellerie",
@@ -781,6 +1296,7 @@
         type: "CDD",
         level: "Management"
       },
+
       {
         title: "Maître d’Hôtel",
         sector: "Restauration",
@@ -788,6 +1304,7 @@
         type: "CDI",
         level: "Management"
       },
+
       {
         title: "Chef de Rang",
         sector: "Restauration",
@@ -795,6 +1312,7 @@
         type: "CDI",
         level: "Employé"
       },
+
       {
         title: "Demi-Chef de Rang",
         sector: "Restauration",
@@ -802,6 +1320,7 @@
         type: "CDI",
         level: "Employé"
       },
+
       {
         title: "Serveur / Serveuse",
         sector: "Restauration",
@@ -809,6 +1328,7 @@
         type: "CDD",
         level: "Employé"
       },
+
       {
         title: "Commis de Salle",
         sector: "Restauration",
@@ -816,6 +1336,7 @@
         type: "CDD",
         level: "Débutant"
       },
+
       {
         title: "Chef de Cuisine",
         sector: "Cuisine",
@@ -823,6 +1344,7 @@
         type: "CDI",
         level: "Management"
       },
+
       {
         title: "Sous-Chef",
         sector: "Cuisine",
@@ -830,6 +1352,7 @@
         type: "CDI",
         level: "Management"
       },
+
       {
         title: "Chef de Partie",
         sector: "Cuisine",
@@ -837,6 +1360,7 @@
         type: "CDI",
         level: "Employé"
       },
+
       {
         title: "Commis de Cuisine",
         sector: "Cuisine",
@@ -844,6 +1368,7 @@
         type: "CDD",
         level: "Débutant"
       },
+
       {
         title: "Plongeur",
         sector: "Cuisine",
@@ -851,6 +1376,7 @@
         type: "CDD",
         level: "Débutant"
       },
+
       {
         title: "Chef Barman",
         sector: "Bar",
@@ -858,6 +1384,7 @@
         type: "CDI",
         level: "Management"
       },
+
       {
         title: "Barman / Barmaid",
         sector: "Bar",
@@ -865,6 +1392,7 @@
         type: "CDI",
         level: "Employé"
       },
+
       {
         title: "Sales Manager",
         sector: "Commercial",
@@ -872,6 +1400,7 @@
         type: "CDI",
         level: "Management"
       },
+
       {
         title: "Event Manager",
         sector: "Événementiel",
@@ -879,6 +1408,7 @@
         type: "CDI",
         level: "Management"
       },
+
       {
         title: "Banquet Manager",
         sector: "Événementiel",
@@ -886,78 +1416,137 @@
         type: "CDI",
         level: "Management"
       }
+
     ];
+
+
     /* ================= DISPLAY JOBS ================= */
+
     const jobsContainer =
       document.getElementById("jobsContainer");
+
+
     function showJobs(list) {
+
+      if (!jobsContainer) {
+        return;
+      }
+
+
       if (list.length === 0) {
+
         jobsContainer.innerHTML = `
+
           <div style="
             grid-column: 1 / -1;
             text-align: center;
             padding: 50px 20px;
             color: #6b7280;
           ">
+
             <h3 style="
               color: #111827;
               margin-bottom: 10px;
             ">
               لا توجد وظائف مطابقة
             </h3>
+
             <p>
               جرّب البحث عن مهنة أو ولاية أخرى.
             </p>
+
           </div>
+
         `;
+
         return;
       }
+
+
       jobsContainer.innerHTML =
         list.map(function(job) {
+
           return `
+
             <div class="job-card">
+
               <div class="company">
                 ${job.sector}
               </div>
+
               <h3>
                 ${job.title}
               </h3>
+
               <div class="job-info">
-                ${job.city}<br>
-                دوام كامل<br>
+
+                ${job.city}
+
+                <br>
+
+                دوام كامل
+
+                <br>
+
                 ${job.level}
+
               </div>
+
               <div class="tags">
+
                 <span class="tag">
                   ${job.type}
                 </span>
+
                 <span class="tag">
                   ${job.sector}
                 </span>
+
               </div>
-              <a href="#" class="apply">
-                عرض الوظيفة
+
+              <a
+                href="jobs.html"
+                class="apply"
+              >
+                عرض الوظائف
               </a>
+
             </div>
+
           `;
+
         }).join("");
+
     }
+
+
     /* ================= SEARCH ================= */
+
     const searchInput =
       document.getElementById("searchInput");
+
     const citySelect =
       document.getElementById("citySelect");
+
     const searchButton =
       document.getElementById("searchButton");
+
+
     function searchJobs() {
+
       const keyword =
         searchInput.value
           .trim()
           .toLowerCase();
+
+
       const city =
         citySelect.value;
+
+
       const results =
         jobs.filter(function(job) {
+
           const text =
             (
               job.title +
@@ -968,38 +1557,79 @@
               " " +
               job.city
             ).toLowerCase();
+
+
           const keywordMatch =
             keyword === "" ||
             text.includes(keyword);
+
+
           const cityMatch =
             city === "" ||
             job.city === city;
+
+
           return (
             keywordMatch &&
             cityMatch
           );
+
         });
+
+
       showJobs(results);
-      document
-        .getElementById("jobs")
-        .scrollIntoView({
+
+
+      const jobsSection =
+        document.getElementById("jobs");
+
+
+      if (jobsSection) {
+
+        jobsSection.scrollIntoView({
           behavior: "smooth"
         });
-    }
-    searchButton.addEventListener(
-      "click",
-      searchJobs
-    );
-    searchInput.addEventListener(
-      "keydown",
-      function(event) {
-        if (event.key === "Enter") {
-          searchJobs();
-        }
+
       }
-    );
+
+    }
+
+
+    if (searchButton) {
+
+      searchButton.addEventListener(
+        "click",
+        searchJobs
+      );
+
+    }
+
+
+    if (searchInput) {
+
+      searchInput.addEventListener(
+        "keydown",
+        function(event) {
+
+          if (event.key === "Enter") {
+
+            searchJobs();
+
+          }
+
+        }
+      );
+
+    }
+
+
     /* ================= START ================= */
+
     showJobs(jobs);
+
   </script>
+
+
 </body>
+
 </html>
