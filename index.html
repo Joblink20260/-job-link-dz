@@ -1,45 +1,20 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
-
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>
-    Job Link DZ | منصة التوظيف الجزائرية
-  </title>
-
-  <meta
-    name="description"
-    content="Job Link DZ - منصة التوظيف الجزائرية للباحثين عن العمل والشركات."
-  >
+  <title>Job Link DZ | مستقبلك المهني يبدأ هنا</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap"
-    rel="stylesheet"
-  >
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-
-    /* ================= RESET ================= */
-
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -48,1588 +23,1069 @@
 
     body {
       font-family: "Cairo", sans-serif;
-      background: #ffffff;
-      color: #111827;
-      line-height: 1.6;
+      background: #020617;
+      color: #ffffff;
+      overflow-x: hidden;
     }
 
-    a,
-    button,
-    input,
-    select {
-      font-family: inherit;
+    /* =========================
+       BACKGROUND
+    ========================= */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -5;
+      background:
+        radial-gradient(circle at 75% 25%, rgba(37, 99, 235, 0.18), transparent 30%),
+        radial-gradient(circle at 20% 60%, rgba(14, 165, 233, 0.08), transparent 30%),
+        #020617;
     }
 
-    a {
-      text-decoration: none;
+    .stars {
+      position: fixed;
+      inset: 0;
+      z-index: -4;
+      pointer-events: none;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,.8) 1px, transparent 1px),
+        radial-gradient(circle, rgba(37,99,235,.7) 1px, transparent 1px);
+      background-size: 90px 90px, 140px 140px;
+      background-position: 0 0, 40px 70px;
+      animation: starsMove 18s linear infinite;
+      opacity: .45;
     }
 
+    @keyframes starsMove {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(90px);
+      }
+    }
 
-    /* ================= HEADER ================= */
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
-      min-height: 76px;
-      padding: 0 7%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 76px;
+      z-index: 1000;
+      background: rgba(2, 6, 23, 0.72);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(148, 163, 184, .12);
+    }
 
+    .nav {
+      max-width: 1400px;
+      height: 100%;
+      margin: auto;
+      padding: 0 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-
-      background: #ffffff;
-
-      border-bottom: 1px solid #e5e7eb;
-
-      position: relative;
-      z-index: 10;
     }
 
     .logo {
-      font-family: "Libre Baskerville", serif;
-
-      font-size: 22px;
-      font-weight: 700;
-
-      color: #111827;
-
-      direction: ltr;
-
-      white-space: nowrap;
+      color: #fff;
+      text-decoration: none;
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: -1.5px;
     }
 
     .logo span {
-      color: #2563eb;
+      color: #3b82f6;
     }
 
-    nav {
+    .nav-links {
       display: flex;
       align-items: center;
-
-      gap: 12px;
-
-      flex-wrap: wrap;
+      gap: 28px;
     }
 
-    nav a {
-      color: #374151;
-
+    .nav-links a {
+      color: #cbd5e1;
+      text-decoration: none;
       font-size: 13px;
       font-weight: 600;
-
-      transition: 0.2s;
+      transition: .25s;
     }
 
-    nav a:hover {
-      color: #2563eb;
+    .nav-links a:hover {
+      color: #60a5fa;
     }
 
-    .login {
-      border: 1px solid #2563eb;
-
-      color: #2563eb !important;
-
-      padding: 9px 15px;
-
-      border-radius: 7px;
-    }
-
-    .login:hover {
-      background: #2563eb;
-
-      color: #ffffff !important;
-    }
-
-    .company-link {
-      border: 1px solid #111827;
-
-      color: #111827 !important;
-
-      padding: 9px 15px;
-
-      border-radius: 7px;
-    }
-
-    .company-link:hover {
-      background: #111827;
-
-      color: #ffffff !important;
-    }
-
-
-    /* ================= HERO ================= */
-
-    .hero {
-      min-height: 650px;
-
+    .nav-actions {
       display: flex;
       align-items: center;
-
-      position: relative;
-
-      overflow: hidden;
-
-      background: #071a35;
+      gap: 12px;
     }
 
-    .hero::before {
-      content: "";
-
-      position: absolute;
-
-      inset: 0;
-
-      background-image:
-        url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80");
-
-      background-size: cover;
-
-      background-position: center;
-
-      background-repeat: no-repeat;
-
-      filter: grayscale(100%);
-
-      transform: scale(1.03);
+    .login-btn,
+    .register-btn {
+      text-decoration: none;
+      padding: 11px 20px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: .25s;
     }
 
-    .hero::after {
-      content: "";
+    .login-btn {
+      color: #fff;
+      border: 1px solid #334155;
+    }
 
-      position: absolute;
+    .login-btn:hover {
+      border-color: #3b82f6;
+    }
 
-      inset: 0;
+    .register-btn {
+      color: #fff;
+      background: #2563eb;
+      box-shadow: 0 0 25px rgba(37,99,235,.35);
+    }
 
-      background:
-        linear-gradient(
-          90deg,
-          rgba(7,26,53,0.97) 0%,
-          rgba(7,26,53,0.88) 45%,
-          rgba(7,26,53,0.48) 100%
-        );
+    .register-btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 850px;
+      padding: 145px 7% 80px;
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      align-items: center;
+      gap: 40px;
+      max-width: 1500px;
+      margin: auto;
     }
 
     .hero-content {
       position: relative;
-
-      z-index: 2;
-
-      width: 90%;
-
-      max-width: 1150px;
-
-      margin: auto;
-
-      color: #ffffff;
-
-      text-align: right;
+      z-index: 10;
     }
 
-
-    /* ================= BRAND ================= */
-
-    .hero-label {
+    .small-label {
+      display: inline-block;
+      padding: 7px 14px;
+      border: 1px solid rgba(59,130,246,.35);
+      background: rgba(37,99,235,.08);
       color: #60a5fa;
-
-      font-size: 15px;
-
-      font-weight: 800;
-
-      margin-bottom: 20px;
-    }
-
-    .hero-label .founder {
-      display: block;
-
-      margin-top: 7px;
-
-      color: #dbeafe;
-
-      font-family: "Libre Baskerville", serif;
-
-      font-size: 11px;
-
-      font-weight: 400;
-
-      letter-spacing: 1.2px;
-
-      direction: ltr;
-
-      text-align: right;
+      border-radius: 50px;
+      font-size: 12px;
+      margin-bottom: 22px;
     }
 
     .hero h1 {
-      max-width: 720px;
-
-      font-size: 52px;
-
-      line-height: 1.25;
-
+      font-size: clamp(45px, 6vw, 78px);
+      line-height: 1.12;
+      letter-spacing: -3px;
       font-weight: 800;
-
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
     .hero h1 span {
-      color: #60a5fa;
+      color: #3b82f6;
+      text-shadow: 0 0 30px rgba(59,130,246,.45);
     }
 
-    .hero p {
-      max-width: 650px;
-
-      color: #e5e7eb;
-
-      font-size: 18px;
-
-      line-height: 1.9;
-
-      margin-bottom: 38px;
+    .hero-description {
+      max-width: 580px;
+      color: #94a3b8;
+      font-size: 16px;
+      line-height: 2;
+      margin-bottom: 32px;
     }
 
-
-    /* ================= SEARCH ================= */
-
-    .search-panel {
-      max-width: 920px;
-
+    .hero-buttons {
       display: flex;
-
-      gap: 8px;
-
-      background: #ffffff;
-
-      padding: 9px;
-
-      border-radius: 10px;
-
-      box-shadow:
-        0 20px 50px rgba(0,0,0,0.25);
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 42px;
     }
 
-    .search-panel input,
-    .search-panel select {
-      flex: 1;
-
-      min-width: 190px;
-
-      padding: 16px;
-
-      border: none;
-
-      outline: none;
-
-      background: #ffffff;
-
-      color: #111827;
-
+    .primary-btn,
+    .secondary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      min-width: 170px;
+      padding: 14px 22px;
+      border-radius: 11px;
       font-size: 14px;
-    }
-
-    .search-button {
-      border: none;
-
-      background: #2563eb;
-
-      color: #ffffff;
-
-      padding: 0 30px;
-
-      border-radius: 7px;
-
       font-weight: 700;
-
-      cursor: pointer;
-
-      transition: 0.2s;
+      transition: .3s;
     }
 
-    .search-button:hover {
-      background: #1d4ed8;
+    .primary-btn {
+      background: #2563eb;
+      color: #fff;
+      box-shadow: 0 0 35px rgba(37,99,235,.35);
     }
 
+    .primary-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 45px rgba(37,99,235,.55);
+    }
 
-    /* ================= STATS ================= */
+    .secondary-btn {
+      color: #e2e8f0;
+      border: 1px solid #334155;
+      background: rgba(15,23,42,.45);
+    }
+
+    .secondary-btn:hover {
+      border-color: #3b82f6;
+      transform: translateY(-3px);
+    }
+
+    /* =========================
+       STATS
+    ========================= */
 
     .stats {
-      display: grid;
-
-      grid-template-columns: repeat(3, 1fr);
-
-      background: #111827;
-
-      color: #ffffff;
-
-      text-align: center;
-
-      padding: 30px 7%;
+      display: flex;
+      gap: 0;
+      max-width: 620px;
     }
 
     .stat {
-      border-left: 1px solid #374151;
+      min-width: 145px;
+      padding: 0 22px;
+      border-left: 1px solid rgba(148,163,184,.18);
     }
 
-    .stat:last-child {
-      border-left: none;
+    .stat:first-child {
+      padding-right: 0;
     }
 
-    .stat strong {
-      display: block;
-
+    .stat-number {
       color: #60a5fa;
-
-      font-size: 26px;
-
+      font-size: 25px;
       font-weight: 800;
     }
 
-    .stat span {
-      color: #d1d5db;
+    .stat-text {
+      color: #94a3b8;
+      font-size: 12px;
+      margin-top: 3px;
+    }
 
+    /* =========================
+       3D WORLD
+    ========================= */
+
+    .world-area {
+      position: relative;
+      height: 590px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1000px;
+    }
+
+    .glow {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: rgba(37,99,235,.16);
+      filter: blur(80px);
+      animation: glowPulse 4s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+      0%,100% {
+        transform: scale(.9);
+        opacity: .55;
+      }
+      50% {
+        transform: scale(1.15);
+        opacity: .9;
+      }
+    }
+
+    .globe {
+      position: relative;
+      width: min(470px, 72vw);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 35% 30%, #2563eb 0%, #0f172a 32%, #020617 72%);
+      border: 2px solid rgba(96,165,250,.7);
+      box-shadow:
+        0 0 25px #2563eb,
+        0 0 70px rgba(37,99,235,.55),
+        inset 0 0 70px rgba(37,99,235,.3);
+      animation: globeFloat 6s ease-in-out infinite;
+      transform-style: preserve-3d;
+    }
+
+    @keyframes globeFloat {
+      0%,100% {
+        transform: translateY(0) rotateX(0deg);
+      }
+      50% {
+        transform: translateY(-15px) rotateX(3deg);
+      }
+    }
+
+    .globe::before {
+      content: "";
+      position: absolute;
+      inset: 8%;
+      border-radius: 50%;
+      background:
+        repeating-linear-gradient(
+          0deg,
+          transparent 0 29px,
+          rgba(59,130,246,.22) 30px 31px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          transparent 0 29px,
+          rgba(59,130,246,.22) 30px 31px
+        );
+      transform: rotate(-8deg);
+      opacity: .8;
+    }
+
+    .globe::after {
+      content: "";
+      position: absolute;
+      inset: -25px;
+      border: 1px solid rgba(59,130,246,.45);
+      border-radius: 50%;
+      transform: rotateX(68deg);
+      box-shadow: 0 0 25px rgba(59,130,246,.3);
+    }
+
+    .algeria {
+      position: absolute;
+      top: 43%;
+      left: 43%;
+      width: 85px;
+      height: 85px;
+      transform: translate(-50%,-50%);
+      border: 2px solid #60a5fa;
+      border-radius: 50%;
+      box-shadow:
+        0 0 20px #3b82f6,
+        0 0 50px rgba(59,130,246,.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+    }
+
+    .algeria::before {
+      content: "";
+      width: 13px;
+      height: 13px;
+      background: #60a5fa;
+      border-radius: 50%;
+      box-shadow: 0 0 25px #60a5fa;
+    }
+
+    .algeria span {
+      position: absolute;
+      top: 95px;
+      white-space: nowrap;
+      color: #60a5fa;
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    .orbit {
+      position: absolute;
+      width: 550px;
+      height: 210px;
+      border: 1px solid rgba(59,130,246,.4);
+      border-radius: 50%;
+      transform: rotate(-20deg);
+      animation: orbit 8s linear infinite;
+    }
+
+    .orbit.two {
+      width: 620px;
+      height: 270px;
+      transform: rotate(55deg);
+      animation-duration: 11s;
+    }
+
+    @keyframes orbit {
+      from {
+        transform: rotate(-20deg) rotateZ(0deg);
+      }
+      to {
+        transform: rotate(-20deg) rotateZ(360deg);
+      }
+    }
+
+    .orbit-dot {
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #60a5fa;
+      box-shadow: 0 0 20px #60a5fa;
+    }
+
+    /* =========================
+       FLOATING CARDS
+    ========================= */
+
+    .floating-card {
+      position: absolute;
+      padding: 14px 18px;
+      border-radius: 14px;
+      background: rgba(2,6,23,.76);
+      border: 1px solid rgba(59,130,246,.35);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 15px 40px rgba(0,0,0,.35);
+      z-index: 20;
+      animation: cardFloat 5s ease-in-out infinite;
+    }
+
+    .floating-card strong {
+      display: block;
+      color: #fff;
       font-size: 13px;
     }
 
+    .floating-card small {
+      color: #60a5fa;
+      font-size: 11px;
+    }
 
-    /* ================= SECTION ================= */
+    .card-one {
+      top: 90px;
+      right: 15px;
+    }
+
+    .card-two {
+      bottom: 100px;
+      left: 10px;
+      animation-delay: 1.5s;
+    }
+
+    @keyframes cardFloat {
+      0%,100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-13px);
+      }
+    }
+
+    /* =========================
+       TRUST SECTION
+    ========================= */
 
     .section {
-      max-width: 1150px;
-
+      max-width: 1400px;
       margin: auto;
-
-      padding: 75px 20px;
+      padding: 90px 30px;
     }
 
-    .section-header {
-      margin-bottom: 35px;
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
     }
 
-    .section-header h2 {
-      color: #111827;
-
-      font-size: 30px;
-
-      font-weight: 800;
-    }
-
-    .section-header p {
-      color: #6b7280;
-
-      margin-top: 8px;
-
-      font-size: 14px;
-    }
-
-    .blue-line {
-      width: 55px;
-
-      height: 3px;
-
-      background: #2563eb;
-
-      margin-top: 13px;
-    }
-
-
-    /* ================= JOBS ================= */
-
-    .jobs {
-      display: grid;
-
-      grid-template-columns: repeat(3, 1fr);
-
-      gap: 22px;
-    }
-
-    .job-card {
-      background: #ffffff;
-
-      border: 1px solid #e5e7eb;
-
-      border-radius: 12px;
-
-      padding: 25px;
-
-      transition: 0.25s;
-    }
-
-    .job-card:hover {
-      transform: translateY(-5px);
-
-      border-color: #bfdbfe;
-
-      box-shadow:
-        0 15px 35px rgba(37,99,235,0.08);
-    }
-
-    .company {
-      color: #6b7280;
-
-      font-size: 13px;
-
+    .section-title h2 {
+      font-size: 34px;
       margin-bottom: 10px;
     }
 
-    .job-card h3 {
-      color: #111827;
-
-      font-family: "Libre Baskerville", serif;
-
-      font-size: 18px;
-
-      margin-bottom: 12px;
-
-      direction: ltr;
-
-      text-align: right;
+    .section-title h2 span {
+      color: #3b82f6;
     }
 
-    .job-info {
-      color: #6b7280;
-
+    .section-title p {
+      color: #64748b;
       font-size: 13px;
-
-      line-height: 2;
     }
 
-    .tags {
-      margin-top: 15px;
-    }
-
-    .tag {
-      display: inline-block;
-
-      background: #eff6ff;
-
-      color: #2563eb;
-
-      padding: 5px 10px;
-
-      border-radius: 20px;
-
-      font-size: 11px;
-
-      margin-left: 4px;
-    }
-
-    .apply {
-      display: block;
-
-      background: #111827;
-
-      color: #ffffff;
-
-      text-align: center;
-
-      padding: 12px;
-
-      border-radius: 7px;
-
-      margin-top: 20px;
-
-      font-size: 13px;
-
-      font-weight: 700;
-    }
-
-    .apply:hover {
-      background: #2563eb;
-    }
-
-
-    /* ================= SECTORS ================= */
-
-    .sectors-section {
-      background: #f8fafc;
-
-      border-top: 1px solid #e5e7eb;
-
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    .sector-grid {
+    .companies {
       display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 15px;
+    }
 
+    .company-card {
+      min-height: 155px;
+      padding: 20px;
+      border: 1px solid rgba(148,163,184,.12);
+      border-radius: 16px;
+      background: rgba(15,23,42,.5);
+      transition: .3s;
+    }
+
+    .company-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(59,130,246,.5);
+      box-shadow: 0 15px 35px rgba(0,0,0,.25);
+    }
+
+    .company-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(37,99,235,.12);
+      border: 1px solid rgba(59,130,246,.3);
+      color: #60a5fa;
+      margin-bottom: 18px;
+      font-size: 20px;
+    }
+
+    .company-card h3 {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .company-card p {
+      color: #64748b;
+      font-size: 11px;
+    }
+
+    /* =========================
+       FEATURES
+    ========================= */
+
+    .features {
+      display: grid;
       grid-template-columns: repeat(4, 1fr);
-
       gap: 18px;
     }
 
-    .sector-card {
-      background: #ffffff;
-
-      border: 1px solid #e5e7eb;
-
-      padding: 30px 15px;
-
-      border-radius: 10px;
-
+    .feature {
+      padding: 30px 22px;
+      border: 1px solid rgba(148,163,184,.12);
+      background: rgba(15,23,42,.45);
+      border-radius: 17px;
       text-align: center;
-
-      transition: 0.2s;
     }
 
-    .sector-card:hover {
-      transform: translateY(-4px);
-
-      border-color: #bfdbfe;
+    .feature-number {
+      color: #3b82f6;
+      font-size: 27px;
+      font-weight: 800;
+      margin-bottom: 12px;
     }
 
-    .sector-icon {
-      width: 55px;
-
-      height: 55px;
-
-      margin: 0 auto 14px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      background: #eff6ff;
-
-      color: #2563eb;
-
-      border-radius: 9px;
-
-      font-family: "Libre Baskerville", serif;
-
-      font-weight: 700;
+    .feature h3 {
+      font-size: 15px;
+      margin-bottom: 9px;
     }
 
-    .sector-card h3 {
-      color: #111827;
-
-      font-size: 14px;
+    .feature p {
+      color: #64748b;
+      font-size: 12px;
+      line-height: 1.8;
     }
 
-    .sector-card p {
-      color: #9ca3af;
-
-      font-family: "Libre Baskerville", serif;
-
-      font-size: 10px;
-
-      margin-top: 4px;
-    }
-
-
-    /* ================= CTA ================= */
+    /* =========================
+       CTA
+    ========================= */
 
     .cta {
-      background: #eff6ff;
-
+      margin: 50px auto 90px;
+      max-width: 1100px;
+      padding: 65px 30px;
       text-align: center;
-
-      padding: 75px 20px;
+      border-radius: 25px;
+      border: 1px solid rgba(59,130,246,.25);
+      background:
+        radial-gradient(circle at center, rgba(37,99,235,.16), transparent 60%),
+        rgba(15,23,42,.55);
+      overflow: hidden;
+      position: relative;
     }
 
     .cta h2 {
-      color: #111827;
-
-      font-size: 32px;
-
-      margin-bottom: 10px;
+      font-size: 35px;
+      margin-bottom: 15px;
     }
 
     .cta p {
-      color: #6b7280;
-
-      margin-bottom: 25px;
-    }
-
-    .cta-button {
-      display: inline-block;
-
-      background: #2563eb;
-
-      color: #ffffff;
-
-      padding: 13px 28px;
-
-      border-radius: 7px;
-
+      color: #94a3b8;
+      margin-bottom: 28px;
       font-size: 14px;
-
-      font-weight: 700;
     }
 
-    .cta-button:hover {
-      background: #1d4ed8;
-    }
-
-
-    /* ================= FOOTER ================= */
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
-      background: #080d18;
-
-      color: #ffffff;
-
+      border-top: 1px solid rgba(148,163,184,.12);
+      padding: 35px 30px;
       text-align: center;
-
-      padding: 35px 20px;
+      color: #64748b;
+      font-size: 12px;
     }
 
     footer strong {
-      display: block;
-
-      font-family: "Libre Baskerville", serif;
-
-      font-size: 19px;
-
-      direction: ltr;
+      color: #3b82f6;
     }
 
-    footer strong span {
-      color: #60a5fa;
-    }
+    /* =========================
+       RESPONSIVE
+    ========================= */
 
-    footer p {
-      color: #9ca3af;
+    @media (max-width: 1100px) {
 
-      font-size: 12px;
-
-      margin-top: 8px;
-    }
-
-    .footer-founder {
-      color: #60a5fa !important;
-
-      font-family: "Libre Baskerville", serif;
-
-      font-size: 10px !important;
-
-      letter-spacing: 1px;
-
-      direction: ltr;
-    }
-
-
-    /* ================= MOBILE ================= */
-
-    @media (max-width: 800px) {
-
-      header {
-        padding: 18px 5%;
-
-        flex-direction: column;
-
-        gap: 15px;
-      }
-
-      nav {
-        width: 100%;
-
-        justify-content: center;
-
-        flex-wrap: wrap;
-
-        gap: 10px;
+      .nav-links {
+        display: none;
       }
 
       .hero {
-        min-height: 700px;
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 130px;
       }
 
       .hero-content {
-        text-align: center;
-      }
-
-      .hero-label .founder {
-        text-align: center;
-      }
-
-      .hero h1 {
-        font-size: 36px;
-      }
-
-      .hero p {
-        font-size: 15px;
-      }
-
-      .search-panel {
+        display: flex;
         flex-direction: column;
+        align-items: center;
       }
 
-      .search-panel input,
-      .search-panel select,
-      .search-button {
-        width: 100%;
-
-        min-height: 52px;
+      .world-area {
+        height: 550px;
       }
 
-      .search-button {
-        padding: 14px;
+      .companies {
+        grid-template-columns: repeat(3, 1fr);
       }
 
-      .stats {
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-      }
-
-      .stat {
-        border-left: none;
-
-        border-bottom: 1px solid #374151;
-
-        padding-bottom: 15px;
-      }
-
-      .stat:last-child {
-        border-bottom: none;
-      }
-
-      .jobs {
-        grid-template-columns: 1fr;
-      }
-
-      .sector-grid {
+      .features {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
+    @media (max-width: 600px) {
 
-    @media (max-width: 450px) {
-
-      .sector-grid {
-        grid-template-columns: 1fr;
+      header {
+        height: 68px;
       }
 
-      .hero h1 {
-        font-size: 31px;
-      }
-
-      .hero-label {
-        font-size: 14px;
+      .nav {
+        padding: 0 16px;
       }
 
       .logo {
+        font-size: 22px;
+      }
+
+      .login-btn {
+        display: none;
+      }
+
+      .register-btn {
+        padding: 9px 13px;
+        font-size: 11px;
+      }
+
+      .hero {
+        padding: 115px 18px 40px;
+        min-height: auto;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+        letter-spacing: -2px;
+      }
+
+      .hero-description {
+        font-size: 13px;
+      }
+
+      .stats {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .stat {
+        min-width: 0;
+        padding: 0 10px;
+      }
+
+      .stat-number {
         font-size: 19px;
       }
 
+      .stat-text {
+        font-size: 9px;
+      }
+
+      .world-area {
+        height: 430px;
+      }
+
+      .globe {
+        width: 300px;
+      }
+
+      .orbit {
+        width: 350px;
+      }
+
+      .orbit.two {
+        width: 390px;
+      }
+
+      .floating-card {
+        transform: scale(.8);
+      }
+
+      .card-one {
+        right: -10px;
+      }
+
+      .card-two {
+        left: -10px;
+      }
+
+      .companies {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 65px 18px;
+      }
+
+      .section-title h2,
+      .cta h2 {
+        font-size: 27px;
+      }
     }
-
   </style>
-
 </head>
-
 
 <body>
 
+  <div class="stars"></div>
 
-  <!-- ================= HEADER ================= -->
-
+  <!-- HEADER -->
   <header>
+    <nav class="nav">
 
-    <div class="logo">
-      JOB <span>LINK</span> DZ
-    </div>
-
-    <nav>
-
-      <a href="index.html">
-        الرئيسية
+      <a href="index.html" class="logo">
+        Job<span>Link</span> DZ
       </a>
 
-      <a href="jobs.html">
-        الوظائف
-      </a>
+      <div class="nav-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="jobs.html">الوظائف</a>
+        <a href="#companies">الشركات</a>
+        <a href="#hotels">الفنادق</a>
+        <a href="post-job.html">انشر وظيفة</a>
+        <a href="#about">من نحن</a>
+      </div>
 
-      <a href="#sectors">
-        القطاعات
-      </a>
-
-      <a href="#about">
-        عن المنصة
-      </a>
-
-      <a
-        href="company-register.html"
-        class="company-link"
-      >
-        للشركات
-      </a>
-
-      <a
-        href="login.html"
-        class="login"
-      >
-        دخول / إنشاء حساب
-      </a>
+      <div class="nav-actions">
+        <a href="login.html" class="login-btn">تسجيل الدخول</a>
+        <a href="register.html" class="register-btn">إنشاء حساب</a>
+      </div>
 
     </nav>
-
   </header>
 
 
-  <!-- ================= HERO ================= -->
+  <!-- HERO -->
+  <main>
 
-  <section class="hero">
+    <section class="hero">
 
-    <div class="hero-content">
+      <div class="hero-content">
 
+        <div class="small-label">
+          منصة التوظيف الجزائرية المستقبلية
+        </div>
 
-      <!-- BRAND -->
+        <h1>
+          مستقبلك المهني<br>
+          <span>يبدأ من هنا.</span>
+        </h1>
 
-      <div class="hero-label">
-
-        منصة التوظيف الجزائرية
-
-        <span class="founder">
-          By ABDELMOUAINMAAMRI
-        </span>
-
-      </div>
-
-
-      <h1>
-
-        ابنِ مستقبلك المهني
-
-        <span>
-          مع أفضل الفرص
-        </span>
-
-      </h1>
-
-
-      <p>
-
-        اكتشف الوظائف المناسبة لك،
-        وتواصل مع الشركات التي تبحث عن مهاراتك،
-        وابدأ خطوتك المهنية القادمة.
-
-      </p>
-
-
-      <!-- SEARCH -->
-
-      <div class="search-panel">
-
-        <input
-          id="searchInput"
-          type="search"
-          placeholder="ابحث عن وظيفة أو مهنة"
-          aria-label="البحث عن وظيفة"
-        >
-
-
-        <select
-          id="citySelect"
-          aria-label="اختر الولاية"
-        >
-
-          <option value="">
-            اختر الولاية
-          </option>
-
-          <option value="أدرار">أدرار</option>
-          <option value="الشلف">الشلف</option>
-          <option value="الأغواط">الأغواط</option>
-          <option value="أم البواقي">أم البواقي</option>
-          <option value="باتنة">باتنة</option>
-          <option value="بجاية">بجاية</option>
-          <option value="بسكرة">بسكرة</option>
-          <option value="بشار">بشار</option>
-          <option value="البليدة">البليدة</option>
-          <option value="البويرة">البويرة</option>
-          <option value="تمنراست">تمنراست</option>
-          <option value="تبسة">تبسة</option>
-          <option value="تلمسان">تلمسان</option>
-          <option value="تيارت">تيارت</option>
-          <option value="تيزي وزو">تيزي وزو</option>
-          <option value="الجزائر">الجزائر</option>
-          <option value="الجلفة">الجلفة</option>
-          <option value="جيجل">جيجل</option>
-          <option value="سطيف">سطيف</option>
-          <option value="سعيدة">سعيدة</option>
-          <option value="سكيكدة">سكيكدة</option>
-          <option value="سيدي بلعباس">سيدي بلعباس</option>
-          <option value="عنابة">عنابة</option>
-          <option value="قالمة">قالمة</option>
-          <option value="قسنطينة">قسنطينة</option>
-          <option value="المدية">المدية</option>
-          <option value="مستغانم">مستغانم</option>
-          <option value="المسيلة">المسيلة</option>
-          <option value="معسكر">معسكر</option>
-          <option value="ورقلة">ورقلة</option>
-          <option value="وهران">وهران</option>
-          <option value="البيض">البيض</option>
-          <option value="إليزي">إليزي</option>
-          <option value="برج بوعريريج">برج بوعريريج</option>
-          <option value="بومرداس">بومرداس</option>
-          <option value="الطارف">الطارف</option>
-          <option value="تندوف">تندوف</option>
-          <option value="تيسمسيلت">تيسمسيلت</option>
-          <option value="الوادي">الوادي</option>
-          <option value="خنشلة">خنشلة</option>
-          <option value="سوق أهراس">سوق أهراس</option>
-          <option value="تيبازة">تيبازة</option>
-          <option value="ميلة">ميلة</option>
-          <option value="عين الدفلى">عين الدفلى</option>
-          <option value="النعامة">النعامة</option>
-          <option value="عين تموشنت">عين تموشنت</option>
-          <option value="غرداية">غرداية</option>
-          <option value="غليزان">غليزان</option>
-          <option value="تيميمون">تيميمون</option>
-          <option value="برج باجي مختار">برج باجي مختار</option>
-          <option value="أولاد جلال">أولاد جلال</option>
-          <option value="بني عباس">بني عباس</option>
-          <option value="إن صالح">إن صالح</option>
-          <option value="إن قزام">إن قزام</option>
-          <option value="تقرت">تقرت</option>
-          <option value="جانت">جانت</option>
-          <option value="المغير">المغير</option>
-          <option value="المنيعة">المنيعة</option>
-
-        </select>
-
-
-        <button
-          id="searchButton"
-          class="search-button"
-          type="button"
-        >
-          بحث عن فرص
-        </button>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= STATS ================= -->
-
-  <section class="stats">
-
-    <div class="stat">
-
-      <strong>
-        58
-      </strong>
-
-      <span>
-        ولاية جزائرية
-      </span>
-
-    </div>
-
-
-    <div class="stat">
-
-      <strong>
-        + فرص
-      </strong>
-
-      <span>
-        وظائف جديدة
-      </span>
-
-    </div>
-
-
-    <div class="stat">
-
-      <strong>
-        + شركات
-      </strong>
-
-      <span>
-        تبحث عن المواهب
-      </span>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= JOBS ================= -->
-
-  <section
-    class="section"
-    id="jobs"
-  >
-
-    <div class="section-header">
-
-      <h2>
-        أحدث فرص العمل
-      </h2>
-
-      <div class="blue-line"></div>
-
-      <p>
-        فرص مهنية من مختلف مستويات قطاع الفندقة والمطاعم.
-      </p>
-
-    </div>
-
-
-    <div
-      class="jobs"
-      id="jobsContainer"
-    ></div>
-
-  </section>
-
-
-  <!-- ================= SECTORS ================= -->
-
-  <section
-    class="sectors-section"
-    id="sectors"
-  >
-
-    <div class="section">
-
-      <div class="section-header">
-
-        <h2>
-          قطاعات Job Link DZ
-        </h2>
-
-        <div class="blue-line"></div>
-
-        <p>
-          نبدأ بالفندقة والمطاعم مع إمكانية التوسع إلى قطاعات أخرى.
+        <p class="hero-description">
+          Job Link DZ منصة جزائرية تربط الباحثين عن العمل
+          بأفضل الفرص لدى الشركات والفنادق والمؤسسات
+          في مختلف أنحاء الجزائر.
         </p>
 
+        <div class="hero-buttons">
+          <a href="jobs.html" class="primary-btn">
+            اكتشف الوظائف
+          </a>
+
+          <a href="register.html" class="secondary-btn">
+            أنشئ ملفك المهني
+          </a>
+        </div>
+
+        <div class="stats">
+
+          <div class="stat">
+            <div class="stat-number">+25K</div>
+            <div class="stat-text">باحث عن عمل</div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-number">+3K</div>
+            <div class="stat-text">شركة</div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-number">+1K</div>
+            <div class="stat-text">فندق</div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-number">+8K</div>
+            <div class="stat-text">فرصة عمل</div>
+          </div>
+
+        </div>
+
       </div>
 
 
-      <div class="sector-grid">
+      <!-- 3D WORLD -->
 
+      <div class="world-area" id="world">
 
-        <div class="sector-card">
+        <div class="glow"></div>
 
-          <div class="sector-icon">
-            H
+        <div class="orbit">
+          <div class="orbit-dot"></div>
+        </div>
+
+        <div class="orbit two">
+          <div class="orbit-dot"></div>
+        </div>
+
+        <div class="globe">
+
+          <div class="algeria">
+            <span>الجزائر</span>
           </div>
-
-          <h3>
-            الفنادق
-          </h3>
-
-          <p>
-            Hospitality
-          </p>
 
         </div>
 
-
-        <div class="sector-card">
-
-          <div class="sector-icon">
-            R
-          </div>
-
-          <h3>
-            المطاعم
-          </h3>
-
-          <p>
-            Restauration
-          </p>
-
+        <div class="floating-card card-one">
+          <strong>فرص جديدة الآن</strong>
+          <small>اكتشف وظيفتك القادمة</small>
         </div>
 
-
-        <div class="sector-card">
-
-          <div class="sector-icon">
-            IT
-          </div>
-
-          <h3>
-            التكنولوجيا
-          </h3>
-
-          <p>
-            Technology
-          </p>
-
+        <div class="floating-card card-two">
+          <strong>شركات + فنادق</strong>
+          <small>بوابة واحدة للمواهب</small>
         </div>
-
-
-        <div class="sector-card">
-
-          <div class="sector-icon">
-            C
-          </div>
-
-          <h3>
-            التجارة
-          </h3>
-
-          <p>
-            Commerce
-          </p>
-
-        </div>
-
 
       </div>
 
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- ================= CTA ================= -->
+    <!-- COMPANIES & HOTELS -->
 
-  <section
-    class="cta"
-    id="about"
-  >
+    <section class="section" id="companies">
 
-    <h2>
-      مستعد لخطوتك القادمة؟
-    </h2>
+      <div class="section-title">
+        <h2>
+          شركات وفنادق <span>على المنصة</span>
+        </h2>
 
-    <p>
-      ابدأ البحث عن فرصتك المهنية اليوم.
-    </p>
+        <p>
+          نعمل على بناء شبكة مهنية تجمع المؤسسات والمواهب الجزائرية في مكان واحد.
+        </p>
+      </div>
 
-    <a
-      href="jobs.html"
-      class="cta-button"
-    >
-      اكتشف الوظائف
-    </a>
+      <div class="companies">
 
-  </section>
+        <div class="company-card">
+          <div class="company-icon">01</div>
+          <h3>الشركات</h3>
+          <p>فرص مهنية في مختلف القطاعات</p>
+        </div>
+
+        <div class="company-card">
+          <div class="company-icon">02</div>
+          <h3>الفنادق</h3>
+          <p>وظائف الضيافة والسياحة</p>
+        </div>
+
+        <div class="company-card">
+          <div class="company-icon">03</div>
+          <h3>المؤسسات</h3>
+          <p>فرص العمل المهنية والإدارية</p>
+        </div>
+
+        <div class="company-card">
+          <div class="company-icon">04</div>
+          <h3>المطاعم</h3>
+          <p>وظائف المطاعم والخدمات</p>
+        </div>
+
+        <div class="company-card">
+          <div class="company-icon">05</div>
+          <h3>السياحة</h3>
+          <p>فرص قطاع السفر والسياحة</p>
+        </div>
+
+        <div class="company-card">
+          <div class="company-icon">06</div>
+          <h3>القطاعات الأخرى</h3>
+          <p>اكتشف فرصًا جديدة كل يوم</p>
+        </div>
+
+      </div>
+
+    </section>
 
 
-  <!-- ================= FOOTER ================= -->
+    <!-- FEATURES -->
+
+    <section class="section" id="about">
+
+      <div class="section-title">
+        <h2>
+          لماذا <span>Job Link DZ؟</span>
+        </h2>
+
+        <p>
+          تجربة توظيف مصممة لتكون بسيطة، سريعة ومستقبلية.
+        </p>
+      </div>
+
+      <div class="features">
+
+        <div class="feature">
+          <div class="feature-number">01</div>
+          <h3>فرص في جميع أنحاء الجزائر</h3>
+          <p>
+            اكتشف وظائف جديدة من مختلف الولايات والقطاعات.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-number">02</div>
+          <h3>ملف مهني</h3>
+          <p>
+            أنشئ ملفك المهني واعرض خبراتك ومهاراتك للشركات.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-number">03</div>
+          <h3>للشركات والفنادق</h3>
+          <p>
+            مساحة واحدة لنشر الوظائف والوصول إلى المواهب.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-number">04</div>
+          <h3>تجربة حديثة</h3>
+          <p>
+            واجهة سريعة ومتجاوبة ومصممة للجيل الجديد.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta" id="hotels">
+
+      <h2>
+        خطوتك المهنية تبدأ الآن.
+      </h2>
+
+      <p>
+        سواء كنت تبحث عن فرصة أو تمثل شركة أو فندقًا،
+        Job Link DZ صُمم ليجمعك بالطرف المناسب.
+      </p>
+
+      <a href="register.html" class="primary-btn">
+        إنشاء حساب
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
 
   <footer>
-
-    <strong>
-      JOB <span>LINK</span> DZ
-    </strong>
-
-    <p>
-      منصة التوظيف الجزائرية
-    </p>
-
-    <p class="footer-founder">
-      By ABDELMOUAINMAAMRI
-    </p>
-
-    <p>
-      © 2026 Job Link DZ
-    </p>
-
+    © 2026 <strong>Job Link DZ</strong> — جميع الحقوق محفوظة
   </footer>
 
 
-  <!-- ================= JOB DATABASE ================= -->
-
   <script>
 
-    const jobs = [
+    /* حركة خفيفة للكرة حسب حركة الماوس */
 
-      {
-        title: "Directeur Général",
-        sector: "Hôtellerie",
-        city: "الجزائر",
-        type: "CDI",
-        level: "Direction"
-      },
+    const world = document.getElementById("world");
+    const globe = document.querySelector(".globe");
 
-      {
-        title: "Directeur d’Hôtel",
-        sector: "Hôtellerie",
-        city: "وهران",
-        type: "CDI",
-        level: "Direction"
-      },
+    if (world && globe) {
 
-      {
-        title: "Directeur de la Restauration",
-        sector: "Restauration",
-        city: "الجزائر",
-        type: "CDI",
-        level: "Direction"
-      },
+      world.addEventListener("mousemove", function(e) {
 
-      {
-        title: "Responsable F&B",
-        sector: "Restauration",
-        city: "قسنطينة",
-        type: "CDI",
-        level: "Management"
-      },
+        const rect = world.getBoundingClientRect();
 
-      {
-        title: "Chef de Réception",
-        sector: "Hôtellerie",
-        city: "سطيف",
-        type: "CDI",
-        level: "Management"
-      },
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
 
-      {
-        title: "Réceptionniste",
-        sector: "Hôtellerie",
-        city: "سطيف",
-        type: "CDI",
-        level: "Employé"
-      },
+        const rotateY = ((x / rect.width) - 0.5) * 12;
+        const rotateX = ((y / rect.height) - 0.5) * -12;
 
-      {
-        title: "Night Auditor",
-        sector: "Hôtellerie",
-        city: "الجزائر",
-        type: "CDI",
-        level: "Employé"
-      },
+        globe.style.transform =
+          `translateY(-5px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 
-      {
-        title: "Gouvernant(e)",
-        sector: "Hôtellerie",
-        city: "وهران",
-        type: "CDD",
-        level: "Management"
-      },
+      });
 
-      {
-        title: "Maître d’Hôtel",
-        sector: "Restauration",
-        city: "سطيف",
-        type: "CDI",
-        level: "Management"
-      },
+      world.addEventListener("mouseleave", function() {
 
-      {
-        title: "Chef de Rang",
-        sector: "Restauration",
-        city: "سطيف",
-        type: "CDI",
-        level: "Employé"
-      },
+        globe.style.transform =
+          "translateY(0) rotateX(0deg) rotateY(0deg)";
 
-      {
-        title: "Demi-Chef de Rang",
-        sector: "Restauration",
-        city: "قسنطينة",
-        type: "CDI",
-        level: "Employé"
-      },
-
-      {
-        title: "Serveur / Serveuse",
-        sector: "Restauration",
-        city: "الجزائر",
-        type: "CDD",
-        level: "Employé"
-      },
-
-      {
-        title: "Commis de Salle",
-        sector: "Restauration",
-        city: "سطيف",
-        type: "CDD",
-        level: "Débutant"
-      },
-
-      {
-        title: "Chef de Cuisine",
-        sector: "Cuisine",
-        city: "الجزائر",
-        type: "CDI",
-        level: "Management"
-      },
-
-      {
-        title: "Sous-Chef",
-        sector: "Cuisine",
-        city: "وهران",
-        type: "CDI",
-        level: "Management"
-      },
-
-      {
-        title: "Chef de Partie",
-        sector: "Cuisine",
-        city: "سطيف",
-        type: "CDI",
-        level: "Employé"
-      },
-
-      {
-        title: "Commis de Cuisine",
-        sector: "Cuisine",
-        city: "قسنطينة",
-        type: "CDD",
-        level: "Débutant"
-      },
-
-      {
-        title: "Plongeur",
-        sector: "Cuisine",
-        city: "سطيف",
-        type: "CDD",
-        level: "Débutant"
-      },
-
-      {
-        title: "Chef Barman",
-        sector: "Bar",
-        city: "الجزائر",
-        type: "CDI",
-        level: "Management"
-      },
-
-      {
-        title: "Barman / Barmaid",
-        sector: "Bar",
-        city: "وهران",
-        type: "CDI",
-        level: "Employé"
-      },
-
-      {
-        title: "Sales Manager",
-        sector: "Commercial",
-        city: "الجزائر",
-        type: "CDI",
-        level: "Management"
-      },
-
-      {
-        title: "Event Manager",
-        sector: "Événementiel",
-        city: "قسنطينة",
-        type: "CDI",
-        level: "Management"
-      },
-
-      {
-        title: "Banquet Manager",
-        sector: "Événementiel",
-        city: "سطيف",
-        type: "CDI",
-        level: "Management"
-      }
-
-    ];
-
-
-    /* ================= DISPLAY JOBS ================= */
-
-    const jobsContainer =
-      document.getElementById("jobsContainer");
-
-
-    function showJobs(list) {
-
-      if (!jobsContainer) {
-        return;
-      }
-
-
-      if (list.length === 0) {
-
-        jobsContainer.innerHTML = `
-
-          <div style="
-            grid-column: 1 / -1;
-            text-align: center;
-            padding: 50px 20px;
-            color: #6b7280;
-          ">
-
-            <h3 style="
-              color: #111827;
-              margin-bottom: 10px;
-            ">
-              لا توجد وظائف مطابقة
-            </h3>
-
-            <p>
-              جرّب البحث عن مهنة أو ولاية أخرى.
-            </p>
-
-          </div>
-
-        `;
-
-        return;
-      }
-
-
-      jobsContainer.innerHTML =
-        list.map(function(job) {
-
-          return `
-
-            <div class="job-card">
-
-              <div class="company">
-                ${job.sector}
-              </div>
-
-              <h3>
-                ${job.title}
-              </h3>
-
-              <div class="job-info">
-
-                ${job.city}
-
-                <br>
-
-                دوام كامل
-
-                <br>
-
-                ${job.level}
-
-              </div>
-
-              <div class="tags">
-
-                <span class="tag">
-                  ${job.type}
-                </span>
-
-                <span class="tag">
-                  ${job.sector}
-                </span>
-
-              </div>
-
-              <a
-                href="jobs.html"
-                class="apply"
-              >
-                عرض الوظائف
-              </a>
-
-            </div>
-
-          `;
-
-        }).join("");
+      });
 
     }
-
-
-    /* ================= SEARCH ================= */
-
-    const searchInput =
-      document.getElementById("searchInput");
-
-    const citySelect =
-      document.getElementById("citySelect");
-
-    const searchButton =
-      document.getElementById("searchButton");
-
-
-    function searchJobs() {
-
-      const keyword =
-        searchInput.value
-          .trim()
-          .toLowerCase();
-
-
-      const city =
-        citySelect.value;
-
-
-      const results =
-        jobs.filter(function(job) {
-
-          const text =
-            (
-              job.title +
-              " " +
-              job.sector +
-              " " +
-              job.level +
-              " " +
-              job.city
-            ).toLowerCase();
-
-
-          const keywordMatch =
-            keyword === "" ||
-            text.includes(keyword);
-
-
-          const cityMatch =
-            city === "" ||
-            job.city === city;
-
-
-          return (
-            keywordMatch &&
-            cityMatch
-          );
-
-        });
-
-
-      showJobs(results);
-
-
-      const jobsSection =
-        document.getElementById("jobs");
-
-
-      if (jobsSection) {
-
-        jobsSection.scrollIntoView({
-          behavior: "smooth"
-        });
-
-      }
-
-    }
-
-
-    if (searchButton) {
-
-      searchButton.addEventListener(
-        "click",
-        searchJobs
-      );
-
-    }
-
-
-    if (searchInput) {
-
-      searchInput.addEventListener(
-        "keydown",
-        function(event) {
-
-          if (event.key === "Enter") {
-
-            searchJobs();
-
-          }
-
-        }
-      );
-
-    }
-
-
-    /* ================= START ================= */
-
-    showJobs(jobs);
 
   </script>
 
-
 </body>
-
 </html>
